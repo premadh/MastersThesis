@@ -1,0 +1,35 @@
+%%
+%% ABBREVIATIONS
+%%
+\chapter{Abbreviations and Notations}
+
+%[l] flush left the table
+%l flush left first column
+%p{} column of width 0.8 of the line width
+\begin{longtable}[l]{lp{0.8\linewidth}}
+
+AI        & Artificial Intelligence \\
+ANN       & Artificial Neural Network \\
+BMI       & Body Mass Index \\
+DEA       & Data Exploratory Analysis \\
+DM        & Data Mining \\
+ML        & Machine Learning \\
+MSE       & Mean Squared Error \\
+PCA       & Principal Component Analysis \\
+RSS       & Residual Sum of Squares \\
+SISAL     & Sequential Input Selection Algorithm \\
+SQL       & Structured Query Language \\
+SSE       & Sum of Squared Errors \\
+THL       & Terveyden ja Hyvinvoinnin Laitos \\
+          & (National Institute for Health and Welfare) \\
+mmHg      & Millimeters of Mercury (to measure blood pressure) \\
+mmol/L    & Millimoles per Liter (to measure elements in blood) \\
+$\mathbf{X}$ 		& $N \times d$ input data matrix \\
+$\mathbf{y}$ 		& $N \times 1$ output data matrix \\
+$\mathbf{\beta}$	& Regression coefficients of a single response linear model \\
+$\mathbf{x}$		& Vector of observations of $d$ variables $\mathbf{x}=[x_1,\ldots,x_d]$ \\
+$y$			& An observation of an output variable \\
+$\hat{y}$		& An estimate of the observation $y$ \\
+$\varepsilon$		& Random error
+
+\end{longtable}

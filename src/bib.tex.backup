@@ -1,0 +1,8 @@
+\chapter{Bibliography}
+\label{ch:bibliography}
+
+\begin{fquote}[Isaac Newton] If I have seen further, it is by standing on the shoulders of giants. \fqsource{{In a letter to his rival Robert Hooke (1676)}} \end{fquote}
+
+\bibliographystyle{unsrt}
+\renewcommand{\refname}{}
+\bibliography{src/cv}

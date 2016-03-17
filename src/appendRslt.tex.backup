@@ -1,0 +1,344 @@
+\chapter{Results on Each Chromosome}
+\label{ap:appendRslt}
+
+%\begin{tabular}{|c|c|r|c|r|c|r|}\hline
+%    & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} &$J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}}   \\ \hline%
+ %\end{tabular}
+
+
+\begin{fquote}[Tony Robbins]There is no such thing as failure. There are only results. \fqsource{{American self-help author(1960-)}} \end{fquote} 
+
+\begin{synopsis}
+This chapter presents a summary of results of experiments on all 22 chromosomes. Number of components required to fit the data ($J$) along with their respective likelihood ($\mathcal{L}$) in all three types of data: upsampled, downsampled and combined.
+\end{synopsis}
+
+\begin{table}[h!]
+  \centering
+\begin{tabular}{|c|c|r|c|r|c|r|}\hline
+\multicolumn{7}{|c|}{\textbf{Chromosome 1}} \\ \hline
+\multirow{2}{*}{\textbf{Resolution}} & \multicolumn{2}{|c|}{\textbf{Upsampled}} &  \multicolumn{2}{|c|}{\textbf{Downsampled}} &  \multicolumn{2}{|c|}{\textbf{Combined}} \\ \cline{2-7}
+    & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}}   \\ \hline
+400 & 6 & -5.9194 & 7 & -7.0697 & 7 & -7.0344  \\ \hline
+550 & 7 & -12.9252 & 8 & -9.9172 & 8 & -9.9790  \\ \hline
+700 & 7 & -16.4747 & 9 & -12.399 & 8 & -13.1283  \\ \hline
+850 & 7 & -14.6505& 5 & -13.065 & 7 & -13.7521  \\ \hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[h!]
+  \centering
+\begin{tabular}{|c|c|r|c|r|c|r|}\hline
+\multicolumn{7}{|c|}{\textbf{Chromosome 2}} \\ \hline
+\multirow{2}{*}{\textbf{Resolution}} & \multicolumn{2}{|c|}{\textbf{Upsampled}} &  \multicolumn{2}{|c|}{\textbf{Downsampled}} &  \multicolumn{2}{|c|}{\textbf{Combined}} \\ \cline{2-7}
+    & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} &$J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}}   \\ \hline
+400 & 4 & -6.0295 & 7 & -8.0169 & 6 & -8.1897  \\ \hline
+550 & 5 & -11.8613 & 7 & -11.7851 & 7 & -11.6974  \\ \hline
+700 & 7 & -16.5517 & 7 & -13.4636 & 7 & -13.4568  \\ \hline
+850 & 7 & -20.3705 & 7 & -15.0203 & 7 &  -16.5597 \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[h!]
+  \centering
+\begin{tabular}{|c|c|r|c|r|c|r|}\hline
+\multicolumn{7}{|c|}{\textbf{Chromosome 3}} \\ \hline
+\multirow{2}{*}{\textbf{Resolution}} & \multicolumn{2}{|c|}{\textbf{Upsampled}} &  \multicolumn{2}{|c|}{\textbf{Downsampled}} &  \multicolumn{2}{|c|}{\textbf{Combined}} \\ \cline{2-7}
+    & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} &$J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}}   \\ \hline
+400 & 4 & -6.2442 & 6 & -7.0561 & 7 & -6.7363  \\ \hline
+550 & 7 & -7.6133 & 6 & -8.7447 & 7 & -8.4167  \\ \hline
+700 & 4 & -10.4383 & 7 & -10.5652 & 6 & -11.2252  \\ \hline
+850 & 7 & -12.4494 & 7 & -11.9871 & 7 & -12.9220  \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+  \centering
+\begin{tabular}{|c|c|r|c|r|c|r|}\hline
+\multicolumn{7}{|c|}{\textbf{Chromosome 4}} \\ \hline
+\multirow{2}{*}{\textbf{Resolution}} & \multicolumn{2}{|c|}{\textbf{Upsampled}} &  \multicolumn{2}{|c|}{\textbf{Downsampled}} &  \multicolumn{2}{|c|}{\textbf{Combined}} \\ \cline{2-7}
+    & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} &$J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}}   \\ \hline
+400 & 6 & -5.5425 & 7 & -6.7628 & 8 & -6.5087  \\ \hline
+550 & 4 & -7.3582 & 6 & -6.9300 & 8 & -7.1889  \\ \hline
+700 & 3 & -14.3333 & 7 & -11.7569 & 7 & -12.3751  \\ \hline
+850 & 6 & -14.3317 & 6 & -11.3934 & 7 & -11.6412   \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+  \centering
+\begin{tabular}{|c|c|r|c|r|c|r|}\hline
+\multicolumn{7}{|c|}{\textbf{Chromosome 5}} \\ \hline
+\multirow{2}{*}{\textbf{Resolution}} & \multicolumn{2}{|c|}{\textbf{Upsampled}} &  \multicolumn{2}{|c|}{\textbf{Downsampled}} &  \multicolumn{2}{|c|}{\textbf{Combined}} \\ \cline{2-7}
+    & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} &$J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}}   \\ \hline
+400 & 5 & -3.8016 & 7 & -5.2970 & 7 & -5.2339  \\ \hline
+550 & 4 & -12.158 & 8 & -9.3618 & 6 & -9.5914  \\ \hline
+700 & 8 & -21.0161 & 7 & -12.6904 & 7 & -12.4653  \\ \hline
+850 & 6 & -20.7898 & 6 & -12.8497 & 7 & -13.0176  \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+  \centering
+\begin{tabular}{|c|c|r|c|r|c|r|}\hline
+\multicolumn{7}{|c|}{\textbf{Chromosome 6}} \\ \hline
+\multirow{2}{*}{\textbf{Resolution}} & \multicolumn{2}{|c|}{\textbf{Upsampled}} &  \multicolumn{2}{|c|}{\textbf{Downsampled}} &  \multicolumn{2}{|c|}{\textbf{Combined}} \\ \cline{2-7}
+    & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} &$J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}}   \\ \hline
+400 & 3 & -6.8321 & 7 & -6.0988 & 6 & -6.4244  \\ \hline
+550 & 5 & -9.3474 & 7 & -8.2348 & 6 & -8.8388  \\ \hline
+700 & 4 & -14.9753 & 6 & -10.317 & 6 & -11.9083  \\ \hline
+850 & 6 & -17.0915 & 6 & -12.560 & 5 & -13.1997  \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[h!]
+  \centering
+\begin{tabular}{|c|c|r|c|r|c|r|}\hline
+\multicolumn{7}{|c|}{\textbf{Chromosome 7}} \\ \hline
+\multirow{2}{*}{\textbf{Resolution}} & \multicolumn{2}{|c|}{\textbf{Upsampled}} &  \multicolumn{2}{|c|}{\textbf{Downsampled}} &  \multicolumn{2}{|c|}{\textbf{Combined}} \\ \cline{2-7}
+    & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} &$J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}}   \\ \hline
+400 & 7 & -4.7596 & 7 & -4.4072 & 6 & -4.8041  \\ \hline
+550 & 7 & -6.4318 & 7 & -5.6954 & 7 & -5.9767  \\ \hline
+700 & 5 & -12.160 & 7 & -7.5511 & 5 & -8.8348  \\ \hline
+850 & 4 & -18.9840 & 4 & -8.6133 & 7 & -9.7109  \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+  \centering
+\begin{tabular}{|c|c|r|c|r|c|r|}\hline
+\multicolumn{7}{|c|}{\textbf{Chromosome 8}} \\ \hline
+\multirow{2}{*}{\textbf{Resolution}} & \multicolumn{2}{|c|}{\textbf{Upsampled}} &  \multicolumn{2}{|c|}{\textbf{Downsampled}} &  \multicolumn{2}{|c|}{\textbf{Combined}} \\ \cline{2-7}
+    & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} &$J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}}   \\ \hline
+400 & 4 & -4.9276 & 6 & -4.1155 & 6 & -4.3724  \\ \hline
+550 & 4 & -6.2317 & 7 & -4.9172 & 6 & -5.3038  \\ \hline
+700 & 4 & -10.5181 & 7 & -7.1678 & 7 & -7.4469  \\ \hline
+850 & 8 & -8.1046 & 8 & -7.1619 & 7 & -7.4235  \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+  \centering
+\begin{tabular}{|c|c|r|c|r|c|r|}\hline
+\multicolumn{7}{|c|}{\textbf{Chromosome 9}} \\ \hline
+\multirow{2}{*}{\textbf{Resolution}} & \multicolumn{2}{|c|}{\textbf{Upsampled}} &  \multicolumn{2}{|c|}{\textbf{Downsampled}} &  \multicolumn{2}{|c|}{\textbf{Combined}} \\ \cline{2-7}
+    & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} &$J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}}   \\ \hline
+400 & 6 & -3.8209 & 7 & -4.3096 & 5 & -4.7419  \\ \hline
+550 & 5 & -5.2903 & 7 & -4.9811 & 6 & -5.5177  \\ \hline
+700 & 8 & -10.620 & 6 & -8.6071 & 5 & -9.5910  \\ \hline
+850 & 7 & -10.0603 & 7 & -9.5175 & 6 & -9.5272  \\ \hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[h!]
+  \centering
+\begin{tabular}{|c|c|r|c|r|c|r|}\hline
+\multicolumn{7}{|c|}{\textbf{Chromosome 10}} \\ \hline
+\multirow{2}{*}{\textbf{Resolution}} & \multicolumn{2}{|c|}{\textbf{Upsampled}} &  \multicolumn{2}{|c|}{\textbf{Downsampled}} &  \multicolumn{2}{|c|}{\textbf{Combined}} \\ \cline{2-7}
+    & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} &$J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}}   \\ \hline
+400 & 8 & -3.2834 & 6 & -4.3964 & 6 & -4.3978  \\ \hline
+550 & 8 & -2.7821 & 7 & -6.3721 & 7 & -6.2640  \\ \hline
+700 & 8 & -8.8074 & 8 & -8.2315 & 6 & -9.0516  \\ \hline
+850 & 8 & -13.3051 & 8 & -11.1141 & 6 & -11.0203  \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[h!]
+  \centering
+\begin{tabular}{|c|c|r|c|r|c|r|}\hline
+\multicolumn{7}{|c|}{\textbf{Chromosome 11}} \\ \hline
+\multirow{2}{*}{\textbf{Resolution}} & \multicolumn{2}{|c|}{\textbf{Upsampled}} &  \multicolumn{2}{|c|}{\textbf{Downsampled}} &  \multicolumn{2}{|c|}{\textbf{Combined}} \\ \cline{2-7}
+    & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} &$J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}}   \\ \hline
+400 & 4 & -3.6813 & 6 & -4.7850 & 6 & -4.7648  \\ \hline
+550 & 8 & -3.9603 & 8 & -7.5050 & 6 & -8.1162  \\ \hline
+700 & 4 & -15.6520 & 7 & -11.1570 & 6 & -11.4460  \\ \hline
+850 & 4 & -13.3610 & 4 & -11.2810 & 9 & -11.4400  \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+  \centering
+\begin{tabular}{|c|c|r|c|r|c|r|}\hline
+\multicolumn{7}{|c|}{\textbf{Chromosome 12}} \\ \hline
+\multirow{2}{*}{\textbf{Resolution}} & \multicolumn{2}{|c|}{\textbf{Upsampled}} &  \multicolumn{2}{|c|}{\textbf{Downsampled}} &  \multicolumn{2}{|c|}{\textbf{Combined}} \\ \cline{2-7}
+    & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} &$J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}}   \\ \hline
+400 & 6 & -4.1444 & 7 & -4.6736 & 8 & -4.6166  \\ \hline
+550 & 8 & -5.0504 & 8 & -6.2282 & 8 & -6.3146  \\ \hline
+700 & 6 & -13.9440 & 7 & -10.961 & 9 & -10.5580 \\ \hline
+850 & 5 & -16.9440 & 5 & -10.738 & 10 & -10.7330  \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+  \centering
+\begin{tabular}{|c|c|r|c|r|c|r|}\hline
+\multicolumn{7}{|c|}{\textbf{Chromosome 13}} \\ \hline
+\multirow{2}{*}{\textbf{Resolution}} & \multicolumn{2}{|c|}{\textbf{Upsampled}} &  \multicolumn{2}{|c|}{\textbf{Downsampled}} &  \multicolumn{2}{|c|}{\textbf{Combined}} \\ \cline{2-7}
+    & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} &$J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}}   \\ \hline
+400 & 5 & -3.6969 & 6 & -3.4472 & 7 & -3.3926  \\ \hline
+550 & 5 & -4.3378 & 8 & -3.8797 & 9 & -3.7812  \\ \hline
+700 & 9 & -3.9688 & 7 & -4.7221 & 8 & -4.6245  \\ \hline
+850 & 6 & -8.7558 & 6 & -7.3815 & 6 & -7.9231  \\ \hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[h!]
+  \centering
+\begin{tabular}{|c|c|r|c|r|c|r|}\hline
+\multicolumn{7}{|c|}{\textbf{Chromosome 14}} \\ \hline
+\multirow{2}{*}{\textbf{Resolution}} & \multicolumn{2}{|c|}{\textbf{Upsampled}} &  \multicolumn{2}{|c|}{\textbf{Downsampled}} &  \multicolumn{2}{|c|}{\textbf{Combined}} \\ \cline{2-7}
+    & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} &$J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}}   \\ \hline
+400 & 5 & -3.7348 & 6 & -3.4965 & 6 & -3.4845  \\ \hline
+550 & 5 & -4.3009 & 6 & -3.7693 & 8 & -3.6269  \\ \hline
+700 & 7 & -4.6961 & 7 & -4.3075 & 7 & -4.3181  \\ \hline
+850 & 4 & -7.6186 & 4 & -6.0092 & 7 & -5.6381  \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[h!]
+  \centering
+\begin{tabular}{|c|c|r|c|r|c|r|}\hline
+\multicolumn{7}{|c|}{\textbf{Chromosome 15}} \\ \hline
+\multirow{2}{*}{\textbf{Resolution}} & \multicolumn{2}{|c|}{\textbf{Upsampled}} &  \multicolumn{2}{|c|}{\textbf{Downsampled}} &  \multicolumn{2}{|c|}{\textbf{Combined}} \\ \cline{2-7}
+    & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} &$J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}}   \\ \hline
+400 & 6 & -3.1646 & 5 & -3.8836 & 8 & -3.4694  \\ \hline
+550 & 4 & -4.9117 & 9 & -4.1355 & 7 & -4.4979  \\ \hline
+700 & 5 & -4.8904 & 9 & -4.4926 & 7 & -4.8368 \\ \hline
+850 & 8 & -4.3434 & 8 & -6.3936 & 8 & -5.5853  \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+  \centering
+\begin{tabular}{|c|c|r|c|r|c|r|}\hline
+\multicolumn{7}{|c|}{\textbf{Chromosome 16}} \\ \hline
+\multirow{2}{*}{\textbf{Resolution}} & \multicolumn{2}{|c|}{\textbf{Upsampled}} &  \multicolumn{2}{|c|}{\textbf{Downsampled}} &  \multicolumn{2}{|c|}{\textbf{Combined}} \\ \cline{2-7}
+    & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} &$J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}}   \\ \hline
+400 & 5 & -3.5699 & 4 & -3.7158   & 6 & -3.3564  \\ \hline
+550 & 7 & -3.1739 & 6 & -3.3044   & 6 & -3.3510  \\ \hline
+700 & 5 & -4.7573 & 6 & -4.0875   & 6 & -4.1563  \\ \hline
+850 & 11 & -3.3864 & 11 & -4.5890 & 6 & -4.6062  \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+  \centering
+\begin{tabular}{|c|c|r|c|r|c|r|}\hline
+\multicolumn{7}{|c|}{\textbf{Chromosome 17}} \\ \hline
+\multirow{2}{*}{\textbf{Resolution}} & \multicolumn{2}{|c|}{\textbf{Upsampled}} &  \multicolumn{2}{|c|}{\textbf{Downsampled}} &  \multicolumn{2}{|c|}{\textbf{Combined}} \\ \cline{2-7}
+    & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} &$J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}}   \\ \hline
+400 & 6 & -3.3910 & 7 & -3.2701 & 6 & -3.4884  \\ \hline
+550 & 8 & -3.2570 & 7 & -3.4897 & 7 & -3.5734  \\ \hline
+700 & 6 & -4.4526 & 6 & -4.7788 & 8 & -4.4173  \\ \hline
+850 & 8 & -4.3136 & 8 & -4.5374 & 6 & -5.2015  \\ \hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[h!]
+  \centering
+\begin{tabular}{|c|c|r|c|r|c|r|}\hline
+\multicolumn{7}{|c|}{\textbf{Chromosome 18}} \\ \hline
+\multirow{2}{*}{\textbf{Resolution}} & \multicolumn{2}{|c|}{\textbf{Upsampled}} &  \multicolumn{2}{|c|}{\textbf{Downsampled}} &  \multicolumn{2}{|c|}{\textbf{Combined}} \\ \cline{2-7}
+    & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} &$J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}}   \\ \hline
+400 & 4 & -3.4651 & 7 & -2.5073 & 6 & -2.7273  \\ \hline
+550 & 5 & -3.5862 & 7 & -3.0942 & 6 & -3.2695  \\ \hline
+700 & 6 & -3.5142 & 6 & -3.2159 & 7 & -3.2043  \\ \hline
+850 & 9 & -3.6741 & 9 & -3.8413 & 7 & -3.7792  \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[h!]
+  \centering
+\begin{tabular}{|c|c|r|c|r|c|r|}\hline
+\multicolumn{7}{|c|}{\textbf{Chromosome 19}} \\ \hline
+\multirow{2}{*}{\textbf{Resolution}} & \multicolumn{2}{|c|}{\textbf{Upsampled}} &  \multicolumn{2}{|c|}{\textbf{Downsampled}} &  \multicolumn{2}{|c|}{\textbf{Combined}} \\ \cline{2-7}
+    & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} &$J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}}   \\ \hline
+400 & 3 & -3.7135 & 6 & -2.4045 & 6 & -2.5358  \\ \hline
+550 & 5 & -2.8951 & 6 & -2.4154 & 7 & -2.4565  \\ \hline
+700 & 4 & -5.1835 & 6 & -2.9831 & 7 & -3.0044  \\ \hline
+850 & 4 & -4.0183 & 4 & -3.0227 & 5 & -3.3670  \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+  \centering
+\begin{tabular}{|c|c|r|c|r|c|r|}\hline
+\multicolumn{7}{|c|}{\textbf{Chromosome 20}} \\ \hline
+\multirow{2}{*}{\textbf{Resolution}} & \multicolumn{2}{|c|}{\textbf{Upsampled}} &  \multicolumn{2}{|c|}{\textbf{Downsampled}} &  \multicolumn{2}{|c|}{\textbf{Combined}} \\ \cline{2-7}
+    & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} &$J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}}   \\ \hline
+400 & 5 & -2.9799 & 6 & -2.4055 & 6 & -2.5126  \\ \hline
+550 & 6 & -2.9034 & 6 & -2.2939 & 6 & -2.5126  \\ \hline
+700 & 5 & -3.6122 & 7 & -2.6078 & 6 & -2.9454  \\ \hline
+850 & 5 & -4.0085 & 5 & -3.1918 & 7 & -3.1907 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+  \centering
+\begin{tabular}{|c|c|r|c|r|c|r|}\hline
+\multicolumn{7}{|c|}{\textbf{Chromosome 21}} \\ \hline
+\multirow{2}{*}{\textbf{Resolution}} & \multicolumn{2}{|c|}{\textbf{Upsampled}} &  \multicolumn{2}{|c|}{\textbf{Downsampled}} &  \multicolumn{2}{|c|}{\textbf{Combined}} \\ \cline{2-7}
+    & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} &$J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}}   \\ \hline
+400 & 4 & -1.6774 & 5 & -1.5461 & 5 & -1.6076  \\ \hline
+550 & 6 & -1.6447 & 4 & -1.8109 & 5 & -1.7402  \\ \hline
+700 & 5 & -2.1391 & 5 & -1.9207 & 7 & -1.7489  \\ \hline
+850 & 5 & -2.1391 & 5 & -1.8478 & 6 & -2.0233  \\ \hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[h!]
+  \centering
+\begin{tabular}{|c|c|r|c|r|c|r|}\hline
+\multicolumn{7}{|c|}{\textbf{Chromosome 22}} \\ \hline
+\multirow{2}{*}{\textbf{Resolution}} & \multicolumn{2}{|c|}{\textbf{Upsampled}} &  \multicolumn{2}{|c|}{\textbf{Downsampled}} &  \multicolumn{2}{|c|}{\textbf{Combined}} \\ \cline{2-7}
+    & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} & $J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}} &$J$ & \multicolumn{1}{|c|}{\textbf{$\mathcal{L}$}}   \\ \hline
+400 & 7 & -2.1946 & 4 & -1.7142 & 3 & -1.9641  \\ \hline
+550 & 7 & -2.2315 & 5 & -2.1204 & 4 & -2.3481  \\ \hline
+700 & 7 & -2.7416 & 6 & -2.4106 & 5 & -2.5080  \\ \hline
+850 & 8 & -2.4068 & 8 & -2.4156 & 7 & -2.3680  \\ \hline
+\end{tabular}
+\end{table}
+
+
+%\begin{table}[h!]
+%  \centering
+%\begin{tabular}{|@{}c@{}|@{}l@{}|@{}c@{}|@{}c@{}|} \hline
+%\centering
+
+%\multicolumn{4}{|c|}{\textbf{Chromosome 1}} \\ \hline
+%\textbf{Resolution} & \textbf{Data Type} &  \textbf{\# of Components} & \textbf{Likelihood} \\ \hline %\cline{2-7}
+  
+%\multirow{3}{*}{\textbf{300}} & Downsampled & 7 & -0.1143  \\ \cline{2-4}
+% & Upsampled & 7 & -0.1143  \\ \cline{2-4}
+% & Combined & 7 & -0.1143  \\ \hline
+
+%\multirow{3}{*}{\textbf{400}} & Downsampled & 7 & -0.1143  \\ \cline{2-4}
+% & Upsampled & 7 & -0.1143  \\ \cline{2-4}
+% & Combined & 7 & -0.1143  \\ \hline
+
+
+%\end{tabular}
+%\end{table}
+
+
+
+

@@ -1,0 +1,238 @@
+\chapter{Datasets}
+\label{ap:appendData}
+
+\begin{fquote}[{\small{F. Mosteller, S. Fienberg, R. Rourke}}] Although we often hear that data speak for themselves, their voices can be soft and sly.  \fqsource{{                              from Beginning Statistics with Data Analysis}} \end{fquote} 
+
+\vspace{1cm}
+
+\begin{synopsis}
+This chapter just presents the visualization of the datasets used in this thesis. There were two different chromosomal aberrations dataset in two different resolutions: 400 and 850. Here, the chromosomal aberrations in resolution 400 is depicted for the whole genome while the chromosomal aberrations for dataset in resolution 850 is depicted chromosomewise because of large dimension of dataset. Each row represents one sample of the aberrations pattern for a cancer patient and each column represents one of the chromosome bands (regions). $\overline{X}=(X_{ij})$, $X_{ij}\in \{0,1\}$. In each figure dark color denotes the presence of aberrations and the white color denotes the absence of chromosomal aberrations.
+\end{synopsis}
+
+\clearpage
+
+% \section{Genome in Resolution 400}
+% \label{s:wholegenomedata}
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/data/genome393}
+\caption[]{Genome in Resolution 400. X-axis are spatial co-ordinates of the chromosome regions. In resolution 400, there are 393 different regions. Y-axis are the cancer patients numbering 4590.} \label{Fig:genome303}
+\end{figure}
+
+
+
+% \section{Each Chromosome in Resolution 850}
+% \label{s:chromosomewisedata}
+
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[width=0.65\textwidth]{figures/data/datachr1dm850}
+% \caption[]{Chromosome 1 in resolution 850. Number of Samples is 3836 and data dimension is 63.} \label{Fig:datachr1dm850}
+% \end{figure}
+% 
+% 
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[width=0.65\textwidth]{figures/data/datachr2dm850}
+% \caption[]{Chromosome 2 in resolution 850. Number of Samples is 2006 and data dimension is 62.} \label{Fig:datachr2dm850}
+% \end{figure}
+% 
+% \clearpage
+% 
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[width=0.65\textwidth]{figures/data/datachr3dm850}
+% \caption[]{Chromosome 3 in resolution 850. Number of Samples is 2769 and data dimension is 62.} \label{Fig:datachr3dm850}
+% \end{figure}
+% 
+% 
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[width=0.65\textwidth]{figures/data/datachr4dm850}
+% \caption[]{Chromosome 4 in resolution 850. Number of Samples is 1486 and data dimension is 47.} \label{Fig:datachr4dm850}
+% \end{figure}
+% 
+% \clearpage
+% 
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[width=0.65\textwidth]{figures/data/datachr5dm850}
+% \caption[]{Chromosome 5 in resolution 850. Number of Samples is 2656 and data dimension is 45.} \label{Fig:datachr5dm850}
+% \end{figure}
+% 
+% 
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[width=0.65\textwidth]{figures/data/datachr6dm850}
+% \caption[]{Chromosome 6 in resolution 850. Number of Samples is 2401 and data dimension is 48.} \label{Fig:datachr6dm850}
+% \end{figure}
+% 
+% \clearpage
+% 
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[width=0.65\textwidth]{figures/data/datachr7dm850}
+% \caption[]{Chromosome 7 in resolution 850. Number of Samples is 3400 and data dimension is 44.} \label{Fig:datachr7dm850}
+% \end{figure}
+% 
+% 
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[width=0.65\textwidth]{figures/data/datachr8dm850}
+% \caption[]{Chromosome 8 in resolution 850. Number of Samples is 3732 and data dimension is 40.} \label{Fig:datachr8dm850}
+% \end{figure}
+% 
+% \clearpage
+% 
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[width=0.65\textwidth]{figures/data/datachr9dm850}
+% \caption[]{Chromosome 9 in resolution 850. Number of Samples is 1985 and data dimension is 43.} \label{Fig:datachr9dm850}
+% \end{figure}
+% 
+% 
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[width=0.65\textwidth]{figures/data/datachr10dm850}
+% \caption[]{Chromosome 10 in resolution 850. Number of Samples is 1168 and data dimension is 42.} \label{Fig:datachr10dm850}
+% \end{figure}
+% 
+% \clearpage
+% 
+% \begin{figure}[h!]
+% \centering
+% \centering
+% \includegraphics[width=0.65\textwidth]{figures/data/datachr11dm850}
+% \caption[]{Chromosome 11 in resolution 850. Number of Samples is 2045 and data dimension is 36.} \label{Fig:datachr11dm850}
+% \end{figure}
+% 
+% 
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[width=0.65\textwidth]{figures/data/datachr12dm850}
+% \caption[]{Chromosome 12 in resolution 850. Number of Samples is 2721 and data dimension is 41.} \label{Fig:datachr12dm850}
+% \end{figure}
+% 
+% \clearpage
+% 
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[width=0.65\textwidth]{figures/data/datachr13dm850}
+% \caption[]{Chromosome 13 in resolution 850. Number of Samples is 1524 and data dimension is 36.} \label{Fig:datachr13dm850}
+% \end{figure}
+% 
+% 
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[width=0.65\textwidth]{figures/data/datachr14dm850}
+% \caption[]{Chromosome 14 in resolution 850. Number of Samples is 1175 and data dimension is 32.} \label{Fig:datachr14dm850}
+% \end{figure}
+% 
+% \clearpage
+% 
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[width=0.65\textwidth]{figures/data/datachr15dm850}
+% \caption[]{Chromosome 15 in resolution 850. Number of Samples is 1220 and data dimension is 32.} \label{Fig:datachr15dm850}
+% \end{figure}
+% 
+% 
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[width=0.65\textwidth]{figures/data/datachr16dm850}
+% \caption[]{Chromosome 16 in resolution 850. Number of Samples is 1362 and data dimension is 25.} \label{Fig:datachr16dm850}
+% \end{figure}
+% 
+% \clearpage
+% 
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[width=0.65\textwidth]{figures/data/datachr17dm850}
+% \caption[]{Chromosome 17 in resolution 850. Number of Samples is 2716 and data dimension is 24.} \label{Fig:datachr17dm850}
+% \end{figure}
+% 
+% 
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[width=0.65\textwidth]{figures/data/datachr18dm850}
+% \caption[]{Chromosome 18 in resolution 850. Number of Samples is 1675 and data dimension is 20.} \label{Fig:datachr18dm850}
+% \end{figure}
+% 
+% \clearpage
+% 
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[width=0.65\textwidth]{figures/data/datachr19dm850}
+% \caption[]{Chromosome 19 in resolution 850. Number of Samples is 1591 and data dimension is 19.} \label{Fig:datachr19dm850}
+% \end{figure}
+% 
+% 
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[width=0.65\textwidth]{figures/data/datachr20dm850}
+% \caption[]{Chromosome 20 in resolution 850. Number of Samples is 2598 and data dimension is 20.} \label{Fig:datachr20dm850}
+% \end{figure}
+% 
+% \clearpage
+% 
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[width=0.65\textwidth]{figures/data/datachr21dm850}
+% \caption[]{Chromosome 21 in resolution 850. Number of Samples is 890 and data dimension is 14.} \label{Fig:datachr21dm850}
+% \end{figure}
+% 
+% 
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[width=0.65\textwidth]{figures/data/datachr22dm850}
+% \caption[]{Chromosome 22 in resolution 850. Number of Samples is 987 and data dimension is 16.} \label{Fig:datachr22dm850}
+% \end{figure}
+
+
+
+
+
+
+
+
+
+
+% \begin{table}[h!]
+%   \centering
+% %\begin{tabular}{|c|c|c|c|c|c|c|}
+% \begin{tabular}{|@{}c@{}|@{}c@{}|@{}c@{}|@{}c@{}|@{}c@{}|@{}c@{}|@{}c@{}|}\hline
+% %\centering
+% \multicolumn{7}{|c|}{\textbf{Chromosome 1}} \\ \hline
+% \multirow{2}{*}{\textbf{Resolution}} & \multicolumn{2}{|c|}{\textbf{Upsampled}} &  \multicolumn{2}{|c|}{\textbf{Downsampled}} &  \multicolumn{2}{|c|}{\textbf{Combined}} \\ \cline{2-7}
+%     & Components & Likelihood & Components & Likelihood & Components & Likelihood   \\ \hline
+% 300 & 7 & -0.1143 & 7 & -0.1143 & 7 & -0.1143  \\ \hline
+% 300 & 7 & -0.1143 & 7 & -0.1143 & 7 & -0.1143  \\ \hline
+% \end{tabular}
+% \end{table}
+% 
+% I am a M.Sc. student at Helsinki University of Technology  doing the master's programme in Machine Learning and Data Mining (Macadamia).
+% \begin{table}[h!]
+%   \centering
+% \begin{tabular}{|@{}c@{}|@{}l@{}|@{}c@{}|@{}c@{}|} \hline
+% %\centering
+% 
+% \multicolumn{4}{|c|}{\textbf{Chromosome 1}} \\ \hline
+% \textbf{Resolution} & \textbf{Data Type} &  \textbf{\# of Components} & \textbf{Likelihood} \\ \hline %\cline{2-7}
+%   
+% \multirow{3}{*}{\textbf{300}} & Downsampled & 7 & -0.1143  \\ \cline{2-4}
+%  & Upsampled & 7 & -0.1143  \\ \cline{2-4}
+%  & Combined & 7 & -0.1143  \\ \hline
+% 
+% \multirow{3}{*}{\textbf{400}} & Downsampled & 7 & -0.1143  \\ \cline{2-4}
+%  & Upsampled & 7 & -0.1143  \\ \cline{2-4}
+%  & Combined & 7 & -0.1143  \\ \hline
+% 
+% 
+% \end{tabular}
+% \end{table}
+
+
+
+

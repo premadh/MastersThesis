@@ -1,0 +1,348 @@
+\documentclass[a4paper,12pt,oneside]{book}
+
+% packages
+\usepackage[english,finnish]{babel}	% hyphenation
+%\usepackage[OT1]{fontenc}
+\usepackage[T1]{fontenc} 
+%\usepackage{graphics}
+%\usepackage{tikz}
+% Unicode as the input method (use a modern text editor!)
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}			% mathematical symbols
+\usepackage{array}			% Compressed tables
+\usepackage{textcomp}			% currency symbols
+\usepackage{longtable}			% tabular environments over several pages
+\usepackage{tabularx}			% tabular with intelligent col width
+\usepackage{setspace}			% row spacing single/onehalfe/double spacing
+\usepackage{verbatim}			% comments etc.
+\usepackage{multirow}			% spanning multiple row/column
+\usepackage{colortbl}			% add color to tables panels and rules
+\usepackage{caption}			% for captions
+\usepackage{amsfonts}			% for more fonts
+\usepackage{natbib}			% for changing referentions
+\usepackage{fancyhdr}			% for fancy headers
+\usepackage{noReferences}		% stylefile noReferences.sty required in working directory .. to remove default bibliography
+%\usepackage{type1cm}			% Scaleable fonts
+%\usepackage{amssymb}			% (more) mathematical symbols
+%\usepackage{mathptmx}                  % times roman t1 font
+%\usepackage{styles/authordate1-4_2}	% style to use for citation format
+
+\usepackage{lastpage}
+
+% --- 1. Use this for colorful hyperlinks ---
+%\usepackage[pdfpagemode=None,colorlinks=true,urlcolor=red,linkcolor=blue,citecolor=red,pdfstartview=FitH]{hyperref}  % colorful hyperlinks
+% --- 2. Use this for "invisible" hyperlinks (for printing) ---
+\usepackage[pdfpagemode=None,pdfborder=0,pdfstartview=FitH]{hyperref} 	% invisible hyperlinks
+%% with latex
+\usepackage[dvips]{graphicx}		% import graphics (latex/eps)
+%% with pdflatex
+%\usepackage[pdftex]{graphicx}		% import graphics (pdflatex/pdf)
+\usepackage{rotating}			% package to have rotated tables
+
+%\usepackage{cite}
+% document and pdf information
+\author{Prem Raj Adhikari}
+\title{Mixture modelling approach to multi-scale and multi-resolution modeling of binary data}
+\hypersetup{
+    pdftitle={Mixture Modelling of Multiresolution 0-1 Data},
+    pdfauthor={Prem Raj Adhikari},
+    pdfkeywords={mixture models, multiresolution data, 0-1 data, chromosomal aberration, upsampling, downsampling, cancer genetics, amplifications}
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdfsubject={Masters Thesis},   % subject of the document
+    pdfcreator={Prem Raj Adhikari},   % creator of the document
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=black,          % color of internal links
+    citecolor=black,        % color of links to bibliography
+    filecolor=black,      % color of file links
+    urlcolor=black,           % color of external links
+  }
+%\pdfadjustspacing=1 			% force pdflatex do same spacing as latex
+
+% some page setup
+
+\renewcommand{\textfraction}{0}		% minimum amount of text on page (0-1%)
+\renewcommand{\topfraction}{1}    	% allowed space for floats on top of page (0-1)
+\renewcommand{\bottomfraction}{1} 	% allowed space for floats on bottom of page (0-1)
+\renewcommand{\arraystretch}{1.1}	% tables should also have increased line spacing (% of rows)
+%\renewcommand{\tabcolsep}{1.0}		% (% of columns)
+
+% margins
+\oddsidemargin 0.45in  			%odd (right) pages left margin
+\evensidemargin 0.45in 			%even (left) pages left margin
+\textwidth = 5.5in
+\textheight = 8.4in
+
+% own commands
+\newcommand{\tableheader}[1]{\emph{#1}}
+\newcommand{\paraheader}[1]{\textbf{#1}}
+\newcommand{\tablecaption}[1]{\caption{#1}\vspace{4mm}}
+\newcommand{\noun}[1]{\textsc{#1}}
+%\newcommand{\bold}[1]{\textbf{#1}}
+\newcommand{\myurl}[1]{\texttt{#1}}
+
+
+\captionsetup{width=.75\textwidth}
+%\captionsetup{justification=left}
+\captionsetup{margin={1.0cm,1.0cm}}
+\captionsetup{indention=0pt}
+
+\makeatletter
+\def\thickhrulefill{\leavevmode \leaders \hrule height 1ex \hfill \kern \z@}
+\def\@makechapterhead#1{%
+  %\vspace*{50\p@}%
+  \vspace*{11\p@}%
+  {\parindent \z@ \centering \reset@font
+        \thickhrulefill\quad
+        \scshape \@chapapp{} \thechapter
+        \quad \thickhrulefill
+        \par\nobreak
+        \vspace*{11\p@}%
+        \interlinepenalty\@M
+        \hrule
+        \vspace*{11\p@}%
+        \Huge \bfseries #1\par\nobreak
+        \par
+        \vspace*{11\p@}%
+        \hrule
+    %\vskip 40\p@
+    \vskip 90\p@
+  }}
+
+%from here 
+% fquote Fancy Quotation environment
+
+% Use \sloppy to make right-margin easier?
+% Set picture units to be relative to font size (em)?
+% Use begingroup to rest units afterwards?
+
+\newcommand{\fq@author}{}
+\newcommand*{\fqsource}[1]{\gdef\fq@source{#1}}
+\definecolor{quotemark}{gray}{0.7}
+
+\newenvironment{fquote}[1][]{%
+\def\fq@author{#1}% Seem to need to use def for ifx @empty to work
+\let\fq@source\@empty
+  \vspace{1em}
+  \begin{list}{}{%
+      \setlength{\leftmargin}{0.2\textwidth}
+      \setlength{\rightmargin}{0.2\textwidth}
+    }
+    \item[]%
+    \begin{picture}(0,0)(0,0)
+      \put(-15,-5){\makebox(0,0){%
+	  \scalebox{5}{\textcolor{quotemark}{\bfseries``}}}%
+      }
+    \end{picture}\em\ignorespaces%
+}{%
+  \newline%
+  \makebox[0pt][l]{\hspace{0.6\textwidth}%
+  \begin{picture}(0,0)(0,0)
+    \put(15,10){\makebox(0,0){%
+	\scalebox{5}{\textcolor{quotemark}{\rm\bfseries''}}}%
+    }
+  \end{picture}}%
+  \ifx\fq@author\@empty\else\hfill\textsc{--- \fq@author}\fi
+  \ifx\fq@source\@empty\else\\\mbox{}\hfill\textsl{\small\fq@source}\fi
+  \end{list}
+  \ifx\fq@author\@empty\else\vspace{1em}\fi
+}
+%to here
+
+% Synopsis environment (like an abstract for each chapter)
+
+\newcommand{\synopsisname}{Synopsis}
+
+\newenvironment{synopsis}{%
+%  \small
+  \begin{center}%
+    {\bfseries \synopsisname\vspace{-.5em}\vspace{\z@}}%
+  \end{center}%
+  \quotation
+}{%
+  \endquotation
+}
+
+\newenvironment{publish}{%
+  \vfil
+  \center\small\ignorespaces
+  \rule{10em}{0.4pt}\par\noindent\ignorespaces
+}{%
+  \par\noindent\rule[1ex]{10em}{0.4pt}
+  \endcenter
+}
+
+
+\makeatletter
+\renewcommand\bibsection%
+{
+  \section*{\refname
+    \@mkboth{\MakeUppercase{\refname}}{\MakeUppercase{\refname}}}
+}
+
+\makeatother
+\fancyhf{} % delete current setting for header and footer
+\fancyhead{} % get rid of headers on plain pages
+%\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+\fancyhead[RE]{\sffamily\nouppercase{\rightmark} }
+\fancyhead[LO]{\sffamily\nouppercase{\leftmark} }
+%\fancyfoot[RO, LE] {\thepage}
+\fancyfoot[C]{\thepage}
+%\headrulewidth 0.4pt
+%\footrulewidth 0 pt
+
+%\hyphenpenalty=100000
+
+\begin{document}
+%\hyphenation{0-1}
+\frontmatter %cover pages
+
+	%\pagestyle{plain}
+	\selectlanguage{english} 	%from the selected language choose one
+
+	% COVER PAGE
+	\thispagestyle{empty} 		%no headers, feet, or numbering
+
+	\begin{flushleft}
+	\includegraphics[bb=0.7cm 0.7cm 2cm 3cm, scale = .7]{figures/aaltologo}
+	
+	\vspace{-1.65cm}
+	
+	\hspace{2.3cm} Aalto University   \\
+	\hspace{2.3cm} School of Science and Technology \\
+	\hspace{2.3cm} Faculty of Information and Natural Sciences \\
+	\hspace{2.3cm} Department of Information and Computer Science \\
+	\end{flushleft}
+	\vspace{2cm}
+
+	\begin{flushleft}
+	\large \bf Prem Raj Adhikari \\
+	\end{flushleft}
+	
+	\vspace{1cm}
+	
+	\begin{flushleft}
+	\LARGE \bf Mixture Modelling of Multiresolution \mbox{0-1} Data
+	
+	\end{flushleft}
+	\vspace{5.0cm} 
+	
+	\begin{flushleft}
+	Master's Thesis submitted in partial fulfillment of the requirements for the degree of Master of Science in Technology.
+	\end{flushleft}
+	\vspace{0.2cm}
+	
+	\begin{flushleft}
+	Espoo, November 29, 2010
+	\end{flushleft}
+	\vspace{0.5cm}
+	
+	\begin{flushleft}
+	\begin{tabular}{@{}ll}
+	Supervisor: \hspace{1.0cm} & Professor Samuel Kaski \\
+	Instructor: & Jaakko Hollmén, D.Sc. (Tech.) 
+	\end{tabular}
+	\end{flushleft}
+
+\clearpage
+
+% ABSTRACT ENGLISH
+\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{Abstract}
+\input{src/abstract.tex}
+
+\clearpage
+
+\renewcommand{\arraystretch}{1.1}	%set value to best one
+\parindent 1em 				%new paragraph indentation 1 M
+\parskip 0pt 				%vertical space inserted between paragraphs
+
+% ACKNOWLEDGMENTS
+% one-and-a-half row spacing (ACK)
+\onehalfspacing
+\pagestyle{plain}
+\addcontentsline{toc}{chapter}{Acknowledgments}
+\input{src/acknowledgments.tex}
+
+\clearpage
+
+\parindent 1em 				%new paragraph indentation 1 M
+
+% single row spacing (TOC)
+%\singlespacing
+% TABLE OF CONTENTS
+
+%\addcontentsline{}{}{Table of Contents}
+
+\tableofcontents
+\addcontentsline{toc}{chapter}{Table of Contents}
+
+\clearpage
+
+% one-and-a-half row spacing (until end)
+\onehalfspacing
+%\doublespacing
+% ABBREVIATIONS
+%\listoffigures
+\addcontentsline{toc}{chapter}{Abbreviations}
+\input{src/abbreviations.tex}
+
+\clearpage
+
+% LIST OF FIGURE
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+\clearpage
+
+% LIST OF TABLES
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+\label{lastoffront}
+\clearpage
+
+% THESIS
+\mainmatter 			%content pages
+\pagestyle{fancy} 		%running headings on each page
+%\pagestyle{fancy}
+
+\input{src/introduction.tex} 		%chap 1
+
+\input{src/mixmodels.tex}		%chap 3
+
+\input{src/sampling.tex}		%chap 4
+
+\input{src/experiments.tex}		%chap 5
+
+\input{src/conclude.tex}		%chap 6
+\clearpage
+\pagestyle{plain}
+\input{src/bib.tex}		%chap 6
+
+\clearpage 		%start new page flushing all previous data
+
+% BIBLIOGRAPHY
+%\bibliographystyle{styles/authordate1_ti} %modified :: www.ctan.org/tex-archive/biblio/bibtex/contrib/authordate/
+%\bibliographystyle{unsrt}
+% If you want ``REFERENCES'' to be ``Bibliography'', uncomment the following
+%\renewcommand{\bibtitle}{Bibliography}
+%\renewcommand{\bibheadtitle}{Bibliography}
+
+%\bibliography{src/cv}
+%\addcontentsline{toc}{chapter}{Bibliography}
+%\clearpage
+
+% APPENDICES
+\appendix
+\input{src/appendNom.tex}
+\input{src/appendRslt.tex}
+\input{src/appendData.tex}
+
+%\backmatter %ending pages
+%\label{page:lastpage}
+
+% end of document
+\end{document}

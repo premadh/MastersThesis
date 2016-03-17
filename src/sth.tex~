@@ -1,0 +1,369 @@
+\title{A Very Simple \LaTeXe{} Template}
+\author{
+        Vitaly Surazhsky \\
+                Department of Computer Science\\
+        Technion---Israel Institute of Technology\\
+        Technion City, Haifa 32000, \underline{Israel}
+            \and
+        Yossi Gil\\
+        Department of Computer Science\\
+        Technion---Israel Institute of Technology\\
+        Technion City, Haifa 32000, \underline{Israel}
+}
+\date{\today}
+
+\documentclass[12pt]{article}
+\usepackage{tikz}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This is the paper's abstract \ldots
+\end{abstract}
+
+\section{Introduction}
+This is time for all good men to come to the aid of their party!
+
+\paragraph{Outline}
+The remainder of this article is organized as follows.
+Section~\ref{previous work} gives account of previous work.
+Our new and exciting results are described in Section~\ref{results}.
+Finally, Section~\ref{conclusions} gives the conclusions.
+
+\section{Previous work}\label{previous work}
+A much longer \LaTeXe{} example was written by Gil~\cite{Gil:02}.
+
+
+
+% Graphic for TeX using PGF
+% Title: /users/padhikar/Diagrams/bmm.dia
+% Creator: Dia v0.97
+% CreationDate: Fri Oct  8 16:18:27 2010
+% For: padhikar
+% \usepackage{tikz}
+% The following commands are not supported in PSTricks at present
+% We define them conditionally, so when they are implemented,
+% this pgf file will use them.
+\ifx\du\undefined
+  \newlength{\du}
+\fi
+\setlength{\du}{15\unitlength}
+\begin{tikzpicture}
+\pgftransformxscale{1.000000}
+\pgftransformyscale{-1.000000}
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (8.370803\du,0.475000\du)--(8.370803\du,10.106250\du)--(15.095803\du,10.106250\du)--(15.095803\du,0.475000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\pgfpathmoveto{\pgfpoint{8.370823\du}{0.475000\du}}
+\pgfpatharc{270}{180}{0.750000\du and 0.750000\du}
+\pgfusepath{fill}
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\pgfpathmoveto{\pgfpoint{15.845803\du}{1.225000\du}}
+\pgfpatharc{360}{270}{0.750000\du and 0.750000\du}
+\pgfusepath{fill}
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (7.620803\du,1.225000\du)--(7.620803\du,9.356250\du)--(15.845803\du,9.356250\du)--(15.845803\du,1.225000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\pgfpathmoveto{\pgfpoint{7.620803\du}{9.356211\du}}
+\pgfpatharc{180}{90}{0.750000\du and 0.750000\du}
+\pgfusepath{fill}
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\pgfpathmoveto{\pgfpoint{15.095744\du}{10.106250\du}}
+\pgfpatharc{90}{0}{0.750000\du and 0.750000\du}
+\pgfusepath{fill}
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\pgfsetdash{}{0pt}
+\pgfsetmiterjoin
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 1.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (8.370803\du,0.475000\du)--(15.095803\du,0.475000\du);
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 1.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (8.370803\du,10.106250\du)--(15.095803\du,10.106250\du);
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 1.000000}
+\pgfsetstrokecolor{dialinecolor}
+\pgfpathmoveto{\pgfpoint{8.370823\du}{0.475000\du}}
+\pgfpatharc{270}{180}{0.750000\du and 0.750000\du}
+\pgfusepath{stroke}
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 1.000000}
+\pgfsetstrokecolor{dialinecolor}
+\pgfpathmoveto{\pgfpoint{15.845803\du}{1.225000\du}}
+\pgfpatharc{360}{270}{0.750000\du and 0.750000\du}
+\pgfusepath{stroke}
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 1.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (7.620803\du,1.225000\du)--(7.620803\du,9.356250\du);
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 1.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (15.845803\du,1.225000\du)--(15.845803\du,9.356250\du);
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 1.000000}
+\pgfsetstrokecolor{dialinecolor}
+\pgfpathmoveto{\pgfpoint{7.620803\du}{9.356211\du}}
+\pgfpatharc{180}{90}{0.750000\du and 0.750000\du}
+\pgfusepath{stroke}
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 1.000000}
+\pgfsetstrokecolor{dialinecolor}
+\pgfpathmoveto{\pgfpoint{15.095744\du}{10.106250\du}}
+\pgfpatharc{90}{0}{0.750000\du and 0.750000\du}
+\pgfusepath{stroke}
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (11.733303\du,5.485625\du){};
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\pgfpathellipse{\pgfpoint{11.618828\du}{2.930582\du}}{\pgfpoint{1.125555\du}{0\du}}{\pgfpoint{0\du}{0.908946\du}}
+\pgfusepath{fill}
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\pgfsetdash{}{0pt}
+\pgfsetmiterjoin
+\definecolor{dialinecolor}{rgb}{1.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\pgfpathellipse{\pgfpoint{11.618828\du}{2.930582\du}}{\pgfpoint{1.125555\du}{0\du}}{\pgfpoint{0\du}{0.908946\du}}
+\pgfusepath{stroke}
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (11.618828\du,3.125582\du){};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\pgfsetdash{}{0pt}
+\pgfsetbuttcap
+{
+\definecolor{dialinecolor}{rgb}{1.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+% was here!!!
+\pgfsetarrowsend{stealth}
+\definecolor{dialinecolor}{rgb}{1.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (6.070803\du,2.981250\du)--(10.568272\du,2.980582\du);
+}
+\definecolor{dialinecolor}{rgb}{0.819608, 0.854902, 0.976471}
+\pgfsetfillcolor{dialinecolor}
+\pgfpathellipse{\pgfpoint{9.576386\du}{7.418946\du}}{\pgfpoint{1.125555\du}{0\du}}{\pgfpoint{0\du}{0.908946\du}}
+\pgfusepath{fill}
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\pgfsetdash{}{0pt}
+\pgfsetmiterjoin
+\definecolor{dialinecolor}{rgb}{1.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\pgfpathellipse{\pgfpoint{9.576386\du}{7.418946\du}}{\pgfpoint{1.125555\du}{0\du}}{\pgfpoint{0\du}{0.908946\du}}
+\pgfusepath{stroke}
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (9.576386\du,7.613946\du){};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\pgfsetdash{}{0pt}
+\pgfsetbuttcap
+{
+\definecolor{dialinecolor}{rgb}{1.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+% was here!!!
+\pgfsetarrowsend{stealth}
+\definecolor{dialinecolor}{rgb}{1.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (6.095803\du,7.381250\du)--(8.450831\du,7.418946\du);
+}
+\definecolor{dialinecolor}{rgb}{0.819608, 0.854902, 0.976471}
+\pgfsetfillcolor{dialinecolor}
+\pgfpathellipse{\pgfpoint{13.803817\du}{7.343946\du}}{\pgfpoint{1.125555\du}{0\du}}{\pgfpoint{0\du}{0.908946\du}}
+\pgfusepath{fill}
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\pgfsetdash{}{0pt}
+\pgfsetmiterjoin
+\definecolor{dialinecolor}{rgb}{1.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\pgfpathellipse{\pgfpoint{13.803817\du}{7.343946\du}}{\pgfpoint{1.125555\du}{0\du}}{\pgfpoint{0\du}{0.908946\du}}
+\pgfusepath{stroke}
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (13.803817\du,7.538946\du){};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\pgfsetdash{}{0pt}
+\pgfsetbuttcap
+{
+\definecolor{dialinecolor}{rgb}{1.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+% was here!!!
+\pgfsetarrowsend{stealth}
+\definecolor{dialinecolor}{rgb}{1.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (16.820803\du,7.331250\du)--(14.929373\du,7.343946\du);
+}
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\pgfsetdash{}{0pt}
+\pgfsetbuttcap
+{
+\definecolor{dialinecolor}{rgb}{1.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+% was here!!!
+\pgfsetarrowsend{stealth}
+\definecolor{dialinecolor}{rgb}{1.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (11.188096\du,3.770338\du)--(9.915503\du,6.606250\du);
+}
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\pgfsetdash{}{0pt}
+\pgfsetbuttcap
+{
+\definecolor{dialinecolor}{rgb}{1.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+% was here!!!
+\pgfsetarrowsend{stealth}
+\definecolor{dialinecolor}{rgb}{1.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (11.944336\du,3.709838\du)--(13.373086\du,6.504189\du);
+}
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (11.733303\du,5.290625\du){};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (9.690503\du,2.131250\du){Z};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (10.265503\du,2.306250\du){n};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (13.740503\du,9.506250\du){n=1:N};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (23.865503\du,6.481250\du){};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (7.860603\du,6.373750\du){X};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (8.485603\du,6.523750\du){n};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (9.210603\du,6.273750\du){};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (8.848203\du,6.498750\du){1};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (14.335603\du,6.423750\du){X};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (14.885603\du,6.573750\du){n};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (15.985603\du,6.323750\du){};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (15.223203\du,6.573750\du){d};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (23.378103\du,6.681250\du){};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (24.170803\du,9.781250\du){};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (5.090803\du,7.758750\du){ϴ};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (5.090803\du,8.911628\du){};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (5.740803\du,7.958750\du){j};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (6.280803\du,7.816250\du){};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (5.905803\du,7.966250\du){1};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (16.920803\du,7.706250\du){ϴ};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (16.920803\du,8.859128\du){};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (17.620803\du,7.906250\du){jd};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (17.770803\du,7.831250\du){};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (5.895803\du,7.881250\du){};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (5.705803\du,-1.501250\du){};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (5.705803\du,-0.348372\du){};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (5.020803\du,2.831250\du){};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (5.370803\du,3.281250\du){π};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (5.370803\du,4.786906\du){};
+\end{tikzpicture}
+
+\section{Results}\label{results}
+In this section we describe the results.
+
+\section{Conclusions}\label{conclusions}
+We worked hard, and achieved very little.
+
+\bibliographystyle{abbrv}
+\bibliography{main}
+
+\end{document}

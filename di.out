@@ -1,0 +1,49 @@
+\BOOKMARK [0][-]{section*.1}{Abstract}{}
+\BOOKMARK [0][-]{section*.1}{Acknowledgments}{}
+\BOOKMARK [0][-]{chapter*.3}{Table of Contents}{}
+\BOOKMARK [0][-]{chapter*.3}{Abbreviations}{}
+\BOOKMARK [0][-]{chapter*.5}{List of Figures}{}
+\BOOKMARK [0][-]{chapter*.6}{List of Tables}{}
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}
+\BOOKMARK [1][-]{section.1.1}{Machine Learning in Cancer Research}{chapter.1}
+\BOOKMARK [1][-]{section.1.2}{Chromosomal Aberrations}{chapter.1}
+\BOOKMARK [1][-]{section.1.3}{Multiple Resolutions of Genome}{chapter.1}
+\BOOKMARK [1][-]{section.1.4}{Outline of the Thesis}{chapter.1}
+\BOOKMARK [1][-]{section.1.5}{Contributions of the Thesis}{chapter.1}
+\BOOKMARK [0][-]{chapter.2}{Mixture Models and 0-1 data}{}
+\BOOKMARK [1][-]{section.2.1}{0-1 Data}{chapter.2}
+\BOOKMARK [1][-]{section.2.2}{Mixture Models}{chapter.2}
+\BOOKMARK [1][-]{section.2.3}{Expectation Maximization Algorithm}{chapter.2}
+\BOOKMARK [1][-]{section.2.4}{Cross-validation}{chapter.2}
+\BOOKMARK [1][-]{section.2.5}{DNA Copy Number Aberrations Data}{chapter.2}
+\BOOKMARK [1][-]{section.2.6}{Review of Literature on Copy Number Analysis}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.6.1}{Mixture Models in Copy Number Analysis}{section.2.6}
+\BOOKMARK [0][-]{chapter.3}{Sampling Between Different Resolutions}{}
+\BOOKMARK [1][-]{section.3.1}{Upsampling}{chapter.3}
+\BOOKMARK [1][-]{section.3.2}{Downsampling}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.2.1}{OR-function Downsampling}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.2}{Majority Decision Downsampling}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.3}{Length Weighted Downsampling}{section.3.2}
+\BOOKMARK [0][-]{chapter.4}{Experiments and Results}{}
+\BOOKMARK [1][-]{section.4.1}{Software}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.1.1}{BernoulliMix Program Package}{section.4.1}
+\BOOKMARK [1][-]{section.4.2}{DNA Copy Number Aberrations Dataset}{chapter.4}
+\BOOKMARK [1][-]{section.4.3}{Comparison of Downsampling Methods}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.3.1}{Property Models}{section.4.3}
+\BOOKMARK [2][-]{subsection.4.3.2}{Matrix Difference: Frobenius Norm}{section.4.3}
+\BOOKMARK [2][-]{subsection.4.3.3}{Changes in Aberrations}{section.4.3}
+\BOOKMARK [2][-]{subsection.4.3.4}{Frequent Itemsets}{section.4.3}
+\BOOKMARK [2][-]{subsection.4.3.5}{Motivation for Database Integration}{section.4.3}
+\BOOKMARK [1][-]{section.4.4}{Mixture Modelling of Multivariate Bernoulli Distributions}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.4.1}{Model Selection}{section.4.4}
+\BOOKMARK [2][-]{subsection.4.4.2}{Model Structure Selection}{section.4.4}
+\BOOKMARK [2][-]{subsection.4.4.3}{Computational Complexity}{section.4.4}
+\BOOKMARK [2][-]{subsection.4.4.4}{Experimental Design}{section.4.4}
+\BOOKMARK [2][-]{subsection.4.4.5}{Results}{section.4.4}
+\BOOKMARK [2][-]{subsection.4.4.6}{Validation Using Data Resampling approach}{section.4.4}
+\BOOKMARK [0][-]{chapter.5}{Summary and Conclusion}{}
+\BOOKMARK [1][-]{section.5.1}{Summary and Conclusions}{chapter.5}
+\BOOKMARK [1][-]{section.5.2}{Future Work}{chapter.5}
+\BOOKMARK [0][-]{appendix.A}{Chromosome Nomenclature}{}
+\BOOKMARK [0][-]{appendix.B}{Results on Each Chromosome}{}
+\BOOKMARK [0][-]{appendix.C}{Datasets}{}

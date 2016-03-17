@@ -1,0 +1,84 @@
+%%
+%% EXPERIMENTS AND RESULTS
+%%
+\chapter{Experiments and Results}
+\label{c:experiments}
+
+\begin{fquote}[Johann Wolfgang von Goethe]Knowing is not enough; we must apply. \\ Willing is not enough; we must do. \fqsource{{German Writer(1749-1832)}} \end{fquote} 
+
+\begin{synopsis}
+This chapter describes the experiments performed on mixture modelling of Multivariate Bernoulli Distribution on the amplification patterns. The obtained results are analysed and discussed.
+\end{synopsis}
+
+\section{Software:}
+\label{s:software}
+This thesis uses an already defined programme package. Programming the mixture models from scratch and just making them work would consume significant amount of time. Therefore, approach in this thesis was to use a readymade package and analyze the results. This approach provided the time to concernterate the efforts on the machine learning aspects and its application in real world data. Although programming mixture models from scratch would be very educational and precious programming experience, it takes a lot of time and diverges the attention from machine learning which was the primary goal of the thesis.
+
+There are several softwares, both commerical and free, available for finite mixture modelling. Few examples are:
+\begin{itemize}
+ \item MULTIMIX available in http://www.stats.waikato.ac.nz/Staff/maj/multimix/ 
+ \item MIX (Commerical) available in http://icarus.math.mcmaster.ca/peter/mix/mix.html
+ \item AutoClass available in http://ti.arc.nasa.gov/project/autoclass/
+ \item Clustan available in http://www.clustan.com/
+ \item Snob available in http://www.csse.monash.edu.au/~dld/Snob.html
+ \item Mtreemix available in http://mtreemix.bioinf.mpi-sb.mpg.de/
+ \item PyMix available in http://www.pymix.org/pymix/
+ \item em available in http://www.ar.media.kyoto-u.ac.jp/members/david/softwares/em/
+ \item BernoulliMix available in http://www.cis.hut.fi/jhollmen/BernoulliMix/ 
+\end{itemize}
+
+Most of the software packages above were free but had shortcomings of their own. For example, most of them were designed to work with Gaussian distribution. Since our main aim was to model multivariate bernoulli distribution and BernoulliMix provided the all the required features and was freely available. Furthermore, integrating BernoulliMix with other tools such as Matlab \cite{matlab}, Shell Scripting \cite{shellscript}, Perl \cite{perl} and R \cite{rlang} is smooth and unconstrained. 
+
+\subsection{BernoulliMix}
+\label{ss:bmix}
+BernoulliMix \cite {bmixdoc} programme package is an opensource programme package for finite mixture modelling of Multivariate Bernoulli distributions. It is freely available at \href{http://www.cis.hut.fi/jhollmen/BernoulliMix/}{BernoulliMix Homepage}. BernoulliMix, implemented is ANSI C, can be used to model the 0-1 data probabilistically. BernoulliMix has five programs to work with finite mixture models of multivariate Bernoulli Distribution:
+
+\begin{itemize}
+\item \textbf{bmix\_init}: To initialize the mixture models with randomly selected parameters sampled from the uniform distribution of selected range.
+\item \textbf{bmix\_like}: To calculate the likelihood of the data with the mixture model. Likelihood can be calculated either for whole data or each vector separately.
+\item \textbf{bmix\_train}: To train the mixture model from the data using EM algorithm i.e. learn the parameters of the mixture model.
+\item \textbf{bmix\_sample}: To sample data from Mixture Model as the model is generative.
+\item \textbf{bmix\_cluster}: To cluster the data (associating a component distribution with a cluster) with the mixture model by the maximum posterior rule.
+\end{itemize}
+
+Details about the programme package and its use with examples can be obtained from \cite {bmixdoc}. The BernoulliMix programme package was used in conjuction with Matlab, R, Perl and Shell Scripting to garner the results of the experiments.
+
+\section{Dataset}
+\label{s:dataset}
+The dataset provided was a binary (0-1) dataset about DNA amplifications specifying amplification of certain band of chromosome. DNA copy number amplifications are mutations in the DNA structure as discussed in chapter \ref{ch:introduction}. The data was collected by bibliomics survey of 838 journal articles during 1992-2002 by hand without using state-of-the-art text mining techniques \cite {Holl20071} \cite{Myllykangas200815}. The dataset contained the information about the amplification patters of 4590 cancer patients. Each row describes one sample of cancer patient while each column identifies one chromosomal band(region). The amplified chromosomal regions were marked with 1 while and the value 0 defines that the chromosome band is not amplified. Furthermore, information regarding the associated tumor was available with each sample of data. Figure \ref{Fig:data} demonstrates the 100 samples of the data in resolution 393.
+
+
+Data figure goes here.
+
+
+
+
+
+
+Patients who whose chromosomal band had not shown amplification for specific chromosome were not included in the experiments. The ISCN (ISCN 2009: An International System for Human Cytogenetic Nomenclature)nomenclature of chromosome discussed in appendix \ref{ap:nomenclature} divides the chromosome into different resolutions shown in table \ref{Tab:resolution}
+
+\begin{table}[h!]
+  \centering
+\begin{tabular}{ |c|c|c|c| }
+\hline
+  \textbf{S.No} &  \textbf{Resolution} &\textbf{$\#$ Regions} &\textbf{$\#$ Regions in Chr 1 } \\ \hline \hline
+  1& 300 & 317 & 23\\ \hline
+  2& 400 & 393 & 28\\ \hline
+  3& 550 & 555 & 42\\ \hline
+  4& 700 & 759 & 61 \\ \hline
+  5& 850 & 862 & 63 \\ \hline
+\end{tabular}
+\caption{\textit{Number of Chromosome bands(regions) for 5 different resolutions of data studied in the thesis. Included as an example number of bands in chromosome 1 }}
+\label{Tab:resolution}
+\end{table}
+
+The original data was in the resolution 400 i.e. there were 393 chromosomal bands(regions) for the entire genome. The original data was up-scaled to resolution 550, 700 and 850 and down-scaled to 300 bands using the ideas discussed in chapter \ref{ch:sampling}. Bands for specific chromosome were extracted and mixture modelling was preformed on each chromosome. For example: chromosome-1 had 63, 61, 42 and 28 chromosomal bands in resolution 850, 700, 550, 400, and 300 respectively. Similarly, a different set of data was available in resolution 850. The data in resolution 850 was different than that in the resolution 400. Similar to the data in the resolution 400, the data in resolution 850 was down-scaled to resolution 300, 400, 550 and 700. Elementwise AND operation over all the samples in the data results in a zero vector which shows that sophisticated methods and techniques are required for classifying and profiling amplification. 
+
+Through study was performed for every chromosome with every resolution using the finite mixture modelling approach.
+
+\section{Model Selection}
+\label{s:modelselection}
+Model selection is a process of selecting best model from a set of possible models that optimally fits the data. It is one of the most difficult problems in machine learning and there exist no well defined rules to select the model. Often, model selection depends on the use of some prior information and `rule of thumb' \footnote{Defination from Merriam-Webster Online Dictionary : Rule of thumb - a general principle regarded as roughly correct but not intended to be scientifically accurate}. For example, consider a case in in polynomial curve fitting: the choice among $ax+b$ and $ax^2+bx+c$ is difficult. The concept of underfitting, overfitting, bias-variance dilema(trade-off) are the central issues to be considered in model fitting. The details of these concept can be obtained from Sections 6.1, 9.1 of \cite{bishop}; Sections 6.8, 6.9 of \cite{gruney}; and Sections 2.13, 4.13 of \cite{hykin}. The model selection problem in this thesís is restricted to the number of mixture components in the mixture model. The model fitting is an easy task, suppose in above case
+
+To determine optimal number of components in the mixture model, 10-fold cross-validation technique discussed in chapter \ref{ch:crossvalidation}. The 10-fold stratified cross-validation was used with 10-fold random cross-validation to select the number of components in the mixture model. The cross-validation process was repeated 10-times and the number of mixture c
+

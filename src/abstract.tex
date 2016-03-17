@@ -1,0 +1,49 @@
+%%
+%% ABSTRACT
+%%
+\parindent 0pt
+\parskip 1ex
+
+{\large
+\renewcommand{\arraystretch}{1.0}
+\begin{tabular*}{15.0cm}{l@{\extracolsep{\fill}}r}
+AALTO UNIVERSITY SCHOOL OF   & ABSTRACT OF THE \\
+SCIENCE AND TECHNOLOGY   & MASTER'S THESIS \\
+\end{tabular*}
+}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|l|}
+\hline
+\makebox[4cm][l]{\bf Author:} \hspace{0.4cm} Prem Raj Adhikari \\
+\makebox[4cm][l]{\bf Name of the Thesis:} \hspace{0.4cm} Mixture Modelling of Multiresolution 0-1 Data\\
+\makebox[9.4cm][l]{\makebox[4cm][l]{\bf Date: } \hspace{0.4cm} November 29, 2010}   \\
+\makebox[4cm][l]{\bf Number of pages:} \hspace{0.4cm} \protect\pageref{lastoffront} + \pageref{LastPage} \\
+\hline
+\makebox[12.2cm][l]{\makebox[4cm][l]{\bf Department:} \hspace{0.4cm} Department of Information and Computer Science } \\
+\makebox[12.2cm][l]{\makebox[4cm][l]{\bf Professorship:} \hspace{0.4cm} T-61 Computer and Information Science } \\
+
+\hline
+\makebox[4cm][l]{\bf Supervisor:} \hspace{0.4cm} Professor Samuel Kaski \\
+\makebox[4cm][l]{\bf Instructor:} \hspace{0.4cm} Jaakko Hollmén, D.Sc. (Tech.) \\
+
+\hline
+\parbox[t]{14.5cm}{
+	\parskip0ex
+	\parindent 1em
+	\vskip-4mm
+	\vskip1ex
+%	\onehalfspacing
+Biological systems are complex and measurements in biology are made with high throughput and high resolution techniques often resulting in data in multiple resolutions. Furthermore, ISCN~\cite{iscn} has defined five different resolutions of the chromosome band. Currently, available standard algorithms can only handle data in one resolution at a time. Hence, transformation of the data to the same resolution is inevitable before the data can be fed to the algorithm. Furthermore, comparing the results of an algorithm on data in different resolutions can produce interesting results which aids in determining suitable resolution of data. In addition, experiments in different resolutions can be helpful in determining the appropriate resolution for computational methods. 
+
+In this thesis, one method for upsampling and three different methods of downsampling 0-1 data are proposed, implemented and experiments are performed on different resolutions. Suitability of the proposed methods are validated and the results are compared across different resolutions. The proposed methods produce plausible results showing that the significant patterns in the data are retained in the transformed resolution. Thereafter, the mixture models are trained on the data original data and the results are analyzed. However, machine learning methods such as mixture models require high amounts of data to produce plausible results. Therefore, the major aim of the data transformation procedure was the integration of databases. Hence, two different datasets available in two different resolutions were integrated after transforming them to a single resolution and mixture models were trained on them. Trained models can be used to classify cancers and cluster the data. The results on integrated data showed significant improvements compared with the data in the original resolution.
+
+} \\
+\hline
+\parbox[t]{14.5cm}{
+Keywords: mixture models, multiresolution data, 0-1 data, model selection, cross-validation, chromosomal aberration, upsampling, downsampling, cancer genetics.
+\vskip1ex
+} \\
+\hline
+\end{tabular}
+
+\newpage

@@ -1,0 +1,55 @@
+%%
+%% ABSTRACT
+%%
+\parindent 0pt
+\parskip 1ex
+
+{\large
+\renewcommand{\arraystretch}{1.0}
+\begin{tabular*}{15.0cm}{l@{\extracolsep{\fill}}r}
+HELSINKI UNIVERSITY & ABSTRACT OF THE \\
+OF TECHNOLOGY       & MASTER'S THESIS \\
+\end{tabular*}
+}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|l|}
+\hline
+\makebox[4cm][l]{\bf Author:} Luis Gabriel De Alba Rivera \\
+\makebox[4cm][l]{\bf Name of the Thesis:} Modeling and Profiling people's way of living:\\
+\makebox[4cm][l]{} A data mining approach to a health survey \\
+\makebox[9.4cm][l]{\makebox[4cm][l]{\bf Date: } November 19, 2009} {\bf Number of pages:} ix + 84 \\
+
+\hline
+\makebox[12.2cm][l]{\makebox[4cm][l]{\bf Department:} Department of Information and Computer Science } \\
+\makebox[12.2cm][l]{\makebox[4cm][l]{\bf Professorship:} T-61 Computer and Information Science } \\
+
+\hline
+\makebox[4cm][l]{\bf Supervisor:} Professor Erkki Oja \\
+\makebox[4cm][l]{\bf Instructor:} Jaakko Hollmén, D.Sc. (Tech.) \\
+
+\hline
+\parbox[t]{14.5cm}{
+	\parskip0ex
+	\parindent 1em
+	\vskip-4mm
+	\vskip1ex
+%	\onehalfspacing
+In this work a data set consisting of several variables and hundreds of thousands of records is analyzed using different methodologies. The data is the result of a survey that valuates different areas and characteristics that affect directly or indirectly the health and life styles of the Finnish population. The survey was organized by various institutions from Finland.
+
+Firstly, the data set is analyzed, parsed and organized in an effective structure. This process consists in recovering the valid answers from the survey, cleaning the data, removing outliers and filling up the database. The database is structured in a way that facilitates access and analysis of complex queries.
+
+Secondly, the following step consists on a data exploratory analysis where the data is studied by means of graphical visualization and basic statistics. During this process the variables are analyzed, alone and combined, finding relevant information in them. Depending on the involved variables specific plots are generated. Restrictive queries are used to extract significant information of relevant parameters.
+
+Thirdly, after the exploratory analysis the variables are modeled using different approaches. The objective is to come up with the best set of regression parameters to represent each independent variable. Simple linear and polynomial regression, variable selection algorithms as SISAL, neural network structures and principal components transformations are used for this purpose. The attributes of the models are compared to mean predictors of all variables to confirm improvements. Special attention is put on variables with the most missing points.
+
+In conclusion, the exploratory analysis shows how fast and simple it is to extract relevant information from a data set if it is structured correctly; interesting facts are discovered by this approach. The regression analysis is an appropriate methodology to model the variables. The models show a considerable improvement over the mean predictor; for some variable notably simple setups are sufficient. Results for all methods are displayed in easy to follow tables. Strategies for future work are also presented.
+} \\
+\hline
+\parbox[t]{14.5cm}{
+Keywords: modeling, profiling, data mining, exploratory analysis, visualization, machine learning, regression, variable selection, healthcare study, life style, survey.
+\vskip1ex
+} \\
+\hline
+\end{tabular}
+
+\newpage

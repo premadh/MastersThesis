@@ -1,0 +1,34 @@
+%%
+%% SUMMARY AND CONCLUSIONS
+%%
+\chapter{Summary and Conclusion}
+\label{ch:summary}
+
+\begin{fquote}[Sir Winston Churchill]Now this is not the end. It is not even the beginning of the end. But it is, perhaps, the end of the beginning. \fqsource{After Victory at El Alamein (1942)} \end{fquote} 
+\begin{synopsis}
+This chapter presents a summary of the work, draws conclusions from experimental results and discusses future areas of research.
+\end{synopsis}
+
+\section{Summary and Conclusions}
+\label{s:summary}
+
+
+
+\section{Future Works}
+\label{s:future}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width = 0.75\textwidth]{figures/problem}
+\caption[Problem studied in the Master's thesis]{Schematic representation of problem studied in the Master's thesis and its seamless extension to the problem to be studied in future.} \label{Fig:problem}
+\end{figure}
+
+As shown in Figure \ref{Fig:problem} this thesis focused on data transformation methods for changing the representation of the data in different resolution with the goal of database integration. The mixture modelling approach was then applied to the data in a single resolution. However, the field still lacks many methods and algorithms that can enhance the analysis of data in multiple resolutions without the need for transformation between different resolutions. The field seeks the  design and implementation of a multiresolution mixture model to work with multiple resolution of the data simultaneously as shown in Figure \ref{Fig:solution}. 
+%\clearpage
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width = 0.9\textwidth]{figures/modeltry}
+\caption[Solution studied in Master's thesis]{Pictorial representation of the solution to the problem shown in Figure \ref{Fig:problem} achieved in Master's thesis and the possible solution for future studies.} \label{Fig:solution}
+\end{figure}
+The problem was studied only at chromosome level and the data transformation process was defined only in different resolutions of the chromosome. In the future work, the data transformation process can be defined until the very minute biological details such as genes.The simple upsampling technique used in the thesis also needs further investigation and inferencing techniques can be implemented. Figure \ref{Fig:solution} shows the solution studied in Master's thesis and the possible directions for the future research in the designing of the multiresolution mixture model. In further work the probabilistic models, such as mixture models and probabilistic time series models, such as Hidden Markov Models(HMMs) can be extended to cope with data in multiple resolutions. This requires changing the model representation, but it is not straightforward to see how inference and learning procedures should be changed for best results. The designed model should provide a novel means to work on the multiple resolutions of the chromosomal data. Since multiresolution data occurs normally in various fields such as telecommunication industry, image processing; design and implementation of multiresolution mixture will provide other related fields also an opportunity to use the mixture models.

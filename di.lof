@@ -1,0 +1,41 @@
+\select@language {finnish}
+\select@language {english}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces G-banding patterns in different resolution}}{5}{figure.caption.9}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Different types of distributions}}{11}{figure.caption.10}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces A graphical mixture model of mixture of Bernoulli.\relax }}{15}{figure.caption.13}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces $k-$fold cross-validation}}{22}{figure.caption.15}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Sampling in Multiple Resolution}}{28}{figure.caption.16}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Upsampling}}{29}{figure.caption.17}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces OR-function downsampling}}{31}{figure.caption.19}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Majority decision downsampling}}{32}{figure.caption.20}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Weighted downsampling}}{33}{figure.caption.21}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Aberrations in chromosome 17 in resolution 400}}{38}{figure.caption.22}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Aberrations in chromosome 17 in resolution 850}}{39}{figure.caption.23}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Aberrations in each column}}{41}{figure.caption.26}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Mean of differences in aberrations in each column}}{42}{figure.caption.27}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Number of aberrations produced}}{43}{figure.caption.29}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Mean differences in the aberrations produced}}{44}{figure.caption.30}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Frobenius norm}}{45}{figure.caption.31}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Number of \unhbox \voidb@x \hbox {0-1} changes}}{46}{figure.caption.32}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Differences in \unhbox \voidb@x \hbox {0-1} Changes}}{47}{figure.caption.33}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Number of samples of data in resolution 850}}{50}{figure.caption.35}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Model selection in chromosome 5 and resolution 550}}{51}{figure.caption.36}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Number of unique samples of data in resolution 400}}{52}{figure.caption.37}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Model selection in chromosome 17 and resolution 400}}{56}{figure.caption.38}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Model selection in chromosome 17 and resolution 850}}{57}{figure.caption.39}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Final Trained Model in chromosome 17 and resolution 400}}{58}{figure.caption.41}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Final Trained Model in chromosome 17 and resolution 850}}{59}{figure.caption.42}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Experimental procedure}}{61}{figure.caption.44}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Parallel co-ordinates plot of likelihood of integrated data}}{64}{figure.caption.47}
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Model selection in resampled data}}{66}{figure.caption.48}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Problem studied in the Master's thesis}}{70}{figure.caption.50}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Regions in chromosome 17 and resolution 400}}{82}{figure.caption.53}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Genome in Resolution 400}}{91}{figure.caption.76}

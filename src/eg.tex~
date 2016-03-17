@@ -1,0 +1,156 @@
+\documentclass[english,11pt,a4paper]{book}
+\usepackage[T1]{fontenc}
+%\usepackage[LFE,LAE,OT1]{fontenc}
+\usepackage[finnish,english]{babel}
+\usepackage{ifthen, calc}
+%\usepackage[english]{babel}   % changed to English to get blindtext package working
+\usepackage{underlin}
+\usepackage{lmodern}
+\usepackage{blindtext}
+\usepackage{color}
+\newboolean{English}
+\newboolean{Finnish}
+
+\DeclareOption{english}{\setboolean{English}{true}\setboolean{Finnish}{false}}
+\DeclareOption{finnish}{\setboolean{Finnish}{true}\setboolean{English}{false}}
+\ExecuteOptions{english}
+\newcommand{\uselogo}[3]{%
+\IfEnglish{\renewcommand*{\@@ltologo}{\aaltologo[eng]{#1}{#2}{#3}}}{}%
+\IfFinnish{\renewcommand*{\@@ltologo}{\aaltologo[fin]{#1}{#2}{#3}}}{}%
+}%
+
+%\pagestyle{underline}
+
+\definecolor{aaltoyellow}{cmyk}{0,.06,1,0}%
+\definecolor{aaltored}{cmyk}{0,.80,.70,0}%
+\definecolor{aaltoblue}{cmyk}{1,.30,0,0}%
+\definecolor{aaltogrey}{cmyk}{.10,.11,.13,.36}%
+\newcommand*{\LogoSymbColor}{black}%
+\newcommand*{\LogoSymbol}{}%
+\newcommand*{\LogoUniv}{}%
+\newcommand*{\LogoTxt}{}%
+\newcommand*{\LogoTxtColor}{aaltogrey}% Default for colour logo
+\newlength{\SymbSpcLeft}%
+\newlength{\SymbSpcRight}%
+\newlength{\LogoTxtWidth}%
+%
+% Syntax:
+% \aaltologo[fin|eng|swe]{red|blue|yellow|black}{?|!|"|''}{tkk|hse|taik}
+\newcommand{\aaltologo}[4][fin]{%
+{% An extra set of braces is required to limit the scope of the font
+% Set the colour parameters
+\ifthenelse{\equal{#2}{black}}{\renewcommand*{\LogoTxtColor}{black}}{%
+\ifthenelse{\equal{#2}{red}}{\renewcommand*{\LogoSymbColor}{aaltored}}{%
+\ifthenelse{\equal{#2}{blue}}{\renewcommand*{\LogoSymbColor}{aaltoblue}}{%
+\ifthenelse{\equal{#2}{yellow}}{\renewcommand*{\LogoSymbColor}{aaltoyellow}}{%
+\PackageError{aaltothesis}%
+     {Options are red, blue, yellow, or black}%
+     {Use red, blue, yellow, or black instead of #2.}%
+}}}}%
+% Set the symbol ?, ! or "
+\ifthenelse{\equal{#3}{?}}{%
+\renewcommand{\LogoSymbol}{?}%
+\setlength{\SymbSpcLeft}{-12pt}%
+\setlength{\SymbSpcRight}{-2pt}%
+}{%
+\ifthenelse{\equal{#3}{!}}{%
+\renewcommand*{\LogoSymbol}{!}%
+\setlength{\SymbSpcLeft}{-7.4pt}%
+\setlength{\SymbSpcRight}{0pt}%
+}{%
+\ifthenelse{\equal{#3}{"}\or\equal{#3}{''}}{%
+% '' had to be made of 2 ' characters since " looked different in helvetica
+\renewcommand{\LogoSymbol}{'\hspace{-3.5pt}'}%
+\setlength{\SymbSpcLeft}{-10pt}%
+\setlength{\SymbSpcRight}{0pt}%
+}{%
+\PackageError{aaltothesis}%
+     {Options are ?, !, ", or ''}%
+     {Use character ?, !, ", or '' instead of #3.}%
+}}}%
+%
+\usefont{T1}{phv}{b}{n}%
+\fontsize{10}{11.1}\selectfont%
+% Set up the text, depending on the language and school
+\ifthenelse{\equal{#1}{fin}}{% Finnish
+\renewcommand*{\LogoUniv}{Aalto-yliopisto}
+\ifthenelse{\equal{#4}{tkk}}{%
+\renewcommand*{\LogoTxt}{Teknillinen korkeakoulu}
+\settowidth{\LogoTxtWidth}{Teknillinen korkeakoulu}%
+}{%
+\ifthenelse{\equal{#4}{hse}}{%
+\renewcommand*{\LogoTxt}{Kauppakorkeakoulu}%
+\settowidth{\LogoTxtWidth}{Kauppakorkeakoulu}%
+}{%
+\ifthenelse{\equal{#4}{taik}}{%
+\renewcommand*{\LogoTxt}{Taideteollinen korkeakoulu}%
+\settowidth{\LogoTxtWidth}{Taideteollinen korkeakoulu}%
+}{%
+\PackageError{aaltothesis}%
+     {Options are tkk, hse, or taik}%
+     {Use tkk, hse, or taik instead of #4.}%
+}}}}{%
+\ifthenelse{\equal{#1}{eng}}{% English
+\renewcommand*{\LogoUniv}{Aalto University}%
+\ifthenelse{\equal{#4}{tkk}}{%
+\renewcommand*{\LogoTxt}{School of Science and Technology}%
+\settowidth{\LogoTxtWidth}{School of Science}%
+}{%
+\ifthenelse{\equal{#4}{hse}}{%
+\renewcommand*{\LogoTxt}{School of Economics}%
+\settowidth{\LogoTxtWidth}{School of Economics}%
+}{%
+\ifthenelse{\equal{#4}{taik}}{%
+\renewcommand*{\LogoTxt}{School of Art and Design}%
+\settowidth{\LogoTxtWidth}{School of Art and Design}%
+}{%
+\PackageError{aaltothesis}%
+     {Options are tkk, hse, or taik}%
+     {Use tkk, hse, or taik instead of #4.}%
+}}}}{%
+\ifthenelse{\equal{#1}{swe}}{% Swedish
+\renewcommand*{\LogoUniv}{Aalto-universitetet}%
+\ifthenelse{\equal{#4}{tkk}}{%
+\renewcommand*{\LogoTxt}{Tekniska h\"ogskolan}%
+\settowidth{\LogoTxtWidth}{Tekniska hogskolan}%
+}{%
+\ifthenelse{\equal{#4}{hse}}{%
+\renewcommand*{\LogoTxt}{Handelsh\"ogskolan}%
+\settowidth{\LogoTxtWidth}{Handelshogskolan}%
+}{%
+\ifthenelse{\equal{#4}{taik}}{%
+\renewcommand*{\LogoTxt}{Konstindustriella h\"ogskolan}%
+\settowidth{\LogoTxtWidth}{Konstindustriella hogskolan}%
+}{%
+\PackageError{aaltothesis}%
+     {Options are tkk, hse, or taik}%
+     {Use tkk, hse, or taik instead of #4.}%
+}}}}{%
+\PackageError{aaltothesis}%
+     {Options are fin (default), eng, or swe}%
+     {Use fin (default), eng, or swe instead of #1.}%
+}}}%
+%
+% Finally, put the logo together.
+%
+%\begin{tabular}{@{}l@{\hspace{5.4pt}}l@{\hspace{10.54pt}}p{\LogoTxtWidth}@{\hspace{28pt}}|}%
+\begin{tabular}{@{}l@{\hspace{5.4pt}}l@{\hspace{10.54pt}}p{\LogoTxtWidth}@{}}%
+\fontsize{42}{78}\selectfont%
+A&%  <- The A is here. It tends to get lost in all this code!
+\fontsize{42}{78}\selectfont%
+\hspace{\SymbSpcLeft}\textcolor{\LogoSymbColor}{\LogoSymbol}\hspace{\SymbSpcRight}%
+&%
+\fontsize{10}{10.74}\selectfont%
+\parbox[b][28pt][t]{\LogoTxtWidth}{\raggedright%
+\LogoUniv{}\\ \textcolor{\LogoTxtColor}{\LogoTxt}%
+}%
+\end{tabular}%
+}}%
+%%%  END LOGO  %%%
+%
+%
+\begin{document}
+\uselogo{yellow}{!}{tkk}
+  \Blinddocument
+  
+\end{document}

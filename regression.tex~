@@ -1,0 +1,231 @@
+%%
+%% Methods for Regression
+%%
+\chapter{Regression models}
+\label{c:regressionOfVariables}
+
+\section{Introduction}
+\label{s:intro}
+
+The analyzed dataset contains 47 variables of which 29 are discrete and 18 are continuous. As explained before, the dataset is the result of a questionnaire answered by a large population. The application of a questionnaire to a large population has consequences; on the positive side the number of responses is very high, this gives a wide range of different answers and enough correct responses to minimize the effect of possible errors. On the negative side large datasets are difficult to handle and usually require pre-processing; computational expensive tasks turn tricky to apply.
+
+The dataset's size also contributes to its porosity, i.e. there are unanswered questions. The variables with missing values, as well as the outliers were previously marked in the pre-processing of the data. The percentage of availability of the variables can be seen in Table \ref{tab:proportions}. The missingness of each variable is highly related and dependent on the difficulty of the question related to it. If the respondent does not know the exact answer he/she may try to give the most used value, i.e. ``the value everybody says is the correct one''. For example, in the case of Blood pressure levels, people who had it checked a few days before answering the questionnaire may know the correct value, the same for people who have to check it constantly. However, the rest of the population may just try an average value or leave the field empty.
+
+With enough information the missing variables could be recovered by means of other available variables, one approach is the use of regression methods. In a linear regression problem the objective is to estimate the response variable $y$ by a linear combination of the input variables $\mathbf{x}=[x_1,\ldots,x_d]$ \cite{jTikka}. The regression model is given by
+
+\begin{eqnarray}
+ \mathbf{y} & = & \mathbf{X} \mathbf{\beta} + \mathbf{\varepsilon}\,,
+ \label{eq:regressionA}
+\end{eqnarray}
+
+\noindent where $\mathbf{y}$ is a $N \times 1$ vector of responses and $\mathbf{X}$ is a $N \times d$ matrix of input values. The regression coefficients are given by $\mathbf{\beta} = [\beta_1,\ldots,\beta_d]^T$ and are unknown. The noisy elements $\mathbf{\varepsilon}=[\varepsilon_1,\ldots,\varepsilon_d]^T$ are independent and normally distributed with zero mean and a given variance $\varepsilon_n \sim N(0,\sigma^2)$ \cite{jTikka}.
+
+The linear regression model given in \cite{hastie} is
+
+\begin{eqnarray}
+ f(X) & = & \beta_0 + \sum_{j=1}^{p} X_j\beta_j\,,
+ \label{eq:regressionB}
+\end{eqnarray}
+
+\noindent the only major difference is in how the formula is represented. The term $\beta_0$ is the intercept coefficient of the regression model.
+
+To measure the quality of the regression model the Residual Sum of Squares (RSS) \cite{hastie} also known as Sum of Squared Errors (SSE) \cite{jTikka} could be used. However, during this thesis the Mean Squared Error (MSE) is used. The sole difference is that the error produced by the whole model is averaged by the number of elements used. The Root Mean Squared Error (RMSE) is the root of the MSE; by extracting the root the measurement of the error is in the exact same units as the variable being estimated.
+
+\begin{eqnarray}
+ RSS & = & \sum_{i=1}^{N}(y_i - f(x_i))^2 \\
+ MSE & = & \frac{1}{N}\sum_{i=1}^{N} (y_i - f(x_i))^2
+ \label{eq:errors}
+\end{eqnarray}
+
+For the regression methods it is common to work only with continuous variables. Nevertheless, the idea of discarding all the discrete variables and only using the continuous ones did not seem correct. Specially, when more than half of the variables belong to this category; some useful information may be lying within them. It was decided to use the 7 most available discrete variables. They were \emph{transformed} into a valid continuous domain to be used in the regression problem. These selected variables and their numerical transformation are shown in Table \ref{tab:discrete}.
+
+\begin{table}
+ \begin{center}
+  \begin{tabular}{|l|l|}
+   \hline
+        Variable & Options (numerical value) \\
+   \hline
+   \hline
+	Sex & Male(-1) Female(+1) \\
+	Economic situation & Much better(+2) Better(+1) Equal(0) \\ & Worse(-1) Much Worse(-2)\\
+	House size adults & 1(1) 2(2) \ldots \\
+	Smoker for a year & No(0) Yes(1)\\
+	Smoking now & No(0) Randomly(1) Yes(2)\\
+	Stress & Yes life is hard(3) More than average people(2) \\ & Somewhat(1) No(0)\\
+	Life satisfaction & Very pleased(+3) Pleased(+2) Somewhat(+1) \\ & Dissatisfied(-1)\\
+   \hline
+  \end{tabular}
+ \end{center}
+ \caption[Numerical value of discrete]{\label{tab:discrete}Discrete variable used for regression. The different options of each variable were transformed to an appropriate numerical value.}
+\end{table}
+
+Various regression methodologies were applied for this thesis. First, a regression model was generated for each variable using its best predictor with a single variable. Then the previous approach was improved using a polynomial regression. The third and forth approaches included multiple input variables, in both cases different algorithms were used to select a relevant subset of predictor variables. 
+
+From previous analysis 5 variables were detected as the most missing ones, with a missingness between 30\% to more than 50\%. Four of these variables are related to topics which a given person has a high probability of not knowing the answer; the variables are Blood pressure for diastole and systole, Cholesterol total and HDL. The fifth variable is Number of cigarettes being smoked per day; although, it is an easy to know answer, the response is only available for 43\% of the records. The missing answers could just mean zeroes, i.e. not smoking anything or people hiding their smoking habits, thus affecting the result of the test. In an effort to improve the regression of these variables a group of artificial neural networks were trained and a PCA regression approach applied.
+
+It has been stated many times before the size of the dataset. However, the question of how many elements to use for regression is still open. As stated in \cite{prML} increasing the size of the data reduces the over-fitting problem, this is observed in Figure \ref{ima:rmse_vs_points}. The number of points used affect the variance of the error for training and testing; the more points are used the more stable is the model. Therefore, it was decided that for all the regression approaches all the available points were going to be used. In the case of $k$-fold cross-validation only 20,000 elements are used because the approach is always repeated, at least 100 times, to increase the reliability of the results.
+
+\begin{figure}
+ \begin{center}
+ \includegraphics[scale=0.5]{figures/rmse_vs_points}
+ \end{center}
+ \caption[Variance of error depending on the number of samples]{\label{ima:rmse_vs_points}Variance of error in the Training and Testing phases depending on the number of samples used.}
+\end{figure}
+
+For each method studied in this thesis all the continuous variables were modeled using the previously mentioned discrete variables, plus all the remaining continuous variables with an availability of at least 95\% and both calculated variables, BMI and Total Alcohol Consumption. As a baseline to measure each one of the regression models the errors given by the Mean predictor were used. The Mean predictor is based on the mean, or most common answer, for each variable; an improvement over the mean predictor can be considered a gain, or learning, by the model. The Table \ref{tab:appE1} in Appendix \ref{app:E} has the mean predictor for all the variables. Each variable has a different measure unit. To facilitate comparison and detection of importance within variables they were normalized to have a zero mean and unit variance.
+
+\section{Single predictor}
+\label{s:singleP}
+
+In a linear regression model it is assumed that the regression function is linear in the inputs, or that the generated model is a good approximation \cite{hastie}. By convention, in any model, linear or not, the $x$-variables has the role of explanatory variable while the $y$-variable is the response or result \cite{rDataAnalysis}. A linear regression model has the form
+
+\begin{eqnarray}
+  y & = & \alpha + \beta x + \varepsilon\,,
+  \label{eq:simpleRegression}
+\end{eqnarray}
+
+\noindent where the noise $\varepsilon$ is independently and identically distributed with mean zero and variance $\sigma^2$. The coefficient $x$ may come from different sources as its explained in \cite{hastie}. It can be a quantitative input, a transformation of the quantitative input, an expansion of the input (e.g. $X_2 = X_1^2$), etc. The estimation of the variable $\hat{y}$ is done as
+
+\begin{eqnarray}
+  \hat{y} & = & a + bx\,,
+  \label{eq:estimation}
+\end{eqnarray}
+
+\noindent where $a$ is the intercept value, $b$ is the slope and $x$ the explanatory variable.
+
+For this thesis two linear approaches were followed. In the first approach the best linear fitting variables are found, i.e. input variables are used, one by one, to find the explanatory variable $x$ that best fits the response variable $y$.
+
+This first approach was performed as follows; for each pair of different variables, where one is the explanatory and the other one is the response, the complete valid dataset was retrieved. With 90\% of the retrieved dataset the linear model was generated, the remaining 10\% was used for testing the model. The variable that presented the smallest testing MSE was the selected explanatory variable of the actual variable.
+
+With the selected variable a 10-fold cross-validation was repeated 100 times and used to estimate the coefficients $\alpha$ and $\beta$ as in Equation \ref{eq:estimation}. The regression process returned different results with interesting information. The results and error reduction compared against the mean predictor are available in Table \ref{tab:appE2} in Appendix \ref{app:E}. As an example is the Height of a person; by using Sex as a explanatory variable the MSE was reduced by 50\% compared to the mean predictor, see Equation \ref{eq:linear_s}. For Weight a reduction of 30\% is achieved when using Height as the explanatory variable, see Equation \ref{eq:linear_w}. Figure \ref{ima:singlePredictor} shows the regression of variable Weight by means of Height.
+
+\begin{eqnarray}
+   H & = & 171.75 - 6.76\,S
+   \label{eq:linear_s} \\
+   W & = & -88.12 + 0.96\,H
+   \label{eq:linear_w}
+\end{eqnarray}
+
+Not all models improved over the mean predictor, e.g. Alcohol Light Wine; in this case the error increased by 1\%. In other cases the gain was too small, for example Cholesterol Total and HDL had a gain below 5\%.
+
+\begin{figure}
+ \begin{center}
+ \includegraphics[scale=0.5]{figures/singlePredictor}
+ \end{center}
+ \caption[Linear model of variable Weight by means of Height]{\label{ima:singlePredictor}Plot showing the linear model of variable Weight when using Height as explanatory variable.}
+\end{figure}
+
+In the second approach the models were set to have two fixed variables Sex and Age plus a third one selected as the best explanatory variable. Moreover, the model was trained with different polynomial degrees of the explanatory variable; the degrees went from 1 to 5. All the different polynomials degrees were trained with all variables and the best polynomial with the best explanatory variable was selected. From there followed a 10-fold cross-validation repeated 100 times to estimate the coefficients $\alpha$ and $[\beta_1\ldots\beta_d]$ where $d$ is the degree of the selected polynomial.
+
+Sex and Age are selected as basic variables and they both have a linear influence on the regression. The selection of these specific variables is because they can be seen as discriminants for the data, i.e. a way to cluster the data in a ``natural'' form (separation by sex and age groups). It is expected that, for example, height, weight, habits, stress levels, etc. differ between males and females. The same happens with Age, factors vary over time and affect different, e.g. 60 year old people have different habits than 30 year olds'. In many of the studies presented in Section \ref{s:epRelatedResearch} this separation is noticed and used; therefore, this same regression approach is also used.
+
+Sex and Age played an important role for the regression. For example, Age contributed with more than 20\% of the regression coefficient for Education, Income, Cholesterol total, Sleeping time and Best time to live; for this last one having more than 80\% contribution. Sex influenced the Alcohol concentrated and Light wine, with a participation of more than 10\%; the same for Education and Blood pressure systole but not diastole. The use of a polynomial regression model also contributed to an improvement compared to the previous single variable approach. There were improvements on the prediction of almost all variables; Height went from 51\% to 63\%, Education from 0.02\% to 0.05\%, Number of cigarettes from 66\% to 71\%. The difficult variables: Blood pressure systole and diastole from 0.09\% to 0.17\% and 0.09\% to 0.13\% respectively. The complete results can be seen in Tables \ref{tab:appE3A} and \ref{tab:appE3B} in Appendix \ref{app:E}.
+
+Figure \ref{ima:polynomial} shows the regression of variable Weight using Height, the algorithm selected a polynomial of degree 5 as the best predictor. Height prediction improved by 5 points, from 31\% to 36\%, using this approach. The regression formula can be seen at Equation \ref{eq:poly_w} where $S$ is Sex, $A$ is Age and $H$ is Height.
+
+\begin{eqnarray}
+   W & = & 35301.200 - 1.239\,S + 0.213\,A - 1105.050\,H^1 + 13.734\,H^2 \nonumber \\
+     & &  - 0.085\,H^3 + 0.0003\,H^4 - 3.2E^{-7}\,H^5
+   \label{eq:poly_w}
+\end{eqnarray}
+
+\begin{figure}
+ \begin{center}
+ \includegraphics[scale=0.5]{figures/polynomial}
+ \end{center}
+ \caption[Polynomial model of variable Weight by means of Height]{\label{ima:polynomial}Plot showing the model of variable Weight when using Height in a polynomial form as explanatory variable. Sex was separated to appreciate the different curves for males and females. Variable Age, was kept fixed to its mean value.}
+\end{figure}
+
+\section{Feature selection}
+\label{s:featureS}
+
+When there are plenty of variables available for regression it may seem wise to use all of them at once to predict the missing variable $y$. However, when solving the linear models it is normal that all the input factors turn out to have coefficients different from zero regardless of its real importance \cite{jTikka}. Hence the problem of selecting a relevant subset of features upon which to focus attention. Machine learning algorithms including decision trees are known to degrade in performance, i.e. accuracy; when given as input features that are not necessary for predicting the required output \cite{wrapper}.
+A feature $X$ can be considered strongly relevant if the removal of $X$ alone will result in a deterioration of the classifier \cite{wrapper}. An approach to filter different features independently can be observed in Figure \ref{ima:filterApproach}. All the set of features are given as initial inputs then a subset is selected based on a selection algorithm (Backward Selection, Forward Selection, SISAL, etc.) this selected subset is later used as an input baseline for any Induction Algorithm, e.g. Linear regression, Neural networks, etc.
+
+\begin{figure}
+ \begin{center}
+ \includegraphics[scale=0.7]{figures/filterApproach}
+ \end{center}
+ \caption[Feature filter approach]{\label{ima:filterApproach} Feature filter approach according to \cite{wrapper}.}
+\end{figure}
+
+For feature selection the Stepwise selection methods are well known strategies used to obtain candidate subsets from a set of input variables \cite{jTikka}. For this thesis two methodologies are investigated, Forward Stepwise Selection and SISAL \cite{sisal}. Both methodologies were used as a way to select the best subset of features that provide the best regression in a parsimonious model.
+
+\subsection{Forward stepwise selection}
+\label{ss:fs}
+
+The Forward Stepwise Selection algorithm starts with an empty set of inputs and adds the input that most decreases the RSS (or most improves the fit) in each subsequent step. The improvement in fit is often based on the $F$-statistics, Equation \ref{eq:fStat}, where $\hat{\beta}$ is the model with $k$ features, $\tilde{\beta}$ is the model with $k+1$ features and $N$ is the number of elements in the dataset. The algorithm sequentially adds the predictor producing the largest value of $F$; the forward selection algorithm is stopped when the $F$ ratio is not greater than the 95th percentile of the $F_{(1,N-k-2)}$ distribution \cite{hastie,jTikka}.
+
+\begin{eqnarray}
+ F & = & \frac{RSS(\hat{\beta})-RSS(\tilde{\beta})}{RSS(\tilde{\beta})/(N-k-2)}
+ \label{eq:fStat}
+\end{eqnarray}
+
+Each variable ran the forward selection algorithm in order to select the best set of features that models the variable being analyzed. When the best features were selected a 10-fold cross-validation repeated 100 times was run to calculate the coefficients of the selected features.
+
+The use of forward selection resulted in improvements against the mean predictor at almost all variables but Alcohol Drink. The variables with the largest improvements were Number of cigarettes, Height, Weight, Best time to live and Income with a 67\%, 61\%, 35\%, 28\% and 18\% improvement respectively. The most important factors and their weights for these variables were Smoking now (0.83), Sex (0.51), Height (0.64), Age (0.94) and House size adults (0.25). The number of selected factors per variable was 5/15, 6/14, 4/14, 2/15 and 7/15; neither Height nor Weight can be used for modeling themselves. Let's notice that variable Number of cigarettes is one of the five most missing variables.
+
+The forward selection algorithm selected less than 50\% of the number of features available for each variable; moreover, the few selected variables contributed to a significant improvement in the prediction.
+
+For the four remaining most missing variables the gains were as follows: Cholesterol Total 4\%; Cholesterol HDL 3\%; Blood pressure systole 15\%; Blood pressure diastole 12\%. The number of features selected was 4, 1, 3, 3 of 14 possible. One interesting thing to notice is that the algorithm selected Age and Weight as the most important variables for Blood pressure diastole and systole. For Cholesterol total the variable with the most influence was Age. The complete set of results for the forward selection algorithm can be seen in Tables \ref{tab:appE4A} and \ref{tab:appE4B} in Appendix \ref{app:E}.
+
+\subsection{SISAL}
+\label{ss:sisal}
+
+Sequential Input Selection Algorithm (SISAL) is a simple and efficient backward elimination algorithm proposed by \cite{sisal}. In SISAL the removal of features is based on the median and an empirically estimated width of parameter distributions sampled with a cross-validation re-sampling process \cite{sisal}.
+Initially all features are used in the algorithm. The regression coefficient $\beta_i$ of each feature is sampled by a $k$-fold cross-validation repeated $M$ times, i.e. a total of $Mk$ coefficients are generated for each feature $i$. The median $m_{\beta_i}$ is calculated for each feature using the $Mk$ estimates. The width of the sampled distribution is calculated by
+
+\begin{eqnarray}
+ \Delta_{\beta_i} & = & \hat{\beta}_i^{high} - \hat{\beta}_i^{low}\,,
+ \label{eq:sisal}
+\end{eqnarray}
+
+\nowhere $\hat{\beta}_i^{high}$ and $\hat{\beta}_i^{low}$ are the $Mk(1-q)$\,th and $Mkq$\,th values in the ordered list of the $Mk$ estimates of $\hat{\beta}_i$. The variable $q$ is a constant with a predefined value of $q=0.165$. Using the median and the width the least significant feature is removed from the input set. This is done by using the ratio $|m_{\beta_i}|/\Delta_{\beta_i}$; the feature with the smallest ratio is dropped from the set of inputs \cite{sisal}. This sequence, of cross-validation and pruning, is repeated until there are no more features to remove. The output is a number of models equal as the number of features available, due to the fact that only one feature is removed at a time. The model with the minimum validation error is selected and returned as the best model.
+
+Each variable ran the SISAL algorithm to select the best model that represents it. A 10-fold cross-validation repeated 100 times was used to select the best features and models. The best results were obtained for variables Number of cigarettes, Height, Weight, Best time to live and Income, with respective improvements of 69\% 61\% 37\% 29\% and 22\% against the mean predictor. As can be seen, the same best variables were observed while using the Forward stepwise selection algorithm; therefore, these variables may be easily predicted with a linear model. The most important factors for these variables were Smoking now (0.68), Sex (0.49), Height (0.51), Age (0.66) and House size adults (0.19). Similar to those selected by forward selection; however, the weight of the variables variates because SISAL selected, in general, more features for each model. The number of selected features per variable was 12/15, 9/14, 11/14, 12/15 and 13/15; neither Height nor Weight can be used for modeling themselves. As in forward selection variable Number of cigarettes shows up in the list of the best modeled variables.
+
+The relatively high number of selected features provided a better regression compared to the single variable regression and a slightly improvement over forward selection. However, the use of more than 80\% of the available features per variable may not be considered a simple and parsimonious model.
+
+For the most missing variables the improvement was as follows: Cholesterol Total 7\%; Cholesterol HDL 4\%; Blood pressure systole 19\%; Blood pressure diastole 15\%. The number of selected features were 9, 7, 4, 11 of 14 respectively. A noticeable improvement in the regression can be observed, specially for Cholesterol HDL with an improvement of 4\%. For all these four variables Age has a high influence on the prediction, specially in Blood pressure diastole and systole. Another important factor selected by SISAL and with a relative high influence in the regression is Total Alcohol Consumption, a calculated variable; it specially plays an important role for Cholesterol HDL. The complete set of results for the SISAL algorithm can be seen in Tables \ref{tab:appE5A} and \ref{tab:appE5B} in Appendix \ref{app:E}.
+
+\section{Regression improvement}
+\label{s:improvement}
+
+The results of the previous methods show that some variables are easily defined by a linear model while others do not show an improvement over the mean predictor. If the gain is minute and/or it requires plenty of calculations to obtain it, it may turn infeasible to use the model, specially if the mean predictor is so simple. From the five most missing variables only one presented an improvement of more than 50\%, this was Number of cigarettes. For both Blood pressures the improvement was above 15\% and for both Cholesterol levels it was below 10\%. For the later the gain levels by means of forward selection and SISAL can be considered small.
+
+It is well known that the linear models are easy to interpret and fast to calculate; unfortunately they are not accurate enough for some problems \cite{sisal}. The dependencies between variables may not be linear, therefore a non-linear model would explain them better. It may also be that the features may work better if they are transformed before the linear modeling is done. Two different methodologies are investigated; firstly, a feed-forward neural network is used for non-linear models. Secondly, regression on Principal Components (PCA) is analyzed.
+
+The five most missing variables are used in this section; the available features are determined by the results of the previously executed forward selection and SISAL algorithms, i.e. the variables selected by these methods are used as input for the neural network and PCA approaches in the first run of experiments.
+
+The importance of a variable in a model is given by how substantial is its coefficient in the regression model. Because all variables are mean centered and have unit variance it is possible to compare them with each other. Neural networks and PCA are run, in a second set of experiments, using only enough features to represent at least 80\% of the weight available. These \noun{TOP} features are also selected from the results of the forward selection and SISAL algorithms.
+
+\subsection{Artificial neural networks}
+\label{ss:NN}
+
+The artificial neural networks (ANN) are powerful processing systems originally inspired by biological neurons \cite{prML}. The ANN are used because of its highly adaptive nonlinear models and high capability of adaptation based on the data. They have been used to solve many different problems, e.g. financial and biochemical systems \cite{jTikka}. Feed-forward ANN provide an adaptable way to generalize linear regression functions, therefore the purpose of using them in this thesis. Generally a neural network consist of an input layer, a hidden layer and an output layer which are fully connected, i.e. each node in any layer is connected to all the nodes in the previous layer. For how a ANN works, its variations and applications refer to \cite{prML,hastie,venables}.
+
+The configurable neural network model available in R will be used for this thesis. The function is based on the one presented in \cite{venables}; the feed-forward neural network is of generic form with a single hidden layer. For the purpose of modeling the given variables, the ANN are set to have a linear output instead of a logical one and the number of hidden neurons varies according to the number of input features. The number of neurons in the hidden layer is changed from a minimum of half the number of input features to twice plus one the number of input features, e.g. if there are 5 input features the number of hidden neurons will vary from 3 to 11. With the network configured a 10-fold cross-validation process is repeated 100 times to increase the reliability of the results. From the resulting networks the one with the smallest error is selected.
+
+In Table \ref{tab:appE6}, Appendix \ref{app:E}, the results for the ANN when using the forward selection features \noun{ALL} and \noun{TOP} can be observed. Compared to the results obtained by only using forward selection a small positive improvement in the prediction is observed for both cases. Therefore, in the case of \noun{TOP}, the model can be constricted to only the most important variables without affecting the results when using the ANN approach. Besides these facts the most difficult variable, Cholesterol HDL, did not present any improvement in the prediction.
+
+In Table \ref{tab:appE7}, Appendix \ref{app:E}, the results for the ANN when using SISAL are presented. No improvement is visible in the predictions compared to the use of SISAL alone. The only variable that presented a considerable gain is Number of cigarettes. This variable went from a 69\% gain to 75\% in the \noun{ALL} variables test and to 73\% in the \noun{TOP} test.
+
+The use of Neural Networks proved beneficial when using the features given by forward selection; nevertheless the gain was minute compared to the burden of training, testing and analyzing the ANN models. Neural Networks have proved to be beneficial in an extensive number of different areas, however they are not the best approach in all cases.
+
+\subsection{Regression on principal components}
+\label{ss:pca}
+
+Methods for dimensionality reduction can be applied in the context of regression and data analysis \cite{rDataAnalysis}. It may be useful to transform the set of explanatory variables in a way that better suits the regression approach. Principal Component Analysis (PCA) is an orthogonal linear transformation that positions the data in a new coordinate system. Each component in PCA represents a share of the variance; the first component has the largest sample variance; the second component has the second largest variance and so on \cite{hastie}. The PCA transformation is based on the decomposition of the data in its eigenvectors and eigenvalues, where each resulting vectors is orthogonal to each other. Further explanations and applications can be found in \cite{iML,pDataMining,hastie}.
+
+PCA is applied to the features selected by forward selection and SISAL. The data is used ``raw'', i.e. there is no previous normalization, because the provided function performs this step.
+After calculating the PCA, enough components are selected to represent at least 95\% of the variance. In some cases only one variable was available, nevertheless the method was applied although no effect could be expected; this was done because the test ran systematically.
+
+In Table \ref{tab:appE8}, Appendix \ref{app:E}, the results for regression on principal components for the features selected by forward selection are observable. Compared to the results when only using forward selection no improvement is observed nor an important decrease noticed either. The only variable with a noticeable change is Number of cigarettes; when using \noun{ALL} the features it goes down to an improvement of only 12\%, on the other hand when using only the \noun{TOP} features the gain goes up to 66\%, matching that of the original prediction by forward selection.
+
+In Table \ref{tab:appE9}, Appendix \ref{app:E}, one can observe the results when using the SISAL features with PCA. Compared to the use of SISAL alone a reduction on the gain by the predictor is noticeable; the most affected variables are Cholesterol HDL, Blood pressure systole and Number of cigarettes. The tendency of no gain is also observed when using the \noun{TOP} variables. Hence, the regression on principal components did not improve the models while using the SISAL features as input.
+
+PCA, although a well known methodology, did not show any gain on the quality of the models. A future approach may include an in-depth study of the selected variables and their relations, as well as the visualization of the different components to observe, e.g. clusters.
+
+
+
+When modeling the most missing variables, Cholesterol levels, Pressure levels and Number of cigarettes it was noticed that nonlinear models, as feed-forward neural networks, did not improve the quality of the prediction over other methods. In fact, the results were similar to those of simpler linear models and, in some cases, the results were even worse. Similar results were observed while using regression on principal components, no improvements were seen at all. Moreover, some variables have a noticeable reduction in the regression quality compared to the simpler models, e.g. Number of cigarettes. The results observed on Number of cigarettes provide a strong confidence of the linear model representation, as it could be calculated with an improvement of more than 60\%, against the mean predictor, with a linear model with as few as 3 explanatory variables.

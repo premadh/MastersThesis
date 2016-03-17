@@ -1,0 +1,557 @@
+\begin{thebibliography}{10}
+
+\bibitem{iscn}
+L.~G. Shaffer and N.~Tommerup.
+\newblock {\em {ISCN 2005: An International System for Human Cytogenetic
+  Nomenclature(2005)} Recommendations of the International Standing Committee
+  on Human Cytogenetic Nomenclature}.
+\newblock Karger, 2005.
+
+\bibitem{macadamia}
+T.~Raiko, K.~Puolam\"aki, J.~Karhunen, J.~Hollm\'en, A.~Honkela, H.~Mannila,
+  E.~Oja, and E.~Simula.
+\newblock {Macadamia: Master's Programme in Machine Learning and Data Mining}.
+\newblock In {\em {Proceedings of Teaching Machine Learning Workshop on Open
+  Problems and New Directions}}, 2008.
+
+\bibitem{cancer}
+J.~F. Bishop.
+\newblock {\em {Cancer facts : a concise oncology text}}.
+\newblock Harwood Academic Publishers, Amsterdam, The Netherlands, 1999.
+
+\bibitem{whofactsheet}
+{World Health Organization}.
+\newblock {Cancers: World Health Organization Factsheet No. 297}.
+\newblock Website, February 2009.
+\newblock \texttt{http://www.who.int/
+  mediacentre/factsheets/fs297/en/print.html}: Last Accessed: 15 Nov 2010.
+
+\bibitem{american}
+{American Cancer Society, Inc.}
+\newblock {Cancer Facts \& Figures 2006 No. 500806}.
+\newblock Website, 2006.
+\newblock \texttt{http://www.cancer.org/ Research/
+  CancerFactsFigures/CancerFactsFigures/index} : Last Accessed: 15 Nov 2010.
+
+\bibitem{finnish}
+{Cancer Society of Finland}.
+\newblock {Cancer 2015}.
+\newblock Website, 2010.
+\newblock \texttt{http://www.cancer.fi/english/organisation/publications
+  /cancer\_2015} : Last Accessed: 15 Nov 2010.
+
+\bibitem{thatreviewarticle}
+A.~Vellido and P.~J.~G. Lisboa.
+\newblock {Neural Networks and Other Machine Learning Methods in Cancer
+  Research}.
+\newblock In {\em {International Work-Conference on Artificial Neural
+  Networks}}, pages 964--971, 2007.
+
+\bibitem{cgh}
+A.~Kallioniemi, O.~P. Kallioniemi, D.~Sudar, D.~Rutovitz, J.~W. Gray,
+  F.~Waldman, and D.~Pinkel.
+\newblock {Comparative genomic hybridization for molecular cytogenetic analysis
+  of solid tumors}.
+\newblock {\em SCIENCE}, {258}({5083}):{818--821}, {OCT 30} {1992}.
+
+\bibitem{acgh}
+D.~Pinkel, R.~Segraves, D.~Sudar, S.~Clark, I.~Poole, D.~Kowbel, C.~Collins,
+  W.~L. Kuo, C.~Chen, Y.~Zhai, S.~H. Dairkee, B.~M. Ljung, J.~W. Gray, and
+  D.~G. Albertson.
+\newblock {High resolution analysis of DNA copy number variation using
+  comparative genomic hybridization to microarrays}.
+\newblock {\em {Nature Genetics}}, {20}:{ 207 -- 211}, {1998}.
+
+\bibitem{bacdna}
+B.~Ylstra, P.~van~den Ijssel, B.~Carvalho, R.~H. Brakenhoff, and G.~A. Meijer.
+\newblock {BAC to the future! or oligonucleotides: a perspective for micro
+  array comparative genomic hybridization (array CGH).}
+\newblock {\em Nucleic acids research}, 34(2):445--450, 2006.
+
+\bibitem{oligo}
+D.~J. Lockhart, H.~Dong, M.~C. Byrne, M.~T. Follettie, M.~V. Gallo, M.~S. Chee,
+  M.~Mittmann, C.~Wang, M.~Kobayashi, H.~Horton, and E.~L. Brown.
+\newblock {Expression monitoring by hybridization to high-density
+  oligonucleotide arrays}.
+\newblock {\em Nature Biotechnology}, 14(13):1675--1680, 1996.
+
+\bibitem{promoter}
+Y.~Wang, J.~Hayakawa, F.~Long, Q.~Yu, A.~H. Cho, G.~Rondeau, J.~Welsh,
+  S.~Mittal, I.~De Belle, E.~Adamson, M.~McClelland, and D.~Mercola.
+\newblock "promoter array" studies identify cohorts of genes directly regulated
+  by methylation, copy number change, or transcription factor binding in human
+  cancer cells.
+\newblock {\em Annals of the New York Academy of Sciences}, 1058:162--185,
+  2005.
+
+\bibitem{nextgen}
+S.~C. Schuster.
+\newblock {Next-generation sequencing transforms today's biology}.
+\newblock {\em Nature Methods}, 5(1):16--18, December 2007.
+
+\bibitem{nextgen1}
+E.~R. Mardis.
+\newblock {Next-generation DNA sequencing methods.}
+\newblock {\em Annual review of genomics and human genetics}, 9(1):387--402,
+  June 2008.
+
+\bibitem{nextgen2}
+R.~A. Stein.
+\newblock Next-generation sequencing update.
+\newblock {\em Genetic Engineering and Biotechnology News}, 28(15), 2008.
+
+\bibitem{humangenomeproject}
+J.~C. Venter~et. al.
+\newblock {The sequence of the human genome.}
+\newblock {\em Science (New York, N.Y.)}, 291(5507):1304--1351, February 2001.
+
+\bibitem{humangenomeproject1}
+E.~S. Lander~et.al.
+\newblock {Initial sequencing and analysis of the human genome}.
+\newblock {\em Nature}, 409(6822):860--921, February 2001.
+
+\bibitem{mitchell}
+T.~M. Mitchell.
+\newblock {\em {Machine Learning}}.
+\newblock McGraw-Hill, New York, 1997.
+
+\bibitem{hykin}
+S.~Haykin.
+\newblock {\em {Neural Networks: A Comprehensive Foundation}}.
+\newblock Macmillan, New York, 1994.
+
+\bibitem{bishop}
+C.~M. Bishop.
+\newblock {\em {Pattern Recognition and Machine Learning (Information Science
+  and Statistics)}}.
+\newblock Springer-Verlag New York, Inc., Secaucus, NJ, USA, 2006.
+
+\bibitem{mlforcr}
+C.~Jong.
+\newblock {\em {Machine learning for human cancer research}}.
+\newblock PhD thesis, VU University, Amsterdam, 2006.
+
+\bibitem{Myllykangas200815}
+S.~Myllykangas, J.~Tikka, T.~B{\"o}hling, S.~Knuutila, and J.~Hollm{\'e}n.
+\newblock {Classification of human cancers based on {DNA} copy number
+  amplification modeling}.
+\newblock {\em BMC Medical Genomics}, 1:15, 2008.
+
+\bibitem{aberrations}
+I.~R. Kirsch.
+\newblock {\em {The Causes and Consequences of Chromosomal Aberrations}}.
+\newblock {CRC Press}, first edition, December 1992.
+
+\bibitem{lateststudies}
+J.~A. Lee, C.~M.~B. Carvalho, and J.~R. Lupski.
+\newblock {A {DNA} Replication Mechanism for Generating Nonrecurrent
+  Rearrangements Associated with Genomic Disorders}.
+\newblock {\em Cell}, 131(7):1235 -- 1247, 2007.
+
+\bibitem{abnormality}
+F.~Zhang, M.~Khajavi, A.~M. Connolly, C.~F. Towne, S.~D. Batish, and J.~R.
+  Lupski.
+\newblock The {DNA} replication {FoSTeS/MMBIR} mechanism can generate genomic,
+  genic and exonic complex rearrangements in humans.
+\newblock {\em Nature Genetics}, 41(7):849--853, 2009.
+
+\bibitem{Tikka2007972}
+J.~Tikka, J.~Hollm{\'e}n, and S.~Myllykangas.
+\newblock {Mixture modeling of {DNA} copy number amplification patterns in
+  cancer}.
+\newblock In Francisco Sandoval, Alberto Prieto, Joan Cabestany, and Manuel
+  Graña, editors, {\em Computational and Ambient Intelligence}, volume 4507 of
+  {\em Lecture Notes in Computer Science}, pages 972--979. Springer Berlin /
+  Heidelberg, 2007.
+
+\bibitem{unreliable}
+A.~Isaksson, M.~Wallman, H.~G\"{o}ransson, and M.~G. Gustafsson.
+\newblock Cross-validation and bootstrapping are unreliable in small sample
+  classification.
+\newblock {\em Pattern Recognition Letters}, 29(14):1960--1965, 2008.
+
+\bibitem{cvinmicroarray}
+U.~M. Braga-Neto and E.~R. Dougherty.
+\newblock {Is cross-validation valid for small-sample microarray
+  classification?}
+\newblock {\em Bioinformatics}, 20(3):374--380, February 2004.
+
+\bibitem{wolfe}
+J.~H. Wolfe.
+\newblock {P}attern clustering by multivariate mixture analysis.
+\newblock {\em Multivariate Behavioral Research}, 5:329--350, 1970.
+
+\bibitem{expectmax}
+A.~P. Dempster, N.~M. Laird, and D.~B. Rubin.
+\newblock {M}aximum likelihood from incomplete data via the {EM} algorithm.
+\newblock {\em {Journal Of The Royal Statistical Society, Series B}},
+  39(1):1--38, 1977.
+
+\bibitem{everittmixdist}
+B.~S. Everitt and D.~J. Hand.
+\newblock {\em {F}inite mixture distributions}.
+\newblock Chapman and Hall, London; New York:, 1981.
+
+\bibitem{premup}
+P.~R. Adhikari and J.~Hollm\'{e}n.
+\newblock Patterns from multiresolution 0-1 data.
+\newblock In {\em Proceedings of the ACM SIGKDD Workshop on Useful Patterns},
+  UP '10, pages 8--16, New York, NY, USA, 2010. ACM.
+
+\bibitem{premprib}
+P.~R. Adhikari and J.~Hollm\'{e}n.
+\newblock Preservation of statistically significant patterns in multiresolution
+  0-1 data.
+\newblock In Tjeerd Dijkstra, Evgeni Tsivtsivadze, Elena Marchiori, and Tom
+  Heskes, editors, {\em Pattern Recognition in Bioinformatics}, volume 6282 of
+  {\em Lecture Notes in Computer Science}, pages 86--97. Springer Berlin /
+  Heidelberg, 2010.
+
+\bibitem{Puolamaki06pcbi}
+K.~Puolam\"aki, M.~Fortelius, and H.~Mannila.
+\newblock {Seriation in Paleontological Data Using {M}arkov Chain {M}onte
+  {C}arlo Methods}.
+\newblock {\em PLoS Computational Biology}, 2(2):e6, 2006.
+
+\bibitem{randomization}
+A.~Gionis, H.~Mannila, T.~Mielik\"{a}inen, and P.~Tsaparas.
+\newblock {Assessing data mining results via swap randomization}.
+\newblock {\em {ACM Transactions on Knowledge Discovery from Data}}, 1(3):14,
+  2007.
+
+\bibitem{retail}
+T.~Brijs, G.~Swinnen, K.~Vanhoof, and G.~Wets.
+\newblock {Using association rules for product assortment decisions: a case
+  study}.
+\newblock In {\em {KDD '99: Proceedings of the fifth ACM SIGKDD international
+  conference on Knowledge discovery and data mining}}, pages 254--260, New
+  York, NY, USA, 1999. ACM.
+
+\bibitem{mclachlanfmm}
+G.~J. McLachlan and D.~Peel.
+\newblock {\em Finite mixture models}, volume 299 of {\em {P}robability and
+  {S}tatistics -- {A}pplied {P}robability and {S}tatistics {S}ection}.
+\newblock Wiley, New York, 2000.
+
+\bibitem{poission}
+S.~D. Poisson.
+\newblock {\em {Recherches sur la probabilit\'e des jugements en mati\'re
+  criminelle et en mati\'re civile: Pr\'c\'d\'es des r\'gles g\'n\'rales du
+  calcul des probabilit\'s}}.
+\newblock Elibron Classics, 1837.
+
+\bibitem{pdeb}
+P.~Deb.
+\newblock Finite mixture models.
+\newblock Summer north american stata users' group meetings 2008, Stata Users
+  Group, 2008.
+
+\bibitem{probability}
+R.L. Scheaffer and L.J. Young.
+\newblock {\em {Introduction to Probability and its Applications}}.
+\newblock Duxbury Pr, 2009.
+
+\bibitem{occam}
+P.~Boehner.
+\newblock {Collected articles on Ockham}.
+\newblock {\em OFM, St Bonaventure}, 1958.
+
+\bibitem{nonidentifiable}
+M.~Gyllenberg, T.~Koski, E.~Reilink, and M.~Verlann.
+\newblock {Non-Uniqueness in Probabilistic Numerical Identification of
+  Bacteria}.
+\newblock {\em Journal of Applied Probability}, 31(2):542--548, 1994.
+
+\bibitem{furthernoni}
+M.~Carreira-Perpi\~{n}\'{a}n and S.~Renals.
+\newblock {Practical Identifiability of Finite Mixtures of Multivariate
+  Bernoulli Distributions}.
+\newblock {\em Neural Computation}, 12(1):141--152, 2000.
+
+\bibitem{kmeans}
+J.~Macqueen.
+\newblock Some {M}ethods for {C}lassification and {A}nalysis of {M}ultivariate
+  {O}bservations.
+\newblock {\em In Proceedings of 5-th Berkeley Symposium on Mathematical
+  Statistics and Probability, Berkeley}, pages 281--297, 1967.
+
+\bibitem{kmeans2}
+S.~Lloyd.
+\newblock Least {S}quares {Q}uantization in {PCM}.
+\newblock {\em {IEEE} {T}ransactions on {I}nformation {T}heory},
+  28(2):129--137, 1982.
+
+\bibitem{mcmcintro}
+C.~Andrieu, N.~Freitas, A.~Doucet, and M.~I. Jordan.
+\newblock {An Introduction to MCMC for Machine Learning}.
+\newblock {\em Machine Learning}, 50(1-2):5--43, 2003.
+
+\bibitem{spectralmethod1}
+R.~Kannan, H.~Salmasian, and S.~Vempala.
+\newblock The spectral method for general mixture models.
+\newblock {\em SIAM J. Comput.}, 38:1141--1156, July 2008.
+
+\bibitem{spectralmethod}
+S.~Vempala and G.~Wang.
+\newblock {A Spectral Algorithm for Learning Mixtures of Distributions}.
+\newblock In {\em Journal of Computer and System Sciences}, pages 113--123,
+  2002.
+
+\bibitem{matrixcomputation}
+G.~H. Golub and C.~F. Van~Loan.
+\newblock {\em Matrix Computations (Johns Hopkins Studies in Mathematical
+  Sciences)(3rd Edition)}.
+\newblock {The Johns Hopkins University Press}, {3rd} edition, {October} 1996.
+
+\bibitem{svdgolub}
+G.~Golub and W.~Kahan.
+\newblock Calculating the singular values and pseudo-inverse of a matrix.
+\newblock {\em Journal of the Society for Industrial and Applied Mathematics,
+  Series B: Numerical Analysis}, 2(2):205--224, 1965.
+
+\bibitem{regularization}
+D.~Ormoneit and V.~Tresp.
+\newblock {Averaging, maximum penalized likelihood and {Bayesian} estimation
+  for improving Gaussian mixture probability density estimates}.
+\newblock {\em {IEEE} Transactions on Neural Networks}, 9(4):639--650, 1998.
+
+\bibitem{crossvalind}
+S.~Geisser.
+\newblock {A Predictive Approach to the Random Effect Model}.
+\newblock {\em Biometrika}, 61(1):101--107, 1974.
+
+\bibitem{monsteller}
+F.~Monsteller and J.~Tukey.
+\newblock {Data Analysis including statistics}.
+\newblock {\em In Lindzey G. and Aronson E., editors, Handbook of Social
+  Psychology, Vol-2, Addison-Wesley}, 1968.
+
+\bibitem{Kohavi95astudy}
+R.~Kohavi.
+\newblock {A Study of Cross-Validation and Bootstrap for Accuracy Estimation
+  and Model Selection}.
+\newblock In {\em IJCAI}, pages 1137--1145, 1995.
+
+\bibitem{witten}
+I.~H. Witten and E.~Frank.
+\newblock {\em {Data Mining: Practical Machine Learning Tools and Techniques}}.
+\newblock Morgan Kaufmann Series in Data Management Systems. Morgan Kaufmann,
+  second edition, June 2005.
+
+\bibitem{kayphdthesis}
+S.~D. Gay.
+\newblock {\em {Datamining in proteomics: extracting knowledge from peptide
+  mass fingerprinting spectra}}.
+\newblock PhD thesis, University of Geneva, Geneva, 2002.
+
+\bibitem{mixmodelsreview}
+B.~G. Lindsay and M.~L. Lesperance.
+\newblock {A review of semiparametric mixture models}.
+\newblock {\em Journal of Statistical Planning and Inference}, 47(1-2):29 --
+  39, 1995.
+
+\bibitem{binaryimages}
+A.~Juan and E.~Vidal.
+\newblock {Bernoulli Mixture Models for Binary Images}.
+\newblock {\em International Conference on Pattern Recognition}, 3:367--370,
+  2004.
+
+\bibitem{textclassification}
+A.~Juan and E.~Vidal.
+\newblock {On the use of Bernoulli mixture models for text classification}.
+\newblock {\em Pattern Recognition}, 35(12):2705 -- 2710, 2002.
+
+\bibitem{textmining}
+M.~Saeed and H.~Babri.
+\newblock {Classifiers based on {B}ernoulli mixture models for text mining and
+  handwriting recognition tasks}.
+\newblock In {\em IJCNN}, pages 2169--2175, 2008.
+
+\bibitem{Aitkin1981}
+M.~Aitkin, D.~Anderson, and J.~Hinde.
+\newblock {Statistical Modelling of Data on Teaching Styles}.
+\newblock {\em Journal of The Royal Statistical Society. Series A (General)},
+  144(4), 1981.
+
+\bibitem{pollackgenome}
+J.~R. Pollack, C.~M. Perou, A.~A. Alizadeh, M.~B. Eisen, A.~Pergamenschikov,
+  C.~F. Williams, S.~S. Jeffrey, D.~Botstein, and P.~O. Brown.
+\newblock {Genome-wide analysis of {DNA} copy-number changes using c{DNA}
+  microarrays}.
+\newblock {\em Nature Genetics}, 23(1):41--46, 1999.
+
+\bibitem{oldage}
+S.~Knuutila, Y.~Aalto, K.~Autio, A.~Bj\"orkqvist, W.~El-Rifai, S.~Hemmer,
+  T.~Huhta, E.~Kettunen, S.~Kiuru-Kuhlefelt, M.L. Larramendy, T~Lushnikova,
+  O.~Monni, H.~Pere, J.~Tapper, M.~Tarkkanen, A.~Varis, V.~Wasenius, M.~Wolf,
+  and Y.~Zhu.
+\newblock {{DNA} Copy Number Losses in Human Neoplasms}.
+\newblock {\em Gynecologic Oncology}, 155(2):683--694, 1999.
+
+\bibitem{Myllykangas20067324}
+S.~Myllykangas, J.~Himberg, T.~B{\" o}hling, B.~Nagy, J.~Hollm{\'e}n, and
+  S.~Knuutila.
+\newblock {{DNA} copy number amplification profiling of human neoplasms}.
+\newblock {\em Oncogene}, 25(55):7324--7332, 2006.
+
+\bibitem{Holl20071}
+J.~Hollm{\'e}n and J.~Tikka.
+\newblock {Compact and understandable descriptions of mixtures of bernoulli
+  distributions}.
+\newblock {\em Lecture Notes in Computer Science including subseries Lecture
+  Notes in Artificial Intelligence and Lecture Notes in Bioinformatics}, 4723
+  LNCS:1--12, 2007.
+
+\bibitem{Rancoita2009}
+P.~M.~V. Rancoita, M.~Hutter, F.~Bertoni, and I.~Kwee.
+\newblock {Bayesian {DNA} copy number analysis}.
+\newblock {\em {BMC Bioinformatics}}, 10(1):10, 2009.
+
+\bibitem{Dhaene2010262}
+B.~D'haene, J.~Vandesompele, and J.~Hellemans.
+\newblock {Accurate and objective copy number profiling using real-time
+  quantitative {PCR}}.
+\newblock {\em Methods}, 50(4):262--270, 2010.
+
+\bibitem{Despierre2010358}
+E.~Despierre, D.~Lambrechts, P.~Neven, F.~Amant, S.~Lambrechts, and I.~Vergote.
+\newblock {The molecular genetic basis of ovarian cancer and its roadmap
+  towards a better treatment}.
+\newblock {\em Gynecologic Oncology}, 117(2):358--365, 2010.
+
+\bibitem{scaling}
+C.~W.~P. Louis.
+\newblock {Flexible, Robust, And Efficient Human Speech Recognition}.
+\newblock In {\em {In Proceedings of The XIVth International Congress of
+  Phonetic Sciences}}, pages 9--16, 1997.
+
+\bibitem{perl}
+L.~Wall.
+\newblock {Perl: {P}ractical {E}xtraction and {R}eport {L}anguage}.
+\newblock Website, 1987.
+\newblock \texttt{http://www.perl.org/} : Last Accessed: 15 Nov 2010.
+
+\bibitem{ncbi}
+National~Center for Biotechnology~Information.
+\newblock {Human Genome Project}.
+\newblock Website, February 2010.
+\newblock \texttt{http://www.ncbi.nlm.nih.gov/ projects/mapview/} : Last
+  Accessed: 15 Nov 2010.
+
+\bibitem{flexmix}
+F.~Leisch.
+\newblock {FlexMix: A General Framework for Finite Mixture Models and Latent
+  Class Regression in R}.
+\newblock {\em Journal of Statistical Software}, 11(i08), 2003.
+
+\bibitem{mixtools}
+T.~Benaglia, D.~Chauveau, D.~R. Hunter, and D.~Young.
+\newblock {mixtools}: An {R} package for analyzing finite mixture models.
+\newblock {\em Journal of Statistical Software}, 32(6):1--29, 2009.
+
+\bibitem{matlab}
+Mathworks.
+\newblock {Matlab: the language of technical computing}.
+\newblock Website, 1994.
+\newblock \texttt{http://www.mathworks.com/products/matlab} : Last Accessed: 15
+  Nov 2010.
+
+\bibitem{shellscript}
+E.~Quigley and S.~Hawkins.
+\newblock {\em {The Complete Linux Shell Programming Training Course (CD-ROM
+  Boxed-Set)}}.
+\newblock Prentice Hall PTR, Upper Saddle River, NJ, USA, 2000.
+
+\bibitem{rlang}
+R.~Project.
+\newblock The {R} project for statistical computing.
+\newblock Website, 1997.
+\newblock \texttt{http://www.r-project.org} : Last Accessed: 15 Nov 2010.
+
+\bibitem{bmixdoc}
+J.~Hollm{\'e}n.
+\newblock {\em {BernoulliMix}: Program package for finite mixture models of
+  multivariate Bernoulli distributions}, May 2009.
+\newblock \texttt{http://www.cis.hut.fi/jHollmen/BernoulliMix} : Last Accessed:
+  15 Nov 2010.
+
+\bibitem{progenetix}
+M.~Baudis.
+\newblock {Online database and bioinformatics toolbox to support data mining in
+  cancer cytogenetics.}
+\newblock {\em Biotechniques}, 40(3), March 2006.
+
+\bibitem{frobenius}
+G.~W. Stewart.
+\newblock {\em {Matrix Algorithms: Volume 1, Basic Decompositions}}.
+\newblock Society for Industrial Mathematics, 1998.
+
+\bibitem{agrawal}
+R.~Agrawal, T.~Imieli\'{n}ski, and A.~Swami.
+\newblock {Mining association rules between sets of items in large databases}.
+\newblock In {\em SIGMOD '93: Proceedings of the 1993 ACM SIGMOD International
+  Conference on Management of Data}, pages 207--216, New York, NY, USA, 1993.
+  ACM.
+
+\bibitem{apriori}
+H.~Mannila, H.~Toivonen, and A.~I. Verkamo.
+\newblock Efficient algorithms for discovering association rules.
+\newblock In Usama~M. Fayyad and Ramasamy Uthurusamy, editors, {\em {AAAI}
+  Workshop on Knowledge Discovery in Databases (KDD-94)}, pages 181--192,
+  Seattle, Washington, 1994. AAAI Press.
+
+\bibitem{redescription}
+A.~Gallo, P.~Miettinen, and H.~Mannila.
+\newblock {Finding Subgroups having Several Descriptions: Algorithms for
+  Redescription Mining}.
+\newblock In {\em SDM}, pages 334--345, 2008.
+
+\bibitem{mafia}
+D.~Burdick, M.~Calimlim, and J.~Gehrke.
+\newblock {{MAFIA: A } Maximal Frequent Itemset Algorithm for Transactional
+  Databases}.
+\newblock In {\em In ICDE}, pages 443--452, 2001.
+
+\bibitem{svm}
+C.~Cortes and V.~Vapnik.
+\newblock {Support-vector networks}.
+\newblock {\em Machine Learning}, 20:273--297, 1995.
+
+\bibitem{svm1}
+V.~N. Vapnik.
+\newblock {\em Statistical Learning Theory}.
+\newblock Wiley-Interscience, September 1998.
+
+\bibitem{perceptron}
+F.~Rosenblatt.
+\newblock {\em {Principles of neurodynamics; perceptrons and the theory of
+  brain mechanisms}}.
+\newblock Spartan Books Washington, 1962.
+
+\bibitem{elm}
+G.~Huang, Q.~Zhu, and C.~Siew.
+\newblock {Extreme learning machine: Theory and applications}.
+\newblock {\em Neurocomputing}, 70(1-3):489--501, December 2006.
+
+\bibitem{gruney}
+K.~Gurney.
+\newblock {\em {An Introduction to Neural Networks}}.
+\newblock Taylor \& Francis Inc., Bristol, PA, USA, 1997.
+
+\bibitem{componentdet}
+Z.~Zivkovic and F.~van~der Heijden.
+\newblock {Recursive unsupervised learning of finite mixture models}.
+\newblock {\em PAMI}, 26(5):651--656, May 2004.
+
+\bibitem{embook}
+G.~J. Mclachlan and T.~Krishnan.
+\newblock {\em {The EM Algorithm and Extensions}}.
+\newblock Wiley-Interscience, first edition, November 1996.
+
+\bibitem{curse}
+W.~Powell.
+\newblock {\em {Approximate Dynamic Programming: Solving the Curses of
+  Dimensionality}}.
+\newblock Wiley, 2007.
+
+\end{thebibliography}

@@ -1,0 +1,202 @@
+%%
+%% EXPERIMENTS AND RESULTS
+%%
+\chapter{Mixture Models and 0-1 data}
+\label{ch:mixturemodels}
+
+\begin{fquote}[Samuel Karlin]The purpose of models is not to fit the data but to sharpen the questions\fqsource{$11^{th}$ R A Fisher Memorial Lecture (1983)} \end{fquote} 
+\begin{synopsis}
+This chapter is devoted to the introduction of the mathematical foundation of mixture models, special consideration is on the finite mixture models of multivariate Bernoulli\footnote{Bernoulli Distribution is named after Swiss scientist Jacob Bernoulli(1654-1705)} distribution. The chapter also covers EM-algorithm \cite{wolfe} \cite{expectmax} and its formultion for the finite mixture models of multivariate Bernoulli distribution \cite{wolfe}\cite{everittmixdist}. The chapter also provides brief introduction to cross-validation, a method for accessing the results of statistical analysis. Near the end of the chapter, it shortly reviews the literature on the use of finite mixture models of multivariate Bernoulli distribution with a focus on cancer genetics.
+\end{synopsis}
+
+\section{Binary Data}
+\label{s:binarydata}
+History of collection of information and data is quite long. However, the size of data and information was relatively small but recently improved technology, increased storage capacity, and more imporantly the realization of importance of data has lead to the collection and storage of data. Moreover, as dicussed in chapter \ref{ch:introduction}, recent technologies are producing data at exponential rates. Thus, extracting meaningful information from those data is a matter of extreme urgency. In all the fields of study ranging from biology to astronomy to social sciences, binary data has been of special interest. Binary data is special class of categorical data with only two scales which can be considered as true or false, success or failure. Binary data have only two classes (categories) and often represented as \textbf{0} and  \textbf{1} or \textbf{1} and \textbf{-1}. Binary data naturally occurs in many areas of study: in social science, interview questions relating to marital status, gender, like or dislike, alive or dead can be formulated as 0-1 data. Similarly, in paleontology 0 can represent absence of a fossils and 1 can represent presence of fossils \cite{Puolamaki06pcbi}. In universities, the relationship between courses and the students can be represented as 0-1 data where 1 represents that the student has taken the course and 0 reprsents that the student has not taken the course as discussed and preprocessed in \cite{randomization}. One of the principal uses of the binary data is in \textbf{`Market Basket Data'} which assembles information about whether a customer has bought certains goods or not. One of the popular benchmark dataset RETAIL is a prominient example of a market basket data \cite{retail}. Over the years biology and genetics, have been one of the major source of 0-1 data. For example, 0-1 data can capture the notion of presence or absence of certain characteristics in species. The binary data analysed in this thesis as discussed in section \ref{s:dataset} is also a binary data denoting the presence or absence of amplification in chromosome bands.
+
+
+
+\section{Mixture Models}
+\label{s:mixmodels}
+Probabilistic modeling approximates the probability of an event occurring again on the basis of limited instances of observed data. The estimated probability distribution aims to explain the process of data generation. Finite Mixture Models (FMM) are probabilistic models with varying uses such as density estimation, clustering, classification \cite{mclachlanfmm} \cite{everittmixdist} \cite{bishop}. These models are interesting and flexible model family for modelling latent (unobserved) variables in complex distributions. Finite Mixture Models have a very long history. Geoffrey McLachlan and David Peel in their book \textit{``Finite Mixture Models''} attribute famous biometrician Karl Pearson for the first use of the mixture models where he fitted two Gaussians with different means ($\mu _1$ and $\mu _2$) and variances ($\sigma _1 ^ 2$ and $\sigma _2 ^ 2$) in proportions $\pi _1 $ and $\pi _2$ for some data in 1894  \cite{mclachlanfmm}. However, the popularity of mixture models have significantly grown over the past few decades because of the dramatic increase in computing power. Nonetheless, major share of contribution goes to the mathematical foundation, formulation and understanding of the mixture models. Furthermore, formulation of the EM-algorithm \cite{expectmax}, which provides a conceptual framework to estimate the maximum likelihood from the incomplete data, in 1977 provided the necessary impetus to the growing use of mixture models. Over the few years, finite mixture models have been extensively used in many application domains including model based clustering, classification, image analysis, and collaborative filtering in analysis of high dimensional data. 
+
+Finite mixture models(FMM) decomposes the density function into a set of component density functions. Each of the decomposed density functions define a specific class of the origination of the data i.e each component density functions represents a portion of original distribution. This form of representation is not possible with other simple parametric distribution. The basic assumption of FMM is that the different classes in the data originate from the well known parametric distribution. Except for this assumption of the data source, FMMs are extremly flexible in the choice of the distribution. Any classical parametric distributions such as Normal(Gaussian), Poission, Bernoulli can be choosen as component density function. After the choice of distribution, the primary task is then to estimate the parameters of the selected distribution such as mean ($\mu$) and variance ($\sigma ^2 $) for gaussian distribution; interval ($\lambda $) for Poission distribution. It is important to note that each component distribution will be defined by its own set of parameters thus differing itself from the others. This explains the reason that mixture models are called semi-parametric models. The complexity of mixture models depends on the complexity of the problem being solved, not with the size of dataset.  In this thesis, binary data is analysed and the assumption is that it follows ther Bernoulli distribution. Bernoulli distribution is parameterized by just one parameter $\theta$, which denotes the probability of success in a trial with two possible outcomes: success and failure. The learning task is then limited to learning the bernoulli parameter $\theta$.
+
+If the number of mixture components in the mixture model is fixed based on some prior knowledge, then the mixture model acts a parametric model. On the other hand, if the number of mixture components is not fixed initially but is allowed to learn from the data then the mixture model can be considered a non-parametric model. Selection of number of mixture components directly influences the performance of the mixture models. Fewer the number of components, the mixture model behaves similar to a parametric model and increases the bias. On the contrary, if the mixture model has a large number of components then the model can overfit the data thus producing unreasonable variation. Hence, there is always a trade-off between the two. The major drawback in using mixture models is computational complexity of training the mixture models. Normally, training mixture models are computationally expensive when compared to other parametric (such as Poission distribution) as well as non-parametric (such as k-means) methods.
+
+Different methods have been proposed and implemented to estimate the parameters of the mixture model including Expectation Maximization(EM), Markov Chain Monte Carlo(MCMC), and Spectral Method. MCMC uses Gibbs sampling to sample from posterior distribution. Spectral method, on the other hand, uses Singular Value Decomposition(SVD) on the data. For distributions satisfying specific separation condition, spectral method estimates the mixtures highly similar to the true mixture with high probability \cite{spectralmethod}. However, in this thesis EM algorithm, discussed in section \ref{s:em}, is used to estimate the parameters of the mixture model. 
+
+\subsection{Mixture of Multivariate Bernoulli Distribution}
+
+The major focus of the thesis is concentrated on modelling DNA copy number amplification which is a binary data. Hence, the mixture of multivariate Bernoulli distribution forms the crux of the thesis. 
+
+Univariate Bernoulli distribution is a probability distribution with two possible outcomes. Consider an example of a single random binary variable, $x \in \{ 0,1\}$ where $x=0$ denotes the failure of an event and $x=1$ denotes the success of an event. For example, success of an event may be a student participating a course and failure of an event may be the student not participating in the course. Let the probability of occurance of $x=1$ be $\theta$ such that $0 \le \theta \le 1$. Therefore, the probability of occurance of $x=0$ is $1-\theta$. Thus, $p(x=1|\theta)=\theta$ and $p(x=0|\theta)=1-\theta$. Accordingly, the probability mass function i.e. probability distribution over $x$ is given by the equation 
+\begin{eqnarray}
+p(x|\theta)=\theta ^ {x }(1-\theta)^{1-x}
+\end{eqnarray} 
+The mean or the expected value of the random binary variable is given by 
+\begin{eqnarray}
+\mathbb{E}[x] = 0 \times p(x=0|\theta)+1 \times p(x=1|\theta) =  p(x=1|\theta) = \theta
+\end{eqnarray} 
+The variance of the random binary variable is defined as the dispersion of random variable. It can be obtained by
+\begin{eqnarray}
+var(x)= \mathbb{E}(x^{2}) - \{ \mathbb{E}(x)\}^{2} 
+\end{eqnarray}
+where 
+\begin{eqnarray}
+\mathbb{E}(x^{2})= 0^{2} \times p(x=0|\theta) + 1^{2} \times p(x=1|\theta)=p(x=1|\theta)=\theta  \nonumber
+\end{eqnarray}
+and also
+\begin{eqnarray}
+\{ \mathbb{E}(x)\}^{2} = \theta^{2}  \nonumber
+\end{eqnarray}
+Therefore, 
+\begin{eqnarray}
+var(x)=\theta - \theta ^{2} = \theta (1-\theta)
+\end{eqnarray}
+
+The probability $p(x|\theta)$ can be extended to the binary space $\{0,1\}^{\mathrm{N}}$ i.e. to a dataset $ \mathcal{D}= \{x_1 ,\ldots , x_N \}$  where  $\{x_1 ,\ldots , x_N \}$ are the observed values of $x$. Hence, the probability mass function of the multivariate Bernoulli distribution is given by
+
+\begin{eqnarray}
+\label{eq:1}
+P(\mathcal{D}|\Theta)=\displaystyle\prod_{i=1}^{\mathrm{N}}p(x_n|\theta) = \displaystyle\prod_{i=1}^{\mathrm{N}} \theta_i ^{x_i}(1-\theta _i)^{1-x_i}
+\end{eqnarray} 
+
+where $\theta \in \mathbb{R}^i$ and $0 \leq \theta _i \leq 1$ for all $1 \leq i \leq \mathrm{N}$ and $x_1, x_2, \ldots x_\mathrm{N} = \mathbf{x} \in \{0,1\}^\mathrm{N}$
+
+The likelihood function in (\ref{eq:1}) is a function of $\theta$. For independent and identically distributed samples $\chi=\{x_n\} ^{\mathrm{N}}_{n=1}$ from $\{ 0, 1\}^{\mathrm{N}}$, the vector $\hat{\theta}$ that maximizes the likelihood function in (\ref{eq:1}) is the estimated value of $\theta$. Furhtermore, maximizing the likelihood function in (\ref{eq:1}) equivalent to maximizing the logarithm of the likelihood. Thus,
+
+
+\begin{eqnarray}
+\label{eq:2}
+\mathrm{ln} \; p(\mathcal{D}|\Theta)=\displaystyle\sum_{i=1}^{\mathrm{N}} ln \; p(x_i|\theta_i) = \displaystyle \sum _{i=1} ^{\mathrm{N}} x_i \; ln \; \theta_i +(1-{x_i})(1-\theta_i)
+\end{eqnarray} 
+
+From (\ref{eq:2}) it can be seen that the log likelihood function depends on the $\mathrm{N}$ samples of $x_n$ through the sum $\displaystyle\sum_{i=1}^{\mathrm{N}} x_n$ which provides adequate statistics about the distribution. Taking the derivative of (\ref{eq:2}) with respect to $\theta$ and equating it to zero gives the value of maximum likelihood estimation. The value is given by:
+
+\begin{eqnarray}
+\label{eq:3}
+\hat{\theta}_{\mathrm{ML}} = \frac{1}{N} \displaystyle\sum_{i=1}^{\mathrm{N}}x_i
+\end{eqnarray} 
+
+The defination (\ref{eq:3}) is also known as the sample mean. If the sample $\chi$ contains higher order co-relations, the sample co-variance matrix will be diagonal. Hence, the maximum likelihood estimator in (\ref{eq:3}) gives unsatisfiable result. 
+
+Assuming that the data comes from a mixture of known number of the components, $J$, finite mixture of multivariate Bernoulli distributions is defined as:
+
+\begin{eqnarray}
+\label{eq:maindist}
+ p(\mathcal{D}|\Theta)=\displaystyle\sum_{j=1}^{\mathrm{J}} \pi_j P_j(x|\theta_j)
+\end{eqnarray}
+
+In defination (\ref{eq:maindist}) each $P_j$ is a multivariate Bernoulli Distribution parameterized by $\theta_j$. Hence, the finite mixture model can be formulated as:
+
+\begin{eqnarray}
+\label{eq:4}
+ p(\mathcal{D}|\Theta)=\displaystyle\sum_{j=1}^{\mathrm{J}} \pi_j \displaystyle \prod _{i=1} ^{\mathrm{d}} \theta_{ji}^{x_i} (1-\theta_{ji})^{1-x_i}
+\end{eqnarray} 
+
+where $\pi_j$ are the mixture proportions satisfying the properties such as convex combination such that $\pi_j \geq 0 $ and $\displaystyle\sum_{j=1}^{\mathrm{J}} \pi_j = 1$ for all $j=1, \ldots J$. $\Theta$ is composed of $\theta_1, \theta_2, \theta_3 \ldots \theta_N$. The combination of $J$ mixtures of multivariate distribution in (\ref{eq:4}) can capture the co-relations in the sample $\chi$ thus solving the problem of unsatisfiable result in (\ref{eq:3}). Finite mixture of multivariate Bernoulli distribution with  number of components $= J$ and dimension of dataset $=N$ is paramerized by $\Theta=\{J$, $\{ \pi_j, \theta_j\}_{j=1}^{J}\}$
+
+Fitting the Bernoulli Mixture Model involves learning the parameters $\Theta$ and the number of components $J$ from the given data sample $\chi$. This can be formulated in terms of log-likelihood as:
+
+\begin{eqnarray}
+\label{eq:loglkhood}
+\mathcal{L} (\pi, \Theta)= \displaystyle\sum_{n=1}^{\mathrm{N}} log \; P(x_n|\Theta, J) = \displaystyle\sum_{n=1}^{\mathrm{N}} log  \left [ \displaystyle\sum_{j=1}^{\mathrm{J}} \pi_j \displaystyle \prod _{i=1} ^{\mathrm{d}} \theta_{ji}^{x_{ni}} (1-\theta_{ji})^{1-x_{ni}} \right]
+\end{eqnarray} 
+
+%\begin{eqnarray}
+%\label{eq:lkhood}
+%\mathcal{L} = \displaystyle\sum_{n=1}^{\mathrm{N}} log  \left [ \displaystyle\sum_{j=1}^{\mathrm{J}} \pi_j \displaystyle \prod _{i=1} ^{\mathrm{d}} \theta_{ji}^{x_i} (1-\theta_{ji})^{1-x_i} \right]
+%\end{eqnarray} 
+
+
+The term (\ref{eq:loglkhood}) can be maximized with high number of mixture components. However, large number of mixture components increases model complexity and often results in overfited model generalizing poorly on the future data. On the other hand, smaller number of mixture components results in underfitting. To find the trade-off between the appropriate model complexity and large value of the term  (\ref{eq:loglkhood}) some validation techniques must be used. The basic aim of the thesis is to achieve maximally simple and compact parsimonious models. Ten-fold crossvalidation with stratification as discussed in section \ref{s:crossvalidation} is used for the same purpose. The maximizing the term (\ref{eq:loglkhood}) can be performed using EM algorithm discussed in section \ref{s:em}.
+
+
+One of the major drawback of finite mixture models of multivariate Bernoulli distribution is that it belongs to the class of non-identifiable distributions \cite{nonidentifiable}. Thus, there exists distinct parameters ($\alpha$ , $\theta$) and ($\beta$ , $\lambda$) such that they represent same distribution excluding the trivial permutations. The problem of non-identifiablity has been extensively studied in literature after it was proved in \cite{nonidentifiable} \cite{furthernoni} that these FMMs are non-identifiable. However, studies in \cite{furthernoni} have proved that inspite of their non-identifiable nature, they are useful in various applications. 
+
+
+
+
+\section{Expectation Maximization Algorithm}
+\label{s:em}
+Given a sample $\chi$, the parameters maximizing $\Theta$ and $J$ can not be ascertained analytically. However, EM algorithm can be used to optimize the parameters. The Expecation Maximization(EM) is a iterative algorithm for the computation of maximum likelihood with broad application areas and was first coined by Dempster, Laird and Rubin in \cite{expectmax}. The EM algorithm gets its name because in each iteration of EM algorithm comprises of two steps: Expectation Step(E-Step) and Maximization Step(M-Step).
+
+Component-wise differentiation of the term (\ref{eq:loglkhood}) with respect to $\theta$ and $\pi$ results in:
+\begin{eqnarray}
+\label{eq:em1}
+\frac{\delta \mathcal{L}}{\delta \pi_{j}} = \frac{1}{\pi_{j}} \displaystyle\sum_{n=1}^{\mathrm{N}} P(j|x_n;\pi,\Theta)-N \quad j=1, \ldots, J
+\end{eqnarray} 
+And also
+\begin{eqnarray}
+\label{eq:em2}
+\frac{\delta \mathcal{L}}{\delta \theta_{ji}} = \frac{1}{\theta_{ji}(1-\theta_{ji})} \displaystyle\sum_{n=1}^{\mathrm{N}}P(j|x_n;\pi,\Theta) (x_{ni}-\theta_{ji}) \\
+where \quad j=1, \ldots, J \; and \; i=1,\ldots, d \nonumber
+\end{eqnarray} 
+
+The term -N in equation satisfies the constraint $\sum_{j=1}^{J}\pi_j$ introduced in log-likelihood via Lagrange multiplier. Now, From Bayes' theorem the posterior probability can be calculated as shown below.
+\begin{eqnarray}
+\label{eq:em3}
+P(j|x_n;\pi,\Theta)= \frac{p(x_n|j;\pi,\Theta)p(j)}{\sum_{j'=1}^{J} P(x_n|j';\pi\Theta)p(j')} \nonumber \\
+= \frac{\pi_j \prod_{i=1}^{d} \theta_{ji}^{x_{ni}}(1-\theta_{ji})^{1-x_{ni}}} {\sum_{j'=1}^{J} \prod_{i=1}^{d} \theta_{j'i}^{x_{ni}}(1-\theta_{j'i})^{1-x_{ni}}} 
+\end{eqnarray}
+
+Derivation of the EM-algorithm is fairly simple and can be referred from the works of Everitt and Hand \cite{everittmixdist} as well as Wolfe \cite{wolfe}. The basic equations of EM-algorithm are:
+
+\textbf{E-step:} E-step computes the posterior probability using the equation \ref{eq:em3} for the most recent values of parameters {$\theta ^{\tau}, \Theta ^{\tau}$} at iteration $\tau$ i.e. calculate $P(j|x_n;\pi ^{\tau},\Theta ^{\tau})$
+
+\textbf{M-step:} M-step recomputes the the values of parameters {$\theta ^{\tau+1}, \Theta ^{\tau+1}$} for the next iteration.
+
+\begin{eqnarray}
+\label{eq:mstep1}
+\pi_{j}^{\tau+1} = \frac{1}{N} \displaystyle \sum _{n=1}^N P(j|x_n;(\pi^{(\tau)}),\Theta^{(\tau)}) \nonumber \\
+\Theta_{j}^{(\tau+1)} =  \frac{1}{N \pi_{j}^{(\tau+1)}} \displaystyle \sum _{n=1}^N P(j|x_n;(\pi^{(\tau)}),\Theta^{(\tau)})x_n 
+\end{eqnarray}
+
+Iteration between E and M step produces a succession of monotonically increasing sequence of values of log-likelihood for the parameters $\tau \; = \; 0,1,2,3 \ldots $ regardless of the starting point $\{\pi^{(0)}, \Theta^{(0)}\}$. This result is advantageous but also results in the problem of singularities, the possiblity of getting an infinite likelihood if a single data point is assigned to one of the mixtures. However, mixture of Bernoulli distribution are not susceptible to the problem of singularities because the likelihood function is
+bounded above by the constraint $0 \leq p(x_n|\theta_j) \leq 1$. EM-algorithm is restricts the number of the mixture components in the mixture model be known initially. Furthermore, EM-algorithm is sensitive to the initializations and the results may differ on the same data for different initializations. EM algorithm can get stuck in local minima and the global optimum results are not often guranteed. To overcome these problems regularization techniques as discussed in \cite{regularization} can be used. Inspite of these demerits, EM-algorithm has been found widespread use because of its reliablity.
+
+One of the important issue to note regarding the non-identifiable problem is that it matters least with respect to this thesis. Our main aim is to maximize the term (\ref{eq:loglkhood}) considering the trade-off between the model complexity (number of components in the mixture model) and small difference in the maximum likelihood value. If different parameters satisfy the trade-off, choosing any of those parameters will have negligible effect on the final results. 
+
+\section{Cross-validation}
+\label{s:crossvalidation}
+
+The idea of cross-validation, sometimes also called rotation estimation and pioneered by \cite {crossvalind} and \cite{monsteller}, is fundamental concept in machine learning for assessing the results of the statistical analysis. Various forms of cross-validation techniques have been proposed. The basic defination of $k-$fold cross-validation states that the training set $\mathcal{T}$ is divided into $k$ exhaustive and exclusive equal sized sub-sets $\mathcal{T}_1, \mathcal{T}_2 \ldots \mathcal{T}_k$. The main assumption is that the both the training and the validation sets are indipendent. For each sub-set $\mathcal{T}_i$ where $i \in 1, 2, 3 \ldots k$ the data is trained on the union of all the other subsets and determine the error on the subset $T_i$. The final error of the algorithm is the average error on all the sub-sets as shown in the equation \ref{eq:errorcv}.  
+
+\begin{eqnarray}
+\label{eq:errorcv}
+\varepsilon =\frac{1}{k} \sum_{i=1}^{k} \epsilon_{i}
+\end{eqnarray}
+
+The initial subset of data is called the test set; while union of the remaining subsets is called the training set. The efficiency of $k-$fold cross validation largely depends on the choice of $k$. If the number of $k$ is small, the algorithm is computationally efficient as it requires performing only few rounds of experiments. Furthermore, the variance of the estimator will be negligible. On the contrary, the bias of the estimator will be significantly larger, larger than the true error on the future data. 
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.47]{figures/kfold}
+\caption{\textit{Schematic representation of $k-$fold cross-validation technique showing the division of training data into training and validation set }}\label{Fig:kfold}
+\end{figure}
+
+On the other hand, if the number of $k$ is large, the bias of the estimator will be significantly low. With large value of $k$, the bias is likely to converge to the true error on the future yet unseen data. On the contrary, the computational time is greatly increased as the number of iterations increases. For example, in simple $10-$fold cross validation the learning algorithm is repeated 10 times with $9/10$ of the total data. Additionally, variance of the true error estimate will be significantly larger. In most of the cases, the choice of $k$ depends on the size of dataset. If the size of dataset is larger, smaller number of $k$ is a better option while for smaller datasets larger number of $k$ will be a better option.
+
+The optimal number of $k$ for $k$-fold cross validation highly researched area but still an open problem.  Although there are some emperical \cite{Kohavi95astudy} and mathematical results \cite{witten} suggesting the optimal value of $k$, the choice depends on the rule of thumb. Comprehensive studies and experiments on datasets of different sizes have shown that ten is the optimal number of $k$ to get the accurate error \cite{witten}. In cross-validation data is randomly divided into $k$ different sets. Hence, different runs of cross-validation with same learning algorithm on the same data can produce different results. In order to mitigate this problem, many different runs(often 10) of the cross-validation procedure is suggested which involves running the learning algorithm 100 times with 9/10 of the total data each time. One tenfold cross-validation can be seen as a ``standard'' measure of the performance whereas ten tenfold cross-validations would be a ``precise'' measure of performance \cite{kayphdthesis}. Furthermore, similar to the problem in hold-out method, the cross-validation also is susceptible to `unfortunate split'. Thus while partitioning the data into subsets, care should be taken to include different unique samples in all rows to each of the subset. The idea of `stratification' have been suggested as the solution to the problem of unfortunate split thus ensuring that each class is properly represented in both training and the validation sets.  Different classes are only approximately represented in the the proportion present in the training set.
+
+
+\section{DNA Copy Number Changes Data}
+\label{s:copynumberamp}
+Copy number amplification is a form of chromosomal aberration when the copy number of the chromosome increases more than 5. Amplification is different from duplication because duplication exactly doubles the copy number. For instance, in human normal copy number is two, so duplication increases the copy number to 4. Higher level amplifications has been known increases the copy number more than hundred fold. Generally, the amplification is developmentally regulated and amplified copies are lost from the cell. However, amplifications in many cases manifests itself in larger number throughout the genome. DNA amplifications are essentially the hallmarks of cancer. Studies have also shown that copy number amplifications results in resistance to certain drugs. 
+
+Comparative genomic hybridization(CGH) is one of the molecular technique to survey the DNA copy number variation across whole genome. Differentially labelled test and reference genomic DNAs are co-hybridized to normal metaphase chromosomes. Fluorescence ratios along the length of the chromosome provide a cytogenetic representation of DNA copy number variation. However, one major drawback of CGH is the resolution. The mapping resolution is only 20Mbp(million base pairs) which is also the average size of the amplified region. Furthermore, mapping resolution for deletion is 2Mbp. To overcome the problem of CGH, a new microarray technology called Array Comparative genomic hybridizationa (aCGH) has been developed. aCGH provides higher resolution than CGH. Fluorescence ratios at arrayed DNA elements provide a locus by locus measure of copy number changes. aCGH was initially used to characterize variation in gene expression using cDNA. Using the CGH methods, the chromosome is sub-banded to 400 regions, also known as cytogenetic bands. Using different staining techniques, the cytogenetic bands can be visualized and the resolution of the cytogenetic band can be increased to over 800 resolution.
+
+\section{Review of Literature}
+\label{s:mmbd}
+Problem of analysis of binary data is a very old problem and has been considered a lot in statistics and machine learning and mixture model is also an old solution. Recently, mixture models have been a subject of major research. Thus, the extensive literature of mixture models and binary data can not be reviewed here. For detailed review regarding mixture models and its applications, the reader is referenced to \cite{mclachlanfmm}, \cite{mixmodelsreview} and the references therein. On the other hand, \cite{thatreviewarticle} reviews different machine learning methods applied to cancer research. Inspite of the great boom of mixture models in the last few decades, comparatively very few instances of research is based on mixture of multivariate Bernoulli distribution. Nonetheless, mixtures of Bernoulli distribution is found to be suitable in the analysis of the binary data. Thus, this section briefly reviews the research and applications pertaining to the mixture of multivariate Bernoulli distribution with a special focus on cancer genetics. 
+
+Mixture of Bernoulli distribution has found significant application areas when the data is in binary form. For example, in \cite{binaryimages}, Bernoulli mixture model trained using EM-algorithm is used to classify binary images with effective results. Multiple mixtures in the case of binary image captures the pixel co-relations and each pixel is assumed to be governed by its associated Bernoulli parameter. One particular application area, where use of FMM of Bernouli distribution has exceled is natural language processing. In \cite{textclassification}, FMM of Bernoulli distribution is used in text classification. The text classification is used to improve the language modelling for machine translation. The text classification is used as an extention to näive Bayes by modelling the class conditional dependance spreading it over different mixture components. In \cite{textmining}, FMM of Bernoulli distribution has been used to classification. Additionally, the Bernoulli mixture models are used for feature selection and feature extraction including dimensionality reduction from the input data. The combination of the methods implemented in two datasets of varying domains text mining and hand writing recognition, produces considerable increase in classification accuracy. Furthermore, the dimensionality reduction of 99.9\% is achieved on the sparse binary data. 
+
+\subsubsection{Mixture Models in Copy Number Analysis}
+\label{ss:mmcna}
+DNA copy number analysis was started in \cite{pollackgenome} where the authors mainly focused on determining the copy number of the cytogenetic band. Similar works performed are reviewed in \cite{oldage} to determine the copy number. However, in \cite{oldage} and \cite{pollackgenome} the authors did not establish a relation between the copy number and their clinical significance.  In the recent past, DNA copy number amplification data collected with bibliomics survey from 838 journal articles published from 1992 to 2002 was analyzed in \cite{Myllykangas20067324}. In the work, amplification patterns were determined for 73 different neoplasms and the neoplasms were clustered according to amplification profiles thus identifying the amplification hotspots using independent component analysis. The profiling revealed that human neoplasms formed clustered based on the amplification frequency of the cancer. Continuing the studies in DNA copy number amplification, authors in \cite{Myllykangas200815}classified the human cancers based on  copy number amplification using probabilistic modelling. Furthermore, the authors extracted the ranges of the amplification in the chromosome and expressed it according to the cytogentic nomenclature. In \cite{Tikka2007972} and \cite{Holl20071}, the authors modeled the DNA copy number amplification using a mixture of multivariate Bernoulli Distribution. The classification of 73 different neoplasms in  \cite{Myllykangas20067324} were extended to 95 different neoplasm types. Furthermore, in \cite{Rancoita2009}, the authors have proposed the enhancement to Bayesian Piecewise Constant Regression(BPCR) called mBPCR changing the segment number estimator and boundary estimator to enhance the fitting procedure. The proposed mBPCR was more accurate in the determination of true breakpoints of amplification. The more recent studies \cite{Dhaene2010262} and \cite{Despierre2010358} have mainly focused in cancer specific analysis of DNA copy number. Although the mixture models were used in \cite{Tikka2007972} and \cite{Holl20071}, they have studied only chromosome-1 data in resolution 393. Chromosome-1 being the largest chromosome, there are significant amount of amplifications \cite{Myllykangas20067324}. However, single chromosome band and specific gene responsible for cancer has not been identified. Hence, study was performed on all chromosomes including chromosome-1. Chromosomewise analysis can reveal interesting facts about amplification of specific chromosomes and guarantees efficient computation \& ease of analysis. Furthermore, there are several sources of multilevel biological data that comes in multiple resolutions as shown in Fig. \ref{Fig:problem} but there seems to be a significant gap in research to deal with multiple resolution of the data. Algorithms and methods to deal with such multi-resolution data could possess very high clinical significance.
+
+
+
+
+

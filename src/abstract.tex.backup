@@ -1,0 +1,54 @@
+%%
+%% ABSTRACT
+%%
+\parindent 0pt
+\parskip 1ex
+
+{\large
+\renewcommand{\arraystretch}{1.0}
+\begin{tabular*}{15.0cm}{l@{\extracolsep{\fill}}r}
+AALTO UNIVERSITY    & ABSTRACT OF THE \\
+SCHOOL OF SCIENCE AND TECHNOLOGY   & MASTER'S THESIS \\
+\end{tabular*}
+}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|l|}
+\hline
+\makebox[4cm][l]{\bf Author:} \hspace{0.4cm} Prem Raj Adhikari \\
+\makebox[4cm][l]{\bf Name of the Thesis:} \hspace{0.4cm} Mixture Modelling of Multiresolution 0-1 Data\\
+\makebox[9.4cm][l]{\makebox[4cm][l]{\bf Date: } \hspace{0.4cm} November 25, 2010}   \\
+\makebox[4cm][l]{\bf Number of pages:} \hspace{0.4cm} ix + 84 \\
+\hline
+\makebox[12.2cm][l]{\makebox[4cm][l]{\bf Department:} \hspace{0.4cm} Department of Information and Computer Science } \\
+\makebox[12.2cm][l]{\makebox[4cm][l]{\bf Professorship:} \hspace{0.4cm} T-61 Computer and Information Science } \\
+
+\hline
+\makebox[4cm][l]{\bf Supervisor:} \hspace{0.4cm} Professor Samuel Kaski \\
+\makebox[4cm][l]{\bf Instructor:} \hspace{0.4cm} Jaakko Hollmén, D.Sc. (Tech.) \\
+
+\hline
+\parbox[t]{14.5cm}{
+	\parskip0ex
+	\parindent 1em
+	\vskip-4mm
+	\vskip1ex
+%	\onehalfspacing
+Biological systems are complex systems and measurements in biology are made with high throughput and high resolution techniques often resulting in data in multiple resolutions. Furthermore, Currently, available standard algorithms can only handle data
+in one resolution.
+.
+
+Firstly, the data set is analyzed, parsed and organized in an effective structure. This process consists in recovering the valid answers from the survey, cleaning the data, removing outliers and filling up the database. The database is structured in a way that facilitates access and analysis of complex queries.
+
+%\drop{W}ith a drop cap, the initial sits within the margins and runs several lines deep into the paragraph, pushing some normal-sized text off these lines.
+
+In conclusion, the exploratory analysis shows how fast and simple it is to extract relevant information from a data set if it is structured correctly; interesting facts are discovered by this approach. The regression analysis is an appropriate methodology to model the variables. The models show a considerable improvement over the mean predictor; for some variable notably simple setups are sufficient. Results for all methods are displayed in easy to follow tables. Strategies for future work are also presented.
+} \\
+\hline
+\parbox[t]{14.5cm}{
+Keywords: modeling, profiling, data mining, exploratory analysis, visualization, machine learning, regression, variable selection, healthcare study, life style, survey.
+\vskip1ex
+} \\
+\hline
+\end{tabular}
+
+\newpage

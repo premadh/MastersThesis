@@ -1,0 +1,103 @@
+%%
+%% EXPERIMENTS AND RESULTS
+%%
+\chapter{Scaling in different resolutions}
+\label{ch:sampling}
+
+\begin{fquote}[Kurt Lewin] If you truly want to understand something try to change it. \fqsource{German-American Psychologist(1890-1947)} \end{fquote} 
+\begin{synopsis}
+This chapter focusses on the different methods used to upscale the data to higher resolutions and downsample the data to different resolutions. Upsampling discussed in section \ref{s:upsampling} is an indexing process to upsample the data. The three downsampling methods discussed in sections \ref{ss:weighted}, \ref{ss:orfunction}, and \ref{ss:majority} are used to downsample the data to lower resolutions.
+
+\end{synopsis}
+Scaling resolutions in cytogenetics is a process of defining the level of precision for the staining techniques to produce the results either global or detailed. A good metaphor for scaling as given by \cite{scaling} in terms of speech recognition can be an advertisement recently aired in a Dutch Television where the shot is started with a global view. In this case, a shot was taken from the orbit satellite and gradully zooming into Europe, the Netherlands, the Dutch North Sea Coast, the Scheveningen beach up to a lady drinking a glass of beer in a terrace. Similar to the advertisement, different staining techniques produce chromosome bands in different resolution. Computational algorithms can be designed to work with only specific resolution of chromosome band. Hence, up-sampling or down-sampling is necessary before the data can be fed to the algorithm. Furthermore, comparing the results of an algorithm on data in different resolution  can produce interesting results which aids in determining suitable resolution of data. In addition, experiments in different resolutions can be helpful in determining the appropriate method for staining.
+
+\section{Upscaling}
+\label{s:upsampling}
+A simple method was devised to up-sample the data from resolution 393 and three different methods were used to downsample the data from higher resolution. Up-sampling was simple and were implemented using simple transformation tables.Initially, dataset was in resolution 393 and it was up-scaled to three different resolutions 550, 700 and 850. A naive method was used for up-scaling the data. Multiple copies of cytogenetic band in lower resolution was made to upscale the data to higher resolution. For example, cytogenetic band 1q36.1 in resolution 550 has been divided into three bands 1q36.11, 1q36.12 and 1q36.13 in resolution 850. So, multiple copies of 1q36.1 was made for all bands 1q36.11, 1q36.12 and 1q36.13 in resolution. Figure \ref{Fig:upscaling} depicts the process of up-sampling.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.4]{figures/upscaling}
+\caption{\textit {Schematic representation of up-sampling where duplicate copies of similar cytogenetic bands is made in the higher resolution}}\label{Fig:upscaling}
+\end{figure}
+
+Figure \ref{Fig:upscaling} shows that three copies of similar cytogenetic band in lower resolution band are made to upscale the data to higher resolution. When multiple copies of same cytogenetic band is made higher resolution will have only few unique rows. Hence, when the sample size decrease the complex model in higher dimension can not be trained to convergence thus producing poor results. Implementation of downsampling was performed using simple transformation tables implemented in Perl\cite{perl}.
+Table \ref{Tab:Transformation} shows an example of table for transformation of data in 393 resolution to 850 resolution for chromosome 17.
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|p{2.7cm}|p{3cm}|c|}
+    \hline
+    \textbf{Chromosome band:393} & \textbf{Chromosome band 850} & \textbf{Index}  \\
+    \hline
+    17p13	& 	17p13.3 	& 	1 \\ \hline
+    ...		& 	17p13.2 	& 	1 \\ \hline
+    ...		& 	17p13.1 	& 	1 \\ \hline
+    17p12	& 	17p12 		& 	2 \\ \hline
+    17p11.2	& 	17p11.2 	& 	3 \\ \hline
+    17p11.1	& 	17p11.1 	& 	4 \\ \hline
+    17q11.1	& 	17q11.1 	& 	5 \\ \hline
+    17q11.2	& 	17q11.2 	& 	6 \\ \hline
+    17q12	& 	17q12 		& 	7 \\ \hline
+    17q21	& 	17q21.1 	& 	8 \\ \hline
+    ...		& 	17q21.2 	& 	8 \\ \hline
+    ...		& 	17q21.31 	& 	8 \\ \hline
+    ...		& 	17q21.32	& 	8 \\ \hline
+    ...		& 	17q21.33 	& 	8 \\ \hline
+    17q22	& 	17q22 		& 	9 \\ \hline
+    17q23	& 	17q23.1		& 	10 \\ \hline
+    ...		& 	17q23.2		& 	10 \\ \hline
+    ...		& 	17q23.3		& 	10\\ \hline
+    17q24	& 	17q24.1		& 	11 \\ \hline
+    ...		& 	17q24.2		& 	11 \\ \hline
+    ...		& 	17q24.3		& 	11\\ \hline
+    17q25	& 	17q25.1		& 	12 \\ \hline
+    ...		& 	17q25.2		& 	12 \\ \hline
+    ...		& 	17q25.3		& 	12 \\ \hline   
+  \end{tabular}
+  \caption{\textit{Chromosome bands for resolution 393 \& 850 and their transformation} }\label{Tab:Transformation}
+\end{table}
+
+Table \ref{Tab:Transformation} shows that some chromosome bands missing in 393 resolution are seen in resolution 850. Hence, duplicate copies of the similar chromosome band in resolution 393 were made in higher resolution. Duplications were based on the assumption that if an adjacent area is amplified then the probability of the chromosome band being amplified is high because amplifications typically cover large areas. The transformation table were chromosome specific and resolution specific (i.e. 66 transformation table in all for different chromosomes)
+
+\section{Downscaling}
+\label{s:downsampling}
+If the data of the same patients were available in two different resolutions, one of the supervised classification algorithm machine learning can be used in downsampling. However, such data was not available and hence naive but useful methods are used for downsampling. Downsampling methods were implemented in scripts with a script each for each chromosome in each resolution. Section \ref{ss:weighted}, \ref{ss:orfunction} and \ref{ss:majority} details the methods of downsampling. Interstingly, in some cases there were some cytogenetic band which were not available in higher resolution. For instance, the $q$ arm of chromosome-4 in resolution 850 is divided into $4q35.1$ and $4q35.2$. In contrast, in resolution 700, the q arm of chromosome -4 is divided into three bands: $4q35.1$, $4q35.2$ and $4q35.3$. respectively. In such cases, missing band in lower resolution was assigned the amplification pattern of its nearest neighbor in all three methods. For the example case above, the cytogenetic band $4q35.3$ was assigned the amplification pattern of $4q35.2$.
+
+\subsection{Weighted Downsampling}
+\label{ss:weighted}
+In length weighted downsampling method length of the cytogenetic band is considered. Length of the cytogenetic band varies in each assembly and hence relative lengths were considered. The amplification of cytogenetic band in lower resolution determined by the weighted length of cytogenetic band in higher resolution. Each cytogenetic band is weighted according to the relative length of the cytogenetic band. If the total length of amplified region is greater than the total length of unamplified region, the cytogenetic band in lower resolution is amplified, otherwise the cytogenetic band is unamplified. Relative Length are considered which gives more accurate measure of the amplification profiles in the cytogenetic band. Absolute lengths of the cytogenetic bands are not currently available and are varying with each assembly. Two relative measures were considered in the calculation of the length. From the ideogram dataset available in NCBI \cite{ncbi}, the difference between ISCN.top and ISCN.bot were used as relative measures. Similarly, difference between bases-top and bases-bot were also used as the relative measure of the length of each cytogenetic band. The difference in the results produced using the different relative measure of length have also been studied. The figure \ref{Fig:wamapping} depicts the length weighted downsampling procedure.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.4]{figures/weighted}
+\caption{\textit{Schematic representation of weighted average downsampling procedure. Here the cytogenetic band in lower resolution is amplified if total length of the  amplified bands in higher resolution is greater than the total length of unamplified bands, otherwise it not amplified. The figure is an example case in chromosome 1q36.1 where two cytogenetic bands 1q36.11 and 1q36.12 in resolution 850 are amplified and one band 1q36.13 is not amplified. However, total length of unamplified region i.e. band 1q36.13 (345) is greater than total length of the unamplified region i.e. bands 1q36.11 and 1q36.12 (100+115=225). Hence, the band in resolution 550 is unamplified as shown by the bold lines in rectangle containing the cytogenetic band in resolution 550.}} \label{Fig:wamapping}
+\end{figure} 
+
+Similar to majority decision downsampling method, length weighted downsampling method does not consider risks of classifying unamplified band as amplified band and vice-versa.
+
+\subsection{OR-function Downsampling}
+\label{ss:orfunction}
+In  presence test downsampling method, the cytogenetic band in lower resolution is not amplified if none of the bands in higher resolution were amplified. The cytogenetic band in lower resolution is amplified if either of the bands in higher resolution is amplified. Figure \ref{Fig:ptmapping} depicts the presence test downsampling method.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.4]{figures/ptmapping}
+\caption{\textit{Schematic representation of presence test downsampling procedure. Here the cytogenetic band in lower resolution is amplified if any of the bands in higher resolution is amplified. Cytogenetic band in lower resolution is not amplified only when none of the bands in higher resolution is amplified}}\label{Fig:ptmapping}
+\end{figure}
+
+The presence test downsampling method is based on simple belief that if the one of the bands in higher resolution is amplified, it signifies the presence of amplification in the band. The case of downsampling can be considered as a simple binary classification problem in machine learning where input is three dimensional binary variable and output is one dimensional binary variable. In this case, risk in classification is taken into account. Risk of classifying an unamplified band as amplified band and consequently a patient not infected by cancer as cancer infected patient is lower than classifying a patient infected with cancer as a patient not infected with cancer. 
+
+
+\subsection{Majority Decision Downsampling}
+\label{ss:majority}
+In majority decision downsampling method, a cytogenetic band in lower resolution is amplified if majority of the cytogenetic bands in higher resolution are amplified otherwise the cytogenetic band is not amplified. In case of a tie amplification of nearest bands are taken into consideration using `golden goal' strategy until certain number of predefined steps. If the amplification of lower resolution can not be concluded with `golden goal' strategy then the band is lower resolution is deemed as amplified on the basis of similar beliefs concerning risks as discussed in subsection \ref{ss:weighted}. Figure \ref{Fig:mdmapping} shows one of the examples of majority decision in downsampling.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.65]{figures/mdmapping.eps}
+\caption{\textit{Schematic representation of majority decision downsampling procedure. Here the cytogenetic band in lower resolution is amplified if majority of the bands in higher resolution are amplified, otherwise it not amplified.}} \label{Fig:mdmapping}
+\end{figure}
+
+There are two flaws in this downsampling procedure because majority decision downsampling procedure does not take into account the risks associated with classifying an unamplified band as amplified band or vice-versa. The lengths of the cytogenetic bands have also not been considered.
+

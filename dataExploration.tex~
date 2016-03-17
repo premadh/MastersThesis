@@ -1,0 +1,186 @@
+%%
+%% Exploratory Data Analysis
+%%
+\chapter{Data exploration}
+\label{c:dataExploration}
+
+\begin{fquote}[who]When a new dataset is ready to be analyzed; one of the best, easiest and less costly ways of doing it is by performing a Data Exploratory Analysis (DEA). Data exploratory analysis represent the set of techniques used for displaying a collection of data so that the information within the data is easily available \cite{rDataAnalysis}. The data shall be displayed in a form that is simple, helpful and easy to interpret. Visual methods are  \fqsource{{\sc ram ram}} \end{fquote} 
+
+
+When a new dataset is ready to be analyzed; one of the best, easiest and less costly ways of doing it is by performing a Data Exploratory Analysis (DEA). Data exploratory analysis represent the set of techniques used for displaying a collection of data so that the information within the data is easily available \cite{rDataAnalysis}. The data shall be displayed in a form that is simple, helpful and easy to interpret. Visual methods are important because the human brain's capability of analyzing images in a fast and accurate way. Correct visualization and careful analysis are ideal for finding unexpected relationships in the dataset \cite{pDataMining}. The exploratory analysis will provide a way to check assumptions and reveal additional information that may have not been expected. Nevertheless, the limitations of the exploratory analysis are due to the high dimensionality of the data; how to display enough variables at once to make the visualization valid, reliable and useful is a challenge. The basic principles on how to display data for accurate and effective analysis were followed as recommend in \cite{tufte}.
+
+The \emph{Elämä Pelissä} dataset has 20 continuous and 29 discrete variables. Initially each variable is analyzed independently. Then discrete variables are analyzed against each other and continuous variables are done so too. Finally, discrete variables are analyzed against continuous variables.
+
+\section{Single plots}
+\label{s:singlePlots}
+
+The \emph{Mean} and \emph{Median} are simple but interesting data summaries. Both are measures of location \cite{pDataMining}. The specific values for each variable were calculated in the previous chapter for all continuous variables (see Appendix \ref{app:B} and \ref{app:C}). In the single plots these measurements will be easy to visualize. For each single variable a plot and a histogram is calculated. Histograms are simple tools useful for displaying the frequency distribution of a dataset. They could be used to observe data following different distribution, e.g. normal distribution. In a histogram the height of each rectangle is dependent on the number of observations that lay on the width of the same rectangle \cite{rDataAnalysis}.
+
+A total of 49 plots were generated, all graphics are available as a part of the research; however only some figures have been included in this thesis. For discrete variables Figure \ref{ima:milk} illustrates the variable Milk. For continuous variables Figure \ref{ima:BMI} illustrates the BMI of the population. All 49 plots were visually analyzed, some interesting discoveries/observations are presented in Table \ref{tab:appD1} in Appendix \ref{app:D}. It is important to notice that these results come from a visual analysis therefore provided numerical  values are not exact. Some plots returned valuable information, others presented obvious results and some few ones no information at all.
+
+\begin{figure}
+ \begin{center}
+ \includegraphics[scale=0.5]{figures/milk}
+ \end{center}
+ \caption[Discrete variable Milk]{\label{ima:milk}Single plot of discrete variable Milk. ``Fat free milk'' and ``Do not drink milk'' are the most common answers. With 197,516 (43\%) and 138,899 (30\%) respondents respectively.}
+\end{figure}
+
+%\begin{figure}
+% \begin{center}
+% \includegraphics[scale=0.5]{figures/stress}
+% \end{center}
+% \caption[Discrete variable Stress]{\label{ima:stress}Single plot of discrete variable Stress. ``Somewhat stressed'' is the most common answers with 277,380 (61\%) respondents.}
+%\end{figure}
+
+\begin{figure}
+ \begin{center}
+ \includegraphics[scale=0.5]{figures/BMI}
+ \end{center}
+ \caption[Continuous variables BMI]{\label{ima:BMI}Single plot of continuous variable BMI. The plot resembles a normal distribution with a mean at 25.}
+\end{figure}
+
+%\begin{figure}
+% \begin{center}
+% \includegraphics[scale=0.5]{figures/income}
+% \end{center}
+% \caption[Continuous variable Income]{\label{ima:income}Single plot of continuous variable Income. The plot resembles a Poisson distribution. The average income is around 50 thousand Euros.}
+%\end{figure}
+
+\section{Discrete variables}
+\label{s:discreteVariables}
+
+The \emph{Elämä Pelissä} dataset has 29 discrete variables. Each variable was plotted against each other in a matrix-like figure. The size of the matrix corresponds to the number of different option combinations between the two evaluated discrete variables. For example, there are five possible answers for Economic situation (Much better, Better, Equal, Worse, Much worse) and there are four answers for Life satisfaction (Very pleased, Pleased, Somehow, Dissatisfied). Thus when these variables are plotted together the resulting matrix will have 20 squares or options; each square will be labeled with the probability of the two answers shown together in the dataset.
+
+A number and a color are associated to each square, the sum of all the numbers in the matrix is 1000. The smaller the number is the smaller the chance of having such case in the data, contrary to what a large number represents. The colors go from pale yellow to dark green, where the pale yellow is associated with low probabilities and dark green with high probabilities. On the third and fourth axis of the plot there are two histograms showing the number of corresponding answers for each individual option.
+
+Depending on the resulting plot some interpretation can be done. With Economic situation and Life satisfaction a possible linear relation is observed, i.e. a poor economic situation is related to a dissatisfied life. Figure \ref{ima:economic_vs_life}  portrays the plot of Economic situation and Life satisfaction. Smoking and Stress are also correlated variables, Figure \ref{ima:smoking_vs_stress} depicts them.
+
+\begin{figure}
+ \begin{center}
+ \includegraphics[scale=0.5]{figures/economic_vs_life}
+ \end{center}
+ \caption[Economic situations and Life satisfaction]{\label{ima:economic_vs_life}Mixed plot of discrete variables: Economic situation and Life satisfaction. The plot shows a possible linear relation between the two variables; very pleased people will have a much better economic situation contrary to dissatisfied people having a much worse economic situation. \\ \small Code: A very pleased; B pleased; C somewhat satisfied; D dissatisfied.}
+\end{figure}
+
+\begin{figure}
+ \begin{center}
+ \includegraphics[scale=0.5]{figures/smoking_vs_stress}
+ \end{center}
+ \caption[Smoking now and Stress]{\label{ima:smoking_vs_stress}Mixed plot of discrete variables: Smoking now and Stress. The plot shows that smokers are somewhat or more stressed; around 15\% of the records fail in these categories. \\ \small Code: A yes, life its hard; B more than people in general; C somewhat; D no.}
+\end{figure}
+
+With 29 discrete variables 406 combinations are possible; all combinations were plotted and saved as part of the research. Some interesting discoveries are described in Table \ref{tab:appD2} in Appendix \ref{app:D}. Not all plots showed important information but all cases were studied. The given percentages correspond to the pair of selected variables from the amount of respondents
+ found in the total number of records available. No filters have been used, e.g. dividing the respondents by sex or age groups; meaning that the dataset was used as a whole.
+
+\section{Continuous variables}
+\label{s:continousVariables}
+
+The \emph{Elämä Pelissä} dataset has 18 continuous variables plus two calculated ones. Each one of the variables has been plotted against each other in a contour-like plot. The contour has different colors for each surface which depends on the number of elements it represents. Higher number of elements in the area are represented with a dark green color, while lower or none elements are drawn in pale gray.
+
+The number of elements available for the plot depends on the selected variables, e.g. for Age and Education there are  445,281 (97.4\%) elements. Figure \ref{ima:age_vs_education} illustrates a person's years of education along with the age. Figure \ref{ima:education_vs_wine} depicts the consumption of wine depending on the years of education. For this later plot there are 440,817 (97.0\%) elements. It is noticeable how educated people drink more wine, specially with 14 to 18 years of education.
+
+\begin{figure}
+ \begin{center}
+ \includegraphics[scale=0.5]{figures/age_vs_education}
+ \end{center}
+ \caption[Age and Education]{\label{ima:age_vs_education}Contour plot of continuous variables Age and Education. The education level is limited by age, i.e. younger people do not have higher education levels. It is also observable older generations are less prepared, e.g. 40-50 years old people concentrate in 12 to 16 years of education while 50 to 60 years old people concentrate in 8 to 14 years of education.}
+\end{figure}
+
+\begin{figure}
+ \begin{center}
+ \includegraphics[scale=0.5]{figures/education_vs_wine}
+ \end{center}
+ \caption[Education and Wine consumption]{\label{ima:education_vs_wine}Contour plot of continuous variables Education and Wine consumption per day in glasses. The years of education go from 6 to 21. The number of glasses of wine have a peak at four when education is between 14 and 16 years. The majority of the population drink less than one glass of wine per day; however, people with an education ranging between 12 to 18 years are the ones drinking more wine.}
+\end{figure}
+
+With 20 continuous variables 190 different plots were generated. All plots were saved as part of the research. Some interesting discoveries are described in Table \ref{tab:appD3} in Appendix \ref{app:D}. Only few plots showed important information but all cases were studied. No filters were used during the generation of the plots.
+
+\section{Mixed variables}
+\label{s:mixedVariables}
+
+When working with discrete and continuous variables it is important to decide how to visualize pairs that come from both sources, i.e. how to have continuous and discrete variables on the same plot. For the analysis of the \emph{Elämä Pelissä} dataset the discrete variables are set in the \emph{x}-axis with their corresponding number of limited options; the continuous variables are set in the \emph{y}-axis with their full range of values. The query applied to the database selects all the valid elements corresponding to the pair of variables being processed. With the resulting dataset a matrix-like structure is generated where the columns are normalized. Each column represents the various options of the selected discrete variable. The normalization is done with the objective of better observing how the continuous variables are \emph{distributed} over the discrete variables in each one of their different options. At the third axis the number of respondents per column is indicated.  A color palette is added at the fourth axis, to facilitate the interpretation. The colors go from pale white to dark red; where pale white indicates low proportion of elements and dark red a high proportion. Let's not forget that in these plots the values are given in proportions and not in number of elements.
+
+Figure \ref{ima:economic_vs_education} illustrates the plot of Economic situation and Education. The five different columns in the figure correspond to each one of the five different options to select from Economic situation. For all the columns dark red colors are observed between 12 and 16 years, specially 12 years. This means that independent of the economic situation a high proportion of people study for 12 years at least.
+
+Figure \ref{ima:issues_vs_sleeping} depicts the plot of Issues with children and Sleeping time; an interesting variation is observable when problematic children show up. Another example is  Figure \ref{ima:milk_vs_age} where variables Type of milk and Age are portrayed.
+
+\begin{figure}
+ \begin{center}
+ \includegraphics[scale=0.5]{figures/economic_vs_education}
+ \end{center}
+ \caption[Economic situation and Education]{\label{ima:economic_vs_education}Plot of discrete and continuous variables: Economic situation and Years of education. A \emph{step} is observable at the different columns showing a possible relationship between the two variables. The people with a ``Much better'' economic situation have an education level between 14-18 years; the people with a ``Much worse'' economic situation have an education level between 8 and 14 years. While not conclusive, it is noticeable that the education level directly affects the actual economic situation. }
+\end{figure}
+
+\begin{figure}
+ \begin{center}
+ \includegraphics[scale=0.5]{figures/issues_vs_sleeping}
+ \end{center}
+ \caption[Issues with children and Sleeping time]{\label{ima:issues_vs_sleeping}Plot of discrete and continuous variables: Issues with children and Sleeping time. The number sleeping hours for the population in general concentrate between 7 to 8. The variation of hours of sleeping is similar in all the options of variable Issues with children; however at option ``Issues all the time'' a difference is noticeable. For this case the sleeping time range goes down to 6 to 7 hours per day and, in some cases, to 5 hours. Therefore, its a fact that problematic children do affect the resting time of the parents.}
+\end{figure}
+
+\begin{figure}
+ \begin{center}
+ \includegraphics[scale=0.5]{figures/milk_vs_age}
+ \end{center}
+ \caption[Kind of milk and Age]{\label{ima:milk_vs_age}Plot of discrete and continuous variables: Kind of milk and Age. Two interesting patters can be observed in this plot. Firstly; it is observed that the age range of people not consuming milk goes from 40 to 60 years. Secondly; whole milk is consumed in all the range of ages, but it is specifically consumed by older people between 60 to 80 years. This can be explained with the fact that some time ago only the natural form of milk existed. The new milk categories are of recent times; therefore, old generations seem to be consuming what they grew up with.}
+\end{figure}
+
+With a total of 49 variables (29 discrete and 20 continuous) the number of different plots is 580. Some interesting discoveries are described in Table \ref{tab:appD4} in Appendix \ref{app:D}. Only few plots showed important information but all cases were studied. As in the previous cases no filters were used during the generation of the plots.
+
+\section{Specific consults}
+\label{s:specific}
+
+In the previous sections the \emph{Elämä Pelissä} dataset has been analyzed using a visual exploratory approach; different kinds of plots were used depending on the type of variables. However, for all cases the full dataset has been used, i.e. all available and valid records were used without filtering. A filter is a mechanism used to generate a valid subset of the full valid dataset. A filter can be used to select records limited to the male or female gender, records that have $w$ weight or $y$ age, for example. With a filter correctly applied in a DEA it is possible to find interesting relations inside subsets of data. The filter, or filters, can be as simple or complex as required. Initially some basic but useful filters are applied, e.g. sex, age group, etc. More in-depth analysis may require a more advanced filter or sequence of filters.
+
+To facilitate the filtering, plotting and analysis a Perl script was programmed. The script simplifies the generation of the SQL queries and it generates an R file used to plot the resulting figure (if stated the script will handle the plotting also). The script can be run in batch mode or using a cgi web interface. However, the web interface is not fully polished; the selection of variables and the setting of ranges have to be done manually making it error prone.
+
+The following four queries have been generated with the help of the script. The combination of filters that could be applied to the \emph{Elämä Pelissä} dataset is extremely large (if not infinite); therefore, the analysis was limited to four consults only. The questions shown below are the result of the literature review and my personal interest.
+
+\begin{enumerate}
+ \item What is the beer consumption per week for males between 20-40 years? Figure \ref{ima:Qone}.
+ \item What is the average income for people, male and females, with high stress levels and a worse economic situation than the past? Figure \ref{ima:Qtwo}.
+ %\item How often does people get drunk who have an education level below 15 years and an income between 10-30k euros? Figure \ref{ima:Qthree}.
+ \item What are the different life satisfaction levels for females that do normal to hard sports and have one or more minors living at home? and for those not having minors? Figure \ref{ima:Qfour}.
+ \item What are the cholesterol total levels for males that sleep seven or more hours, do not practice sports and are smokers? and for those doing sports and not smoking? Figure \ref{ima:Qfive}.
+\end{enumerate}
+
+\begin{figure}
+ \begin{center}
+ \includegraphics[scale=0.5]{figures/Qone}
+ \end{center}
+ \caption[Beer consumption for males 20-40 years old]{\label{ima:Qone}Beer consumption per week for males between 20 to 40 years old; 68,694 records (15.0\%) found in this category. The gross of the population concentrates between 0 to 6 beers per week. The consumption is higher for people older than 25 years. There is a visible consumption, 200 to 300 people, at 10, 12 and 15 beers per week. Between 20 to 25 beers per week the visibility is less and a smaller population of around only 100 people exists. Therefore, in average, it is highly probable that a male between 20 to 40 years old drinks one beer a day.}
+\end{figure}
+
+\begin{figure}
+ \begin{center}
+ \includegraphics[scale=0.5]{figures/Qtwo}
+ \end{center}
+ \caption[Income of people with high stress and a worse economic situation]{\label{ima:Qtwo}Income per year for people with high levels of stress and a ``Worse'' or ``Much worse'' economic situation that in the past; 16,456 records (3.6\%) found in this category. The results show a population earning mainly between 0 to 60 thousands Euros per year. The highest levels of stress are seen at 30 thousand Euros. It is also noticeable that very  stressed people, ``Yes, its a hard life'', have in average a lower income than people stressed ``More than normal''. However, the former has only 3,987 elements, compared to 12,469 elements of the later, a ratio of almost 1:3. As could have been expected, the economic situation plays an in important role in people's stress level.}
+\end{figure}
+
+%\begin{figure}
+% \begin{center}
+% \includegraphics[scale=0.5]{figures/Qthree}
+% \end{center}
+% \caption[People getting drunk with 15 or less years of education]{\label{ima:Qthree} People getting drunk having 15 or less years of education limited by an income of 10 to 30 thousand Euros; 67,028 records (14.6\%) found in this category. The education level concentrates around 12 years. It is visible that people that gets drunk less often have a higher level of education; for example, ``1/Month'' has darker colors at the top. On the other hand, people getting drunk more often are less educated as the dark colors show at the option ``1+/Week''. Again the proportion of candidates is different for each column while the first one represent only 6.9\% the last one represents 52\% of the total. Education may play an important role in the drinking habits of the people. As stated in the plot each column is independently normalized.}
+%\end{figure}
+
+\begin{figure}
+ \begin{center}
+ \includegraphics[scale=0.5]{figures/QfourA}
+ \includegraphics[scale=0.5]{figures/QfourB}
+ \end{center}
+ \caption[Life satisfaction of females with/without minors]{\label{ima:Qfour}Life Satisfaction of females that do heavy and normal sports having one or more minor (A) or no minors (B) at home. In this plot it is noticeable how much children influence the life satisfaction of females. While the proportion of answers for ``Pleased'' and ``Dissatisfied'' do not change between plots, ``Somehow satisfied'' and ``Very pleased'' are switched. In plot A the really satisfied people represent 27\% of the population and 23\% represent the quite satisfied. When children are not present there is a reduction in the really satisfied people proportion to 20\% and an increase in the quite satisfied people to 31\%. Therefore, females with children are more satisfied with their lives, hence, children play an importance role in female life satisfaction.}
+\end{figure}
+
+\begin{figure}
+ \begin{center}
+ \includegraphics[scale=0.5]{figures/QfiveA}
+ \includegraphics[scale=0.5]{figures/QfiveB}
+ \end{center}
+ \caption[Cholesterol levels for males that do/don't smoke]{\label{ima:Qfive}Cholesterol total levels for males sleeping seven or more hours that smoke and do not practice sports at all (A) and when not smoking and doing hard sports (B). Initially, it is observable that the mean level of cholesterol is at 5\,mmol/L and that the average sleeping time variates from 7 (A) to 8 (B) hours. This variation may be due to the hard sports performed. Another observable issue is that the cholesterol contour levels are higher in plot A than in plot B. In the first one there are noticeable peaks (yellow-green) above 6\,mmol/L while in the second one the levels go below 4\,mmol/L. Therefore, there is an indication that a sedentary life complemented with smoking increases the levels of cholesterol. The desirable level of total cholesterol is below 5.2\,mmol/L according to \protect\cite{chlLevels}. Cholesterol total is one of the variables that will be studied in the following chapter due to its high level of missingness.}
+\end{figure}
+
+The majority of the results obtained during the exploratory analysis could be considered new, interesting or reaffirmation of previous knowledge. In some cases the results are \emph{exotic}, e.g. the infarct of father increasing the BMI of a person. Some questions that may arise after the analysis as: why, how and who, shall be studied by professionals from different fields as doctors, economist, sociologist, etc. Notwithstanding, this was the result of a data exploratory analysis; everything that was considered interesting has been pointed out throughout this thesis.
+
+The exploratory data analysis showed the importance of an initial visualization stage of the data and its basic features. Different types of plots used with different pairs of variables showed important information within the data; without the need of an in-depth analysis. The filtering options and visualization tools facilitated the burden of preparing the queries and generating the plots, thus speeding up the exploratory process. Nevertheless, the analysis was delimited. The vast amount of available data and the different aspects of it would have required a full project focused to visualization and exploratory analysis; only to extract all the available information.

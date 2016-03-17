@@ -1,0 +1,251 @@
+@Article{geldard60some,
+  author = {Frank A. Geldard},
+  title = {Some Neglected Possibilities of Communication},
+  journal = {Science},
+  volume = {131},
+  pages = {1583-1588},
+  year = {1960}
+}
+
+@Misc{gcc,
+  key = 	 {The GNU Project},
+  title = 	 {GNU Compiler Collection},
+  howpublished = {Internet},
+  year = 	 {2004},
+  note = 	 {http://gcc.gnu.org/, checked September 3rd, 2004}
+}
+
+@Book{goldstein01sensation,
+  author = {E. Bruce Goldstein},
+  title = {Sensation and Perception},
+  publisher = {Wadworth Publishing Company},
+  year = {2001},
+  edition = {6th}
+}
+
+@TechReport{iso95mechanical,
+  author = 	 {ISO},
+  title = 	 {Mechanical vibration - Guidelines for the measurement and the assessment of human exposure to hand-transmitted vibration},
+  institution =  {International Organization for Standardization},
+  year = 	 {1995},
+  type = 	 {International standard},
+  number = 	 {ISO 5349:1986},
+  address = 	 {Geneva, Switzerland}
+}
+
+@MastersThesis{jyrinki04perception,
+  author = {Timo Jyrinki},
+  title = {Perception of Small Device Vibration Characteristics - Test Facilities Setup and Study},
+  school = {Helsinki University of Technology, Department of Electrical and Communications Engineering},
+  year = {2004},
+  type = {Master's Thesis}
+}
+
+@InProceedings{minsky84manipulating,
+  author = {Margaret R. Minsky},
+  title = {Manipulating simulated objects with real-world gestures using a force and position sensitive screen},
+  Booktitle = {Proceedings of the 11th annual conference on Computer graphics and interactive techniques},
+  year = {1984},
+  isbn = {0-89791-138-5},
+  pages = {195-203},
+  publisher = {ACM Press}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@Phdthesis{jHollmen,
+  author = {Jaakko Hollmén},
+  title = {User Profiling and Classification for Fraud Detection in Mobile Communications Networks},
+  school = {Helsinki University of Technology},
+  year = {2000},
+}
+
+@Manual{rCRAN,
+    title = {R: A Language and Environment for Statistical Computing},
+    author = {{R Development Core Team}},
+    organization = {R Foundation for Statistical Computing},
+    address = {Vienna, Austria},
+    year = {2008},
+    note = {{ISBN} 3-900051-07-0},
+    url = {http://www.R-project.org},
+  }
+
+@Manual{rPlotrix,
+    title = {Plotrix: Various plotting functions},
+    author = {Jim Lemon and Ben Bolker and othere},
+    year = {2009},
+    note = {R package version 2.6},
+    url = {http://cran.r-project.org/web/packages/plotrix/index.html}
+}
+
+@Manual{sqlite,
+    title = {SQLite},
+    author = {Richard Hipp and others}
+    year = {2009}
+    url = {http://www.sqlite.org}
+}
+
+@Manual{elamaP,
+    title = {Pelataan Elämän Peliä},
+    author = {Seppo Koskinen, Tommi Härkänen, Pekka Jousilahti, Kari Kuulasmaa, Tuija Martelin, Ari-Pekka Sihvonen, Ninni Vanhalakka}
+    year = {2007}
+    url = {http://elamapelissa.yle.fi/sites/elamapelissa.yle.fi/files/pelataan_elaman_pelia.pdf}
+}
+
+@Book{pDataMining,
+  author = {David Hand and Heikki Mannila and Padhraic Smyth},
+  title = {Principles of Data Mining},
+  publisher = {The MIT Press},
+  year = {2001},
+  edition = {1st}
+}
+
+@Book{rDataAnalysis,
+  author = {John Maindonald and John Braun},
+  title = {Data Analysis and Graphics using R},
+  publisher = {The Cambridge University Press},
+  year = {2007},
+  edition = {2nd}
+}
+
+@Book{prML,
+  author = {Christopher M. Bishop},
+  title = {Pattern Recognition and Machine Learning},
+  publisher = {Springer},
+  year = {2006},
+  edition = {1st}
+}
+
+@Book{iML,
+  author = {Ethem Alpaydin},
+  title = {Introduction to Machine Learning},
+  publisher = {The MIT Press},
+  year = {2004},
+  edition = {1st}
+}
+
+@Book{AI,
+  author = {Michael Negnevitsky},
+  title = {Artificial Intelligence},
+  publisher = {Addison Wesley},
+  year = {2002},
+  edition = {1st}
+
+@Article{aCarotid,
+  author={Juonala, M., Viikari, J.S.A., Kähönen, M., Laitinen, T., Taittonen, L., Loo, B.-M., Jula, A., Marniemi, J., Räsänen, L., Rönnemaa, T., Raitakari, O.T.},
+  title={Alcohol consumption is directly associated with carotid intima-media thickness in Finnish young adults. The Cardiovascular Risk in Young Finns Study},
+  journal={Atherosclerosis},
+  year={2009},
+  volume={204},
+  number={2},
+  pages={e93-e98},
+}
+
+@Article{aMortality,
+  author={Pia Mäkelä},
+  title={Alcohol-related mortality by age and sex and its impact on life expectancy: Estimates based on the Finnish death register},
+  journal={European Journal of Public Health},
+  year={1998},
+  volume={8},
+  number={1},
+  pages={43-51},
+}
+
+@Article{smoking,
+  author={Heikkinen, H., Jallinoja, P., Saarni, S., Patja, K.},
+  title={The impact of smoking on health-related and overall quality of life: A general population survey in Finland},
+  journal={Nicotine and Tobacco Research},
+  year={2008},
+  volume={10},
+  number={7},
+  pages={1199-1207},
+}
+
+@Article{pActivity,
+  author={Tammelin, T., Ekelund, U., Remes, J., Näyhä, S.},
+  title={Physical activity and sedentary behaviors among finnish youth},
+  journal={Medicine and Science in Sports and Exercise},
+  year={2007},
+  volume={39},
+  number={7},
+  pages={1067-1074},
+}
+
+@Article{stressBMI,
+  author={Kouvonen, A., Kivimäki, M., Cox, S.J., Cox, T., Vahtera, J.},
+  title={Relationship between work stress and body mass index among 45,810 female and male employees},
+  journal={Psychosomatic Medicine},
+  year={2005},
+  volume={67},
+  number={4},
+  pages={577-583},
+}
+
+@Article{finnishDiet,
+  author={Ovaskainen, M.-L., Törrönen, R., Koponen, J.M., Sinkko, H., Hellström, J., Reinivuo, H., Mattila, P.},
+  title={Dietary intake and major food sources of polyphenols in Finnish adults},
+  journal={Journal of Nutrition},
+  year={2008},
+  volume={138},
+  number={3},
+  pages={562-566},
+}
+
+@Article{hip,
+  author={Oden, A., Dawson, A., Dere, W., Johnell, O., Jonsson, B., Kanis, J. A.},
+  title={Lifetime Risk of Hip Fractures is Understimated},
+  journal={Osteoporosis International},
+  year={1998},
+  volume={8},
+  number={6},
+  pages={599-603},
+}
+
+@Misc{lsst,
+  key = 	 {LSST},
+  title = 	 {Large Synoptic Survey Telescope},
+  howpublished = {Internet},
+  year = 	 {2009},
+  note = 	 {http://www.lsst.org/lsst/about/technology, checked July 15th, 2009}
+}
+
+@Misc{oed,
+  howpublished = {http://dictionary.oed.com},
+  key = {OED},
+  title = {Oxford English Dictionary Online},
+  year = {2009}
+}
+
+@Misc{thl,
+  key = 	 {THL},
+  title = 	 {Terveyden ja Hyvinvoinnin Laitos},
+  howpublished = {Internet},
+  year = 	 {2009},
+  note = 	 {http://www.thl.fi, checked July 17th, 2009}
+}
+
+@Misc{duo,
+  key = 	 {DUODECIM},
+  title = 	 {The Finnish Medical Society Duodecim},
+  howpublished = {Internet},
+  year = 	 {2009},
+  note = 	 {http://www.duodecim.fi, checked July 17th, 2009}
+}
+
+@Misc{elamaW,
+  key = 	 {Elämä Pelissä},
+  title = 	 {YLE TV1:n Elämä Pelissä Testi},
+  howpublished = {Internet},
+  year = 	 {2007},
+  note = 	 {http://elamapelissa.yle.fi}
+}

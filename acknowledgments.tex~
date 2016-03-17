@@ -1,0 +1,36 @@
+%%
+%% ACKNOWLEDGMENTS
+%%
+\chapter*{Acknowledgments}
+\label{acknowledgements}
+
+My Master's thesis research project has been carried out in the Parsimonious Modelling group from the Helsinki Institute of Information Technology at TKK. More than everything it has been a learning experience. I want to thank my lab partners Mika, Mikko, Janne and Miguel for their willingness to help. Big thanks also go to my instructor Jaakko Hollmén for trusting in me for this project. His dedication, simple solutions and interesting comments made the work more fun.
+
+Professor Erkki Oja and post-doc Tapani Raiko were always supportive during the master, providing information, signing papers and helping me with the burdens of my scholarship. Each one of the professors and teachers that instructed me during this two years I thank you. I may not be able to see further than the giants but I am able to see a piece of what the giants see and that's amazing.
+
+Special thanks also go to my master degree mates László, Du\^{s}an and Stevan, for all the ideas, experiences and \emph{code} we shared. The new generation guys Li, Prem and Agha because the best way to learn something is by explaining it; I really enjoyed that you trusted me in so many things.
+
+Finland, the great country I have the opportunity to study at. I learned a lot about its high standards always aiming for equality and prosperity.
+
+My gratitude also goes to my two families, my mom Lucero, dad Luis and my \emph{new} mom and dad Noemi and Armando. My brother Pepe, sisters Lucy, Lulu and Martha; because you all make the journey easier. Although your addiction to Finnish chocolate is impossible to maintain.
+
+Finally, I would like from my hearth to thank my wife Aime who has always supported me with belief and love. Walking always together under the sun, under the moon; all this is for you.
+
+\parindent 0em
+\begin{flushright}
+\vskip0.5cm
+Espoo, November 25th 2009
+\vskip0.5cm
+Luis Gabriel De Alba Rivera
+\end{flushright}
+
+\clearpage
+\vspace{2.5cm}
+\begin{flushright}
+\textit{Solo es digno de la felicidad quien todos los días se esfuerza por conquistarla.} \\
+\textsc{Daniel El Viejo}
+\end{flushright}
+\vspace{17cm}
+\begin{center}
+\noun{Luis Gabriel De Alba Rivera was supported by the Programme AlBan, the European Union Programme of High Level Scholarships for Latin America, scholarship No. E07M402627MX}
+\end{center}

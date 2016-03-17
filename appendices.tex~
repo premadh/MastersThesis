@@ -1,0 +1,1359 @@
+%%
+%% Appendix A
+%%
+\chapter{Elämä Pelissä test}
+\label{app:A}
+
+The following table describes the questions asked in the \emph{Elämä Pelissä} test \cite{elamaP}. Discrete answers are marked as [\ ]. Continuous answers are marked as \_\_. Question 40 is only available in the test on the web.
+
+\begin{center}\small
+\begin{longtable}{|rl|l|}
+
+\caption[Questions asked in the \emph{Elämä Pelissä} test]{\label{tab:appA}Questions asked in the \emph{Elämä Pelissä} test.} \\
+
+%Caption & Titles%
+%%\caption{\label{tab:questions}List of questions of the \emph{Elämä Pelissä} test. Discrete answers are marked as [\ ]. Continuous answers are marked as \_\_.} \\
+\hline 
+& Variables & Question given \\
+& & \ Possible answer options \\
+\hline
+\endfirsthead
+
+%Titles in each page but first%
+\hline 
+& Variables & Question given \\
+& & \ Possible answer options \\
+\hline
+\endhead
+
+%Bottom in each page but last%
+%%\hline \multicolumn{3}{|r|}{{Continued on next page}} \\ 
+\hline
+\endfoot
+
+%Bottom in last page%
+\hline
+\endlastfoot
+
+%Table data%
+
+1. &  Gender          & What is your sex? \\
+   &                  & \ [\ ]Male [\ ]Female \\
+2. &  Age             & How old are you? \\
+   &                  & \ \_\_Years \\
+3. &  Length          & How tall are you? \\
+   &                  & \ \_\_Centimeters \\ 
+4. &  Weight          & How much do you weigh? \\
+   &                  & \ \_\_Kilos \\
+5. &  Education       & For how many years have you gone to school? \\
+   &                  & \ \_\_Years \\
+6. &  Income          & What was your total income last year (after taxes)? \\
+   &                  & \ \_\_Thousands of euros \\
+7. &  Household size  & Number of people living in your house (including yourself) \\
+   &                  & \ \_\_Adults (18+ years) \\
+   &                  & \ \_\_Minors ($<$18 years) \\
+8. & Economic situation & How is your actual financial status compared to the past? \\
+   &                  & \ [\ ]Much better [\ ]Slightly better [\ ]The same \\
+   &                  & \ [\ ]Slightly worse [\ ]Much worse \\
+9. & Cholesterol levels & What is your cholesterol level (mmol/L) for ? \\
+   &                  & \ \_\_Total Cholesterol \\
+   &                  & \ \_\_HDL Cholesterol \\
+10.& Blood pressure   & What is your blood pressure (mmHg)? \\
+   &                  & \ \_\_At Systole \\
+   &                  & \ \_\_At Diastole \\
+11.& Diabetes status  & Do you have diabetes? \\
+   &                  & \ [\ ]No [\ ]Yes, Treatment is diet \\
+   &                  & \ [\ ]Yes, Treatment is medicine/insulin \\
+12.& Father infarct   & Has your father have a myocardial infarct? \\
+   &                  & \ [\ ]Yes [\ ]No \\
+13.& Mother infarct   & Has your mother have a myocardial infarct? \\
+   &                  & \ [\ ]Yes [\ ]No \\
+14.& Alcohol use      & How many glasses or bottles do you drink in a week of? \\
+   &                  & \ \_\_Beer III, IV (bottle 1/3\,l) \\
+   &                  & \ \_\_Long drink (bottle 1/3\,l) \\
+   &                  & \ \_\_Concentrated alcohol (shot 4cl) \\
+   &                  & \ \_\_Wine (glass 12cl) \\
+   &                  & \ \_\_Light wine (glass 12cl) \\
+15.& Drunkenness      & How often do you drink so that you get drunk? \\
+   &                  & \ [\ ]2+/Week [\ ]1+/Week [\ ]1+/Month [\ ]$<$1/Month \\
+16.& Fresh vegetables & How often do you eat fresh vegetables? \\ 
+   &                  & \ [\ ]$<$1/Week [\ ]1-2/Week [\ ]3-5/Week [\ ]Daily \\
+17.& Fruits and berries & How often do you eat fresh fruits or berries? \\
+   &                  & \ [\ ]$<$1/Week [\ ]1-2/Week [\ ]3-5/Week [\ ]Daily \\
+18.& Butter type      & What do you use as \emph{fat} for bread? \\
+   &                  & \ [\ ]Butter [\ ]Margarine [\ ]Nothing \\
+19.& Cooking oil      & What kind of cooking oil do you use? \\
+   &                  & \ [\ ]Vegetable oil [\ ]No fats oil [\ ]Butter/Margarine \\
+20.& Milk             & What kind of milk do you drink? \\
+   &                  & \ [\ ]Whole [\ ]Semi-skimmed [\ ]Number one \\
+   &                  & \ [\ ]Skimmed [\ ]Do not drink \\
+21.& Smoking          & Have you ever smoked daily for at least one year? \\
+   &                  & \ [\ ]Yes [\ ]No \\
+22.& Smoking now      & Do you smoke now? \\
+   &                  & \ [\ ]Yes [\ ]Randomly [\ ]No \\
+23.& Number of cigarettes & How many cigarettes do you smoke daily? \\
+   &                  & \ \_\_Cigarettes \\
+24.& Sports           & How much physical activity do you do per week? \\
+   &                  & \ [\ ]Nothing hard  (house chores) \\
+   &                  & \ [\ ]Light activities (walking) \\
+   &                  & \ [\ ]Normal activities (jogging) \\
+   &                  & \ [\ ]Hard activities (competition) \\
+25.& Seat belt        & Do you use a seat belt while traveling in a car? \\
+   &                  & \ [\ ]Yes [\ ]No \\
+26.& Sleeping         & How many hours in average do you sleep per day? \\
+   &                  & \ \_\_Hours \\
+27.& Association activities & How often you go to a club or association? \\
+   &                  & \ [\ ]1+/Week [\ ]1+/Mont [\ ]1+/Year [\ ]Almost never \\
+28.& Theater and movies & How often do you go to the theater or movies? \\
+   &                  & \ [\ ]1+/Week [\ ]1+/Mont [\ ]1+/Year [\ ]Almost never \\
+29.& Religious events & How often do you assist to church or religious events? \\
+   &                  & \ [\ ]1+/Week [\ ]1+/Mont [\ ]1+/Year [\ ]Almost never \\
+30.& Reading and music & How often do you read books or listen to music? \\
+   &                  & \ [\ ]1+/Week [\ ]1+/Mont [\ ]1+/Year [\ ]Almost never \\
+31.& Hobbies          & How often do you engage in hobbies-like activities? \\
+   &                  & \ [\ ]1+/Week [\ ]1+/Mont [\ ]1+/Year [\ ]Almost never \\
+32.& Spouse           & Do you have issues with your spouse? \\
+   &                  & \ [\ ]Not married [\ ]Almost all the time \\
+   &                  & \ [\ ]Sometimes [\ ]Never \\
+33.& Children         & Do you have issues with your children? \\
+   &                  & \ [\ ]Not have children [\ ]Almost all the time \\
+   &                  & \ [\ ]Quite often [\ ]Sometimes [\ ]Rarely [\ ]Never \\
+34.& Stress           & Have you felt stressed the last months? \\
+   &                  & \ [\ ]Yes, life is unbearable [\ ]Yes, more than average people \\
+   &                  & \ [\ ]Yes, somewhat [\ ]Not at all \\
+35.& Satisfaction     & How satisfied are you with your achievements in your life? \\
+   &                  & \ [\ ]Very pleased [\ ]Pleased [\ ]Somewhat satisfied \\
+   &                  & \ [\ ]Dissatisfied \\
+36.& Work and study load & Do you feel your work and/or study load is high? \\
+   &                  & \ [\ ]Do not have paid work [\ ]All the time [\ ]Quite often \\
+   &                  & \ [\ ]Sometimes [\ ]Rarely \\
+37.& Dreams           & What do you think about: \\
+   &                  & \ ``It seem to me impossible to achieve dreams'' \\
+   &                  & \ [\ ]Agree [\ ]Somewhat agree [\ ]Hard to say \\
+   &                  & \ [\ ]Slightly disagree [\ ]Disagree \\
+38.& Friends          & What do you think about: \\
+   &                  & \ ``I do not have any good friend'' \\
+   &                  & \ [\ ]Agree [\ ]Disagree \\
+39.& Age to live      & Until what age will live? \\
+   &                  & \ (\ )Years \\
+40.& Best age to live & When is the best age to be alive? \\
+   &                  & \ (\ )Years \\
+
+\end{longtable}
+\end{center}
+
+
+
+%%
+%% Appendix B
+%%
+\chapter{Outliers search \& labeling}
+\label{app:B}
+
+The following table depicts the summary information of the continuous variables during the filtering process in the \emph{Elämä Pelissä} data base. \\
+\dag\, Stands for a filter that covers the elements from 0 to $\mu<+3\sigma$ \\
+\ddag\, Stands for a filter that covers the elements within the range $-3\sigma<\mu<+3\sigma$
+
+\begin{center}\small
+\begin{longtable}{l|ccc|ccc|}
+
+\caption[Filtering out outliers from original database]{\label{tab:appB}Filtering out outliers from original database.} \\
+
+   \cline{2-7}
+   \endfirsthead
+   \cline{2-7}
+   \endhead
+   \cline{2-7}
+   \endfoot
+
+    & \multicolumn{3}{c|}{\bold{Age}} & \multicolumn{3}{c|}{\bold{Height}} \\
+   \cline{2-7}
+    & Initial & Temp. & Final & Initial & Temp. & Final \\
+   \cline{2-7}
+   \bold{Min}      & 0 & 0 & \bold{1} &               0 &  & \bold{130}\\
+   \bold{Max}      & 299830 & 495 & \bold{88} &       999 &  & \bold{211} \\
+   \bold{Mean}     & 45.35 & 43.25 & 43.15 &          170.5 &  & 170.67 \\
+   \bold{Variance} & 594993.9 & 226.37 & 217.24 &     186.86 &  & 88.93 \\
+   \bold{Std Dev}  & 771.36 & 15.05 & 14.74 &         13.67 & & 9.43 \\
+   \bold{Median}   & 44 & 44 & 44 &                   170 &  & 170 \\
+   \bold{Filter}    & $x<500$ & \dag & &              \ddag & & \\
+   \bold{Outliers} & 64 & 737 & \bold{801} &          1483 &  & \bold{1483} \\
+   \cline{2-7}
+
+   & \multicolumn{3}{c|}{\bold{Weight}} & \multicolumn{3}{c|}{\bold{Education}} \\
+   \cline{2-7}
+   \bold{Min}      & 0 & 0 & \bold{22} &                     0 &  0 & \bold{2.5}\\
+   \bold{Max}      & 999 & 499 & \bold{130} &                999 & 89 & \bold{25} \\
+   \bold{Mean}     & 76.24 & 76 & 75.31 &                    14.05 & 13.97 & 13.93 \\
+   \bold{Variance} & 523.01 & 332.95 & 260.16 &              69.66 & 15.58 & 13.1 \\
+   \bold{Std Dev}  & 22.87 & 18.25 & 16.13 &                 8.35 & 3.95 & 3.62 \\
+   \bold{Median}   & 74 & 74 & 74 &                          14 & 14 & 14 \\
+   \bold{Filter}    & $x<500$ & \ddag & &                    $x<90$ & \ddag & \\
+   \bold{Outliers} & 144 & 4223 & \bold{4367} &              134 & 3141 & \bold{3275} \\
+   \cline{2-7}
+
+   & \multicolumn{3}{c|}{\bold{BMI}} & \multicolumn{3}{c|}{\bold{Income}} \\
+   \cline{2-7}
+   \bold{Min}      & 0 & 10 & \bold{11.34} &                 0 &  & \bold{0}\\
+   \bold{Max}      & 9.99x$10^8$ & 50 & \bold{40.35} &       5472 & & \bold{278} \\
+   \bold{Mean}     & 4905.44 & 25.85 & 25.6 &                55.93 & & 48.53 \\
+   \bold{Variance} & 4.43x$10^{12}$ & 23.45 & 19.18 &        5494.75 & & 1202.75 \\
+   \bold{Std Dev}  & 2105225 & 4.84 & 4.38 &                 74.13 &  & 34.68 \\
+   \bold{Median}   & 25.1 & 25.06 & 25 &                     45 &  & 45 \\
+   \bold{Filter}    & $10\leq x\leq50$ & \ddag & &           \dag & & \\
+   \bold{Outliers} & 2765 & 6236 & \bold{9001} &             6667 & & \bold{6667} \\
+   \cline{2-7}
+
+   & \multicolumn{3}{c|}{\bold{Cholesterol total}} & \multicolumn{3}{c|}{\bold{Cholesterol HDL}} \\
+   \cline{2-7}
+   \bold{Min}      & 0 & 0 & \bold{2} &                 0 & 0 & \bold{0}\\
+   \bold{Max}      & 999 & 19 & \bold{8} &              999 & 19 & \bold{4.5} \\
+   \bold{Mean}     & 5.67 & 5 & 4.98 &                  2.52 & 1.8 & 1.73 \\
+   \bold{Variance} & 424.97 & 1.03 & 0.85 &             531.64 & 0.84 & 0.44 \\
+   \bold{Std Dev}  & 20.61 & 1.02 & 0.92 &              23.06 & 0.92 & 0.66 \\
+   \bold{Median}   & 5 & 5 & 5 &                        1.6 & 1.6  & 1.5 \\
+   \bold{Filter}    & $x<20$ & \ddag & &                $x<20$ & \dag & \\
+   \bold{Outliers} & 670 & 2036 & \bold{2706} &         342 & 2080 & \bold{2422} \\
+   \cline{2-7}
+
+   & \multicolumn{3}{c|}{\bold{Blood pressure systole}} & \multicolumn{3}{c|}{\bold{Blood pressure diastole}} \\
+   \cline{2-7}
+   \bold{Min}      & 0 & 43 & \bold{90} &               0 & 41 & \bold{54}\\
+   \bold{Max}      & 999 & 179 & \bold{168} &           999 & 99 & \bold{99} \\
+   \bold{Mean}     & 129.79 & 129.1 & 128.92 &          79.98 & 79.08 & 79.18 \\
+   \bold{Variance} & 441.44 & 174.46 & 157.33 &         368.8 & 72.93 & 70.34 \\
+   \bold{Std Dev}  & 21.01 & 13.21 & 12.54 &            19.2 & 8.54 & 8.39 \\
+   \bold{Median}   & 130 & 130 & 130 &                  80 & 80 & 80 \\
+   \bold{Filter}    & $40<x<180$ & \ddag & &            $40<x<100$ & \ddag & \\
+   \bold{Outliers} & 2798 & 2926 & \bold{5724} &        7211 & 1000 & \bold{8211} \\
+   \cline{2-7}
+
+   & \multicolumn{3}{c|}{\bold{Alcohol beer}} & \multicolumn{3}{c|}{\bold{Alcohol long drink}} \\
+   \cline{2-7}
+   \bold{Min}      & 0 & 0 & \bold{0} &                0 & 0 & \bold{0}\\
+   \bold{Max}      & 999 & 140 & \bold{27} &           999 & 140 & \bold{9} \\
+   \bold{Mean}     & 4.08 & 3.69 & 2.89 &              0.79 & 0.42 & 0.24 \\
+   \bold{Variance} & 382.03 & 64.19 & 23.48 &          331.62 & 9.54 & 0.82 \\
+   \bold{Std Dev}  & 19.55 & 8.01 & 4.85 &             18.21 & 3.09 & 0.9 \\
+   \bold{Median}   & 1 & 1 & 1 &                       0 & 0 & 0 \\
+   \bold{Filter}    & $x\leq140$ & \dag & &            $x\leq140$ & \dag & \\
+   \bold{Outliers} & 320 & 8495 & \bold{8815} &        268 & 3601 & \bold{3869} \\
+   \cline{2-7}
+
+   & \multicolumn{3}{c|}{\bold{Alcohol concentrated}} & \multicolumn{3}{c|}{\bold{Alcohol wine}} \\
+   \cline{2-7}
+   \bold{Min}      & 0 & 0 & \bold{0} &                0 & 0 & \bold{0}\\
+   \bold{Max}      & 999 & 140 & \bold{17} &           999 & 140 & \bold{17} \\
+   \bold{Mean}     & 1.71 & 1.29 & 0.81 &              2.18 & 1.8 & 1.36 \\
+   \bold{Variance} & 368.27 & 29.02 & 5.04 &           342.31 & 26.04 & 6.89 \\
+   \bold{Std Dev}  & 19.19 & 5.39 & 2.24 &             18.5 & 5.1 & 2.62 \\
+   \bold{Median}   & 0 & 0 & 0 &                       0 & 0 & 0 \\
+   \bold{Filter}    & $x\leq140$ & \dag & &            $x\leq140$ & \dag & \\
+   \bold{Outliers} & 351 & 6522 & \bold{6873} &        322 & 6406 & \bold{6728} \\
+   \cline{2-7}
+
+   & \multicolumn{3}{c|}{\bold{Alcohol light wine}} & \multicolumn{3}{c|}{\bold{Alcohol total}} \\
+   \cline{2-7}
+   \bold{Min}      & 0 & 0 & \bold{0} &                0 & 0 & \bold{0}\\
+   \bold{Max}      & 999 & 14 & \bold{1.5} &           4495 & 250 & \bold{42} \\
+   \bold{Mean}     & 0.49 & 0.07 & 0.01 &              9.26 & 7.03 & 5.95 \\
+   \bold{Variance} & 312.93 & 0.36 & 0.01 &            7842.6 & 137.93 & 58.8 \\
+   \bold{Std Dev}  & 17.69 & 0.6 & 0.11 &              88.56 & 11.74 & 7.67 \\
+   \bold{Median}   & 0 & 0 & 0 &                       3 & 3 & 3 \\
+   \bold{Filter}    & $x\leq140$ & \dag & &            $x\leq200$ & \dag & \\
+   \bold{Outliers} & 1066 & 6267 & \bold{7333} &       810 & 7963 & \bold{8773} \\
+   \cline{2-7}
+
+   & \multicolumn{3}{c|}{\bold{Cigarettes per day}} & \multicolumn{3}{c|}{\bold{Sleeping hours}} \\
+   \cline{2-7}
+   \bold{Min}      & 0 & 0 & \bold{0} &                0 & 0.1 & \bold{4.5}\\
+   \bold{Max}      & 999 & 150 & \bold{38} &           999 & 23 & \bold{10} \\
+   \bold{Mean}     & 8.21 & 6.52 & 5.74 &              7.52 & 7.48 & 7.48 \\
+   \bold{Variance} & 1532.05 & 110.82 & 67.07 &        30.01 & 1.14 & 0.9 \\
+   \bold{Std Dev}  & 39.14 & 10.53 & 8.19 &            5.48 & 1.07 & 0.95 \\
+   \bold{Median}   & 0 & 0 & 0 &                       0 & 7.5 & 7.5 \\
+   \bold{Filter}    & $x\leq150$ & \dag & &            $0<x<24$ & \ddag & \\
+   \bold{Outliers} & 494 & 3227 & \bold{3721} &        320 & 5052 & \bold{5372} \\
+   \cline{2-7}
+
+   & \multicolumn{3}{c|}{\bold{Age to live}} & \multicolumn{3}{c|}{\bold{Best time to live}} \\
+   \cline{2-7}
+   \bold{Min}      & 0 & 1.6 & \bold{57} &             0 & 1.5 & \bold{1.5}\\
+   \bold{Max}      & 999 & 119 & \bold{111} &          3050 & 89 & \bold{78} \\
+   \bold{Mean}     & 86.89 & 84.41 & 84.89 &           36.75 & 37.48 & 37.43 \\
+   \bold{Variance} & 1742.21 & 84.37 & 60.97 &         516.48 & 189.95 & 187.7 \\
+   \bold{Std Dev}  & 41.74 & 9.19 & 7.81 &             22.73 & 13.78 & 13.71 \\
+   \bold{Median}   & 85 & 85 & 85 &                    38 & 40 & 40 \\
+   \bold{Filter}    & $1<x<120$ & \ddag & &            $1<x<90$ & \dag & \\
+   \bold{Outliers} & 5249 & 5230 & \bold{10479} &      14221 & 455 & \bold{14676} \\
+   \cline{2-7}
+
+   & \multicolumn{3}{c|}{\bold{Household size adults}} & \multicolumn{3}{c|}{\bold{Household size minors}} \\
+   \cline{2-7}
+   \bold{Min}      & 0 & 0 & \bold{0} &                0 & 0 & \bold{0}\\
+   \bold{Max}      & 9787 & 50 & \bold{4} &            999 & 50 & \bold{5} \\
+   \bold{Mean}     & 1.83 & 1.68 & 1.66 &              1.77 & 1.44 & 1.38 \\
+   \bold{Variance} & 313.47 & 0.68 & 0.38 &            276.34 & 1.81 & 1.12 \\
+   \bold{Std Dev}  & 17.71 & 0.82 & 0.61 &             16.62 & 1.35 & 1.06 \\
+   \bold{Median}   & 2 & 2 & 2 &                       1 & 1 & 1 \\
+   \bold{Filter}    & $x\leq50$ & \dag & &             $x\leq50$ & \dag & \\
+   \bold{Outliers} & 125 & 1107 & \bold{1232} &        143 & 1519 & \bold{1662} \\
+
+\end{longtable}
+\end{center}
+
+%%
+%% Appendix C
+%%
+\chapter{Selection of samples}
+\label{app:C}
+
+Based on the original database ten smaller databases were generated. The first one, called Complete (C), includes only the complete records, i.e., the records where all the variables have a value. The other nine databases are divided into three sets of three. Each set has a similar number of elements per database, 10k, 50k and 200k records; i.e., there are three databases with 10k elements, three with 50k and three with 200k. These databases were populated with random records selected from the original database. Only valid records, not outliers, where available to be selected. The random selection was without repetition.
+
+The sampling was done with the purpose of showing that there is not a compulsory necessity of using the full database; a large enough sample presents similar characteristics. This characteristic is mainly used during the regression analysis. In the $k$-fold cross-validation approach repeated $M$ times a sample of only 20k elements is used at each iteration. The reduction of the number of elements speeds-up the process without a significant influence in the result.
+
+The following table depicts the statistics of the artificially generated databases; the average of values of each set of three is the one used. These values are, in general, really close to the ones observed at Appendix \ref{app:B} (last column, \noun{Final}).
+
+\begin{center}\small
+\begin{longtable}{l|cccc|cccc|}
+
+\caption[Statistics from the sampled databases]{\label{tab:appC}Statistics from the sampled databases.} \\
+
+   \cline{2-9}
+   \endfirsthead
+   \cline{2-9}
+   \endhead
+   \cline{2-9}
+   \endfoot
+
+    & \multicolumn{4}{c|}{\bold{Age}} & \multicolumn{4}{c|}{\bold{Height}} \\
+   \cline{2-9}
+    & C & 10k & 50k & 200k & C & 10k & 50k & 200k \\
+   \cline{2-9}
+
+\bold{Min} 	&	5	&	5     &	1     &	1     &		135	&	130   &	130   &	130   \\
+\bold{Max} 	&	87	&	87.33 &	88    &	88    &		202	&	204   &	210   &	211   \\
+\bold{Mean} 	&	45.36	&	43.16 &	43.27 &	43.21 &		172.4	&	170.67&	170.68&	170.67\\
+\bold{Variance} &	127.37	&	215.96&	215.55&	215.71&		85.69	&	88.43 &	88.15 &	88.01 \\
+\bold{Std Dev} 	&	11.29	&	14.7  &	14.68 &	14.69 &		9.26	&	9.4   &	9.39  &	9.38  \\
+\bold{Median}	&	45	&	44    &	44    &	44    &		172	&	170   &	170   &	170   \\
+
+   \cline{2-9}
+   & \multicolumn{4}{c|}{\bold{Weight}} & \multicolumn{4}{c|}{\bold{Education}} \\
+   \cline{2-9}
+
+\bold{Min} 	&	24	&	25.33 &	22.33&	22    &		3	&	3    &	2.5  &	2.5  \\
+\bold{Max} 	&	130	&	130   &	130  &	130   &		25	&	25   &	25   &	25   \\
+\bold{Mean} 	&	77.83	&	74.12 &	75.26&	75.24 &		14.75	&	13.96&	13.95&	13.96\\
+\bold{Variance} &	230.59	&	256.21&	257.3&	257.23&		11.98	&	13   &	13.04&	12.99\\
+\bold{Std Dev} 	&	15.19	&	16.01 &	16.04&	16.04 &		3.46	&	3.61 &	3.61 &	3.6  \\
+\bold{Median}	&	77	&	73.67 &	74   &	74    &		15	&	14   &	14   &	14   \\
+
+   \cline{2-9}
+   & \multicolumn{4}{c|}{\bold{BMI}} & \multicolumn{4}{c|}{\bold{Income}} \\
+   \cline{2-9}
+
+\bold{Min} 	&	12.6	&	12   &	11.57&	11.37&		0	&	0      & 0      & 0      \\
+\bold{Max} 	&	40.35	&	40.34&	40.35&	40.35&		277	&	276.33 & 277.33 & 277.67 \\
+\bold{Mean} 	&	26.06	&	25.57&	25.6 &	25.59&		58.99	&	48.48  & 48.72  & 48.73  \\
+\bold{Variance} &	16.81	&	17.73&	19.13&	19.06&		1333.41	&	1176.64& 1204.11& 1200.75\\
+\bold{Std Dev} 	&	4.1	&	4.37 &	4.37 &	4.37 &		36.52	&	34.44  & 34.7   & 34.65  \\
+\bold{Median}	&	25.47	&	24.97&	24.99&	24.98&		55	&	45     & 45     & 45     \\
+
+   \cline{2-9}
+   & \multicolumn{4}{c|}{\bold{Cholesterol total}} & \multicolumn{4}{c|}{\bold{Cholesterol HDL}} \\
+   \cline{2-9}
+
+\bold{Min} 	&	2	&	2   &	2   &	2   &		0	&	0   &	0   &	0   \\
+\bold{Max} 	&	8	&	8   &	8   &	8   &		4.5	&	4.5 &	4.5 &	4.5 \\
+\bold{Mean} 	&	4.91	&	4.96&	4.98&	4.98&		1.68	&	1.72&	1.72&	1.73\\
+\bold{Variance} &	0.84	&	0.84&	0.84&	0.84&		0.43	&	0.43&	0.43&	0.43\\
+\bold{Std Dev} 	&	0.92	&	0.92&	0.92&	0.92&		0.66	&	0.65&	0.65&	0.66\\
+\bold{Median}	&	5	&	5   &	5   &	5   &		1.5	&	1.5 &	1.5 &	1.5 \\
+
+   \cline{2-9}
+   & \multicolumn{4}{c|}{\bold{Blood pressure systole}} & \multicolumn{4}{c|}{\bold{Blood pressure diastole}} \\
+   \cline{2-9}
+
+\bold{Min} 	&	90	&	90    &	90    &	90    &		54	&	54   &	54   &	54   \\
+\bold{Max} 	&	168	&	168   &	168   &	168   &		99	&	99   &	99   &	99   \\
+\bold{Mean} 	&	128.7	&	128.77&	128.94&	128.88&		79.41	&	79.09&	79.16&	79.16\\
+\bold{Variance} &	139.48	&	152.87&	155.98&	156.43&		66.3	&	70.24&	69.94&	70.19\\
+\bold{Std Dev} 	&	11.81	&	12.36 &	12.49 &	12.51 &		8.14	&	8.38 &	8.36 &	8.38 \\
+\bold{Median}	&	130	&	130   &	130   &	130   &		80	&	80   &	80   &	80   \\
+
+   \cline{2-9}
+   & \multicolumn{4}{c|}{\bold{Alcohol beer}} & \multicolumn{4}{c|}{\bold{Alcohol long drink}} \\
+   \cline{2-9}
+
+\bold{Min} 	&	0	&	0    &	0    &	0    &		0	&	0   &	0   &	0   \\
+\bold{Max} 	&	27	&	26.33&	27   &	27   &		9	&	8.67&	9   &	9   \\
+\bold{Mean} 	&	3.34	&	2.86 &	2.86 &	2.86 &		0.24	&	0.23&	0.23&	0.24\\
+\bold{Variance} &	24.34	&	23.19&	23.25&	23.19&		0.76	&	0.76&	0.78&	0.79\\
+\bold{Std Dev} 	&	4.93	&	4.82 &	4.82 &	4.82 &		0.87	&	0.87&	0.88&	0.89\\
+\bold{Median}	&	1	&	0.67 &	1    &	1    &		0	&	0   &	0   &	0   \\
+
+   \cline{2-9}
+   & \multicolumn{4}{c|}{\bold{Alcohol concentrated}} & \multicolumn{4}{c|}{\bold{Alcohol wine}} \\
+   \cline{2-9}
+
+\bold{Min} 	&	0	&	0   &	0   &	0   &		0	&	0    &	0   &	0   \\
+\bold{Max} 	&	17	&	17  &	17  &	17  &		17	&	16.67&	17  &	17  \\
+\bold{Mean} 	&	1.01	&	0.76&	0.78&	0.79&		1.72	&	1.34 &	1.35&	1.35\\
+\bold{Variance} &	6.23	&	4.63&	4.82&	4.9 &		7.89	&	6.76 &	6.82&	6.81\\
+\bold{Std Dev} 	&	2.5	&	2.15&	2.2 &	2.21&		2.81	&	2.6  &	2.61&	2.61\\
+\bold{Median}	&	0	&	0   &	0   &	0   &		0	&	0    &	0   &	0   \\
+
+   \cline{2-9}
+   & \multicolumn{4}{c|}{\bold{Alcohol light wine}} & \multicolumn{4}{c|}{\bold{Alcohol total}} \\
+   \cline{2-9}
+
+\bold{Min} 	&	0	&	0   &	0   &	0   &		0	&	0    &	0    &	0    \\
+\bold{Max} 	&	1	&	1   &	1   &	1.33&		42	&	42   &	42   &	42   \\
+\bold{Mean} 	&	0.02	&	0.01&	0.01&	0.01&		6.32	&	5.91 &	5.92 &	5.94 \\
+\bold{Variance} &	0.02	&	0.05&	0.01&	0.01&		46.09	&	58.73&	58.14&	58.47\\
+\bold{Std Dev} 	&	0.12	&	0.11&	0.1 &	0.11&		6.79	&	7.66 &	7.63 &	7.65 \\
+\bold{Median}	&	0	&	0   &	0   &	0   &		4	&	3    &	3    &	3    \\
+
+   \cline{2-9}
+   & \multicolumn{4}{c|}{\bold{Cigarettes per day}} & \multicolumn{4}{c|}{\bold{Sleeping hours}} \\
+   \cline{2-9}
+
+\bold{Min} 	&	0	&	0    &	0    &	0    &		4.5	&	4.67&	4.5 &	4.5 \\
+\bold{Max} 	&	35	&	36.33&	37.67&	38   &		10	&	10  &	10  &	10  \\
+\bold{Mean} 	&	3.27	&	5.78 &	5.66 &	5.69 &		7.42	&	7.48&	7.48&	7.48\\
+\bold{Variance} &	42.58	&	66.81&	66.18&	66.08&		0.77	&	0.89&	0.89&	0.89\\
+\bold{Std Dev} 	&	6.53	&	8.17 &	8.14 &	8.13 &		0.88	&	0.95&	0.95&	0.94\\
+\bold{Median}	&	0	&	0    &	0    &	0    &		7	&	7.5 &	7.5 &	7.5 \\
+
+   \cline{2-9}
+   & \multicolumn{4}{c|}{\bold{Age to live}} & \multicolumn{4}{c|}{\bold{Best time to live}} \\
+   \cline{2-9}
+
+\bold{Min} 	&	57	&	57.33 &	57   &	57   &		2	&	2     &	1.83  &	1.5   \\
+\bold{Max} 	&	111	&	110.67&	111  &	111  &		77	&	75.67 &	77.67 &	78    \\
+\bold{Mean} 	&	85.06	&	84.92 &	84.91&	84.88&		38.65	&	37.43 &	37.52 &	37.47 \\
+\bold{Variance} &	57.14	&	60.39 &	60.19&	60.62&		164.74	&	186.91&	186.44&	187.15\\
+\bold{Std Dev} 	&	7.56	&	7.77  &	7.76 &	7.79 &		12.84	&	13.67 &	13.65 &	13.68 \\
+\bold{Median}	&	85	&	85    &	85   &	85   &		40	&	40    &	40    &	40    \\
+
+   \cline{2-9}
+   & \multicolumn{4}{c|}{\bold{Household size adults}} & \multicolumn{4}{c|}{\bold{Household size minors}} \\
+   \cline{2-9}
+
+\bold{Min} 	&	0	&	0   &	0   &	0   &		0	&	0   &	0   &	0   \\
+\bold{Max} 	&	4	&	4   &	4   &	4   &		5	&	5   &	5   &	5   \\
+\bold{Mean} 	&	1.7	&	1.66&	1.66&	1.66&		1.15	&	1.38&	1.38&	1.38\\
+\bold{Variance} &	0.34	&	0.37&	0.38&	0.37&		1.13	&	1.13&	1.12&	1.11\\
+\bold{Std Dev} 	&	0.59	&	0.61&	0.62&	0.61&		1.06	&	1.06&	1.06&	1.06\\
+\bold{Median}	&	2	&	2   &	2   &	2   &		1	&	1   &	1   &	1   \\
+
+\end{longtable}
+\end{center}
+
+%%
+%% Appendix D
+%%
+\chapter{Data exploration findings}
+\label{app:D}
+
+The following tables depict the most interesting findings during the data exploration analysis. The exploration consisted on simple queries used for displaying intersting information that is easily available. The variables were analyzed alone and mixed; discrete vs discrete, continuous vs continuous and discrete vs continuous. The letter $k$ is used to indicate thousands, e.g., 40k equals 40,000. 
+
+%% SINGLE VARIABLE
+\begin{center}\small
+\begin{longtable}{|l|}
+\caption[Single variable exploration findings]{\label{tab:appD1}Single variable exploration findings.} \\
+
+\hline
+\endfirsthead
+\hline
+\endhead
+\hline
+\endfoot
+Age \\
+\ \  \scriptsize There are two possible normal distributions with means around 25 and 45 years. \\
+Alcohol, beer \\
+\ \  \scriptsize One to five bottles per week is what the majority (29\%) of the people drinks. \\
+Alcohol, light wine \\
+\ \  \scriptsize Few people drinks light wine (1\%). \\
+Alcohol, wine \\
+\ \  \scriptsize Between 20k to 40k respondents drink 1 to 4 glasses per week. \\
+Alcohol, drink to get drunk \\
+\ \  \scriptsize 22k (5\%) respondents get drunk more than once a week. \\
+Association activities \\
+\ \  \scriptsize Around 241k (50\%) respondents almost never participates. \\
+Blood pressure diastole \\
+\ \  \scriptsize Almost everybody (70\%) between 75 and 90 as expected. \\
+Blood pressure systole \\
+\ \  \scriptsize Almost everybody (71\%) between 120 and 140 as expected. \\
+BMI \\
+\ \  \scriptsize Normal distribution with mean at 25. \\
+Cholesterol HDL \\
+\ \  \scriptsize Highest proportion of respondents with levels at 1 and 2 mmol/L. \\
+Cholesterol total \\
+\ \  \scriptsize Normal distribution with mean at 5 mmol/L. \\
+Cooking oil \\
+\ \  \scriptsize Vegetable oil is the most used one with 282k (62\%) respondents using it. \\
+Diabetes \\
+\ \  \scriptsize 21k cases of diabetes (4.5\%), 14k (4\%) are treated with insulin. \\
+Do not have good friends \\
+\ \  \scriptsize 52k (11\%) respondents claim not having good friends. \\
+Economic situation \\
+\ \  \scriptsize \emph{Better} and \emph{Much better} situations are the most answered (63\%) options. \\
+Education \\
+\ \  \scriptsize Dependent on the age of the people with a peak at 12 years. \\
+Height \\
+\ \  \scriptsize Normal distribution with mean at 170 cms. \\
+Hobbies \\
+\ \  \scriptsize \emph{More than once a week} has 167k (37\%) respondents. \\
+Infarct father \\
+\ \  \scriptsize Around 84k (18.8\%) respondents with a \emph{Yes} answer. \\
+Infarct mother \\
+\ \  \scriptsize Around 37k (8.3\%) respondents with a \emph{Yes} answer. \\
+Income \\
+\ \  \scriptsize Resembles a Poisson distribution. The higher point at 50k euros. \\ 
+Issues children \\
+\ \  \scriptsize 147k (33\%) respondents do not have children. \\
+Issues spouse \\
+\ \  \scriptsize \emph{Sometimes} answer is the highest with 216k (48\%); \\
+\ \  \scriptsize 91k respondants (20\%) are single. \\
+Milk \\
+\ \  \scriptsize 138k (30\%) respondents do not consume milk, the highest proportion \\
+\ \  \scriptsize consume fat free 197k (43\%). \\
+Seat belt \\
+\ \  \scriptsize There are 13k (2.8\%) respondents that does not use seat belt. \\
+Sex \\
+\ \  \scriptsize There are 70k more woman than man in the data set. \\
+Size of the house adults \\
+\ \  \scriptsize One and two account for the majority of the answers (94\%). \\
+Sleeping time \\
+\ \  \scriptsize 7 and 8 hours are the average, as expected. \\
+Smoking cigarettes per day \\
+\ \  \scriptsize There is a tendency to round the answers, 10, 15 and 20. \\
+\ \  \scriptsize Twenty being the most common answer. \\ 
+Smoking daily for a year \\
+\ \  \scriptsize 197k (43\%) respondents have been smokers for a year. \\
+Smoking now \\
+\ \  \scriptsize 76k (17\%) respondents are smoking now and 35k (8\%) respondents \\
+\ \  \scriptsize tend to smoke randomly. \\
+Stress \\
+\ \  \scriptsize 277k (61\%) respondents are \emph{somehow} stressed. \\
+Weight \\
+\ \  \scriptsize Normal distribution with mean at 70kg. \\
+What age will live \\
+\ \  \scriptsize Increased age to 91 years when respondants are between 80 to 90 years old. \\
+Work and study load \\
+\ \  \scriptsize 56k (12\%) respondents do not have a paid job. \\
+
+\end{longtable}
+\end{center}
+
+%% DISCRETE VS DISCRETE
+\begin{center}\small
+\begin{longtable}{|ll|}
+\caption[Discrete vs Discrete exploration findings]{\label{tab:appD2}Discrete vs Discrete exploration findings.} \\
+
+\hline
+\endfirsthead
+\hline
+\endhead
+\hline
+\endfoot
+Association activities & Do not have good friends \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Number of answers of not having good friends increase when the association} \\
+\multicolumn{2}{|l|}{\ \ \scriptsize activities occur almost never.} \\
+Association activities & Religious events \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize Highly correlated, 35\% respondents have a \emph{Never} answer in both.} \\
+Economic situation & Association activities \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize A better economic situation equals higher association activities.} \\
+Economic situation & Dreams impossible \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize With a worse economic situation it is more difficult to achieve dreams.} \\
+Economic situation & Life satisfaction \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize There is linear correlation, good economic situation equals to a} \\
+\multicolumn{2}{|l|}{\ \ \scriptsize satisfaction with life.} \\
+Economic situation & Movies and theater \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize A better economic situation means people assist more often to these events.} \\
+Economic situation & Stress \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize In a worse economic situation people is more stressed.} \\
+Father infarct & Mother infarct \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize 3.0\% respondents have both as \emph{Yes}.} \\
+Get Drunk & Smoking now \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize People that get drunk is no more propense to be a smoker, } \\
+\multicolumn{2}{|l|}{\ \ \scriptsize there are a similar number of smokers (4-6\%) in all drinking categories.} \\
+Get Drunk & Sports activities \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize People that like to get drunk less is more sporty.} \\
+House size adults & Dot not have good friends \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize The proportion of not having good friends is high, 6\%, when there are only} \\
+\multicolumn{2}{|l|}{\ \ \scriptsize two adults in the house.} \\ 
+House size adults & Get drunk \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize In cases of 1 or 2 adults the same drinking patterns are observed.} \\
+\multicolumn{2}{|l|}{\ \ \scriptsize As if couples are going out together.} \\
+House size adults & Hobbies \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize In cases of 1 or 2 adults the same hobbies responses are observed.} \\ 
+House size adults & House size minors \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize There is a high presence of minors when there are 2 adults; 1 minor 19\%, 2 minors 21\%.} \\
+House size minors & Life satisfaction \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize The presence of one or more minor have a positive effect in life satisfaction.} \\
+Life satisfaction & Dreams impossible \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize Dissatisfied people tends to agree with the impossibility of achieving dreams.} \\
+Religious events & Dreams impossible \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize People that go to religious events tend to be more positive about achieving dreams.} \\
+Sex & Diabetes status \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize Males have a higher probability of having diabetes 6.1\% vs 4.2\% of females.} \\
+Sex & Economic situation \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize \emph{Worse} economic situation answer occurs more with females, 12.3\%, than males, 9.4\%.} \\
+Sex & Fruits and berries \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize Males eat fruit in an uniformly distributed way, ~24\% fore each option.} \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize 42\% of females tend to eat fruits and berries daily.} \\
+Sex & Get drunk \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize Females are less propense to get drunk, males get drunk more often.} \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize \emph{Once per week} answered by 20\% of males vs 9\% of females.} \\
+Sex & Kind of milk \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize 44\% of the consumed milk is fat free and females intake 61\% of it.} \\
+Sex & Seat belt \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize Of those not wearing a seat belt 70\% are males and 30\% females.} \\
+Sex & Vegetables \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize 32\% or respondents are females eating vegetables daily.} \\
+Smoking now & Stress \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize There is a tendency for smokers to consider themselves as stressed,} \\
+\multicolumn{2}{|l|}{\ \ \scriptsize 15\% of the respondents fall in this category.} \\
+Sport activities & Dreams impossible \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize People doing \emph{light} and \emph{normal} sports usually agree that achieving dreams is possible.} \\
+Sport activities & Life satisfaction \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize People that do sports is usually satisfied with their lives.} \\
+Sport activities & Stress \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize Stress can be related to people doing no sports at all.} \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Doing nothing and having more than normal stress levels account for 6\% of respondents.} \\
+Stress & Dreams impossible \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize No stressed people agreeing with the possibility of achieving dreams accounts for 9.8\% } \\
+\multicolumn{2}{|l|}{\ \ \scriptsize of the respondents.} \\
+Vegetables & Fruits and berries \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize Eating Vegetables implies the consumption of fruits and berries.} \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize Similar consumption patterns account for 51\% of the answers.} \\
+Vegetables & Sports activities \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize Both activities seem to be associated. Daily consumption is related with} \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize \emph{light} and \emph{normal} sports activities for 38.5\% of respondents.} \\
+
+\end{longtable}
+\end{center}
+\clearpage
+
+%% CONTINUOUS VS CONTINUOUS
+\begin{center}\small
+\begin{longtable}{|ll|}
+\caption[Continuous vs Continuous exploration findings]{\label{tab:appD3}Continuous vs Continuous exploration findings.} \\
+
+\hline
+\endfirsthead
+\hline
+\endhead
+\hline
+\endfoot
+Age & Best time to live \\
+\multicolumn{2}{|l|}{\ \ \scriptsize People tend to answer with their own age.} \\
+Age & Blood pressure diastole/systole \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Older people have a tendency for a higher blood pressure.} \\
+Age & BMI \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Older people have a tendency for a higher BMI.} \\
+Age & Cholesterol Total/HDL \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Older people have a tendency for a higher cholesterol level.} \\
+Age & Education \\
+\multicolumn{2}{|l|}{\ \ \scriptsize The majority of the people starts education at age 6 and continues up to age 24,} \\
+\multicolumn{2}{|l|}{\ \ \scriptsize new generations are more educated than older ones.} \\
+Age & Total alcohol consumption \\
+\multicolumn{2}{|l|}{\ \ \scriptsize A noticeable increase in consumption after the age 18.} \\
+Blood pressure diastole/systole & Total alcohol consumption \\
+\multicolumn{2}{|l|}{\ \ \scriptsize High pressure seems to be correlated with heavy alcohol consumption.} \\
+Cholesterol HDL & Blood pressure diastole/systole \\
+\multicolumn{2}{|l|}{\ \ \scriptsize When the HDL is lower the blood pressure is slightly higher.} \\
+Cholesterol HDL & BMI \\
+\multicolumn{2}{|l|}{\ \ \scriptsize It is noticeable that for lower levels of HDL the BMI is higher.} \\
+Education & Alcohol beer \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Less educated people tend to drink more beer.} \\
+Education & Alcohol wine \\
+\multicolumn{2}{|l|}{\ \ \scriptsize More educated people tend to drink wine.} \\ 
+Education & Total alcohol consumption \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Less educated people drink more alcohol.} \\
+Education & Income \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Highly educated people have a better income, the average income in Finland} \\
+\multicolumn{2}{|l|}{\ \ \scriptsize is seen between 40k to 60k euros.} \\
+Height & Cigarettes per day \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Taller people seems to smoke more.} \\
+Height & Weight \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Variables are correlated. Taller people weights more, as expected.} \\
+Income & Total alcohol consumption \\
+\multicolumn{2}{|l|}{\ \ \scriptsize With an income of more than 20k the alcohol consumption increases to 5 or more} \\
+\multicolumn{2}{|l|}{\ \ \scriptsize doses per week. Between 20k to 60k euros the consumption can be more than 10 doses. } \\ 
+Number of cigarettes & What age will live \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Heavy smokers (20+ cigarettes per day) reduce the number of years they will} \\
+\multicolumn{2}{|l|}{\ \ \scriptsize live by 5 to 10 years compared to the average.} \\
+Weight & Blood pressure diastole \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Heavier people have a higher blood pressure, as expected.} \\
+Weight & Cholesterol HDL \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Heavier people have a lower level of HDL.} \\
+Weight & Number of cigarettes \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Heavier people seems to smoke more (as taller people do).} \\
+
+\end{longtable}
+\end{center}
+
+%% DISCRETE VS CONTINUOUS
+\begin{center}\small
+\begin{longtable}{|ll|}
+\caption[Discrete vs Continuous exploration findings]{\label{tab:appD4}Discrete vs Continuous exploration findings.} \\
+
+\hline
+\endfirsthead
+\hline
+\endhead
+\hline
+\endfoot
+
+Diabetes status & Age \\
+\multicolumn{2}{|l|}{\ \ \scriptsize People with diabetes controlled by diet have an age range between 50-65 years,} \\
+\multicolumn{2}{|l|}{\ \ \scriptsize people using insulin have an age range between 55-70 years.} \\
+Diabetes status & Blood pressure diastole \\
+\multicolumn{2}{|l|}{\ \ \scriptsize People with diabetes show higher levels of blood pressure.} \\
+Diabetes & BMI \\
+\multicolumn{2}{|l|}{\ \ \scriptsize People without diabetes have a range between 20-30, while diabetics have a range between 23-35.} \\
+Diabetes & Education \\
+\multicolumn{2}{|l|}{\ \ \scriptsize People with diabetes have a lower number of years of education.} \\
+Diabetes & Weight \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Diabetics tend to be heavier, with a range between 70-100 kilos.} \\
+Dreams impossible & Education \\
+\multicolumn{2}{|l|}{\ \ \scriptsize People with higher education disagree less with the impossibility of} \\
+\multicolumn{2}{|l|}{\ \ \scriptsize achieving dreams compared to people with less education.} \\
+Economic situation & Age \\
+\multicolumn{2}{|l|}{\ \ \scriptsize The \emph{Much better} economic situation shows between 50-70 years.} \\
+\multicolumn{2}{|l|}{\ \ \scriptsize The \emph{Much worse} shows from 40-60 years and \emph{Worse} shows in old people 60+ years.} \\
+Economic situation & Education \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Educated people have a much better situation that less educated people.} \\
+Economic situation & Sleeping time \\
+\multicolumn{2}{|l|}{\ \ \scriptsize A much worse economic situation has people sleeping less than 6.5 or more than 9.5 hours.} \\
+Economic situation & What age will live \\
+\multicolumn{2}{|l|}{\ \ \scriptsize People with much worse economic situation expect to live less.} \\
+Father infarct & Age \\
+\multicolumn{2}{|l|}{\ \ \scriptsize It occurs when one is between 40-60 years old.} \\
+Father infarct & BMI \\
+\multicolumn{2}{|l|}{\ \ \scriptsize With a father infarct people have a higher BMI.} \\
+Father infarct & Education \\
+\multicolumn{2}{|l|}{\ \ \scriptsize A father infarct is related, strangely, to a lower level of education.} \\
+Fruits and berries & Age \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Daily consumption concentrates between people 50-60 years old.} \\
+Fruits and berries & Blood pressure diastole \\
+\multicolumn{2}{|l|}{\ \ \scriptsize People with a daily consumption have a slightly lower lever of blood pressure.} \\
+Fruits and berries & Education \\
+\multicolumn{2}{|l|}{\ \ \scriptsize People with a higher education level consumes fruits and berries more often.} \\
+Get drunk & Alcohol, beer \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Getting drunk more than once per week is correlated to high levels of beer consumption.} \\
+Get drunk & Age \\
+\multicolumn{2}{|l|}{\ \ \scriptsize People getting drunk more than once per week are, mainly, between 40-60 years old.} \\
+Get drunk & Education \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Educated people tends to get drunk less often.} \\ 
+House size minors & Age \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Minors usually cohabitate with parents when parents are between 30-50 years old.} \\
+Issues children & Age \\
+\multicolumn{2}{|l|}{\ \ \scriptsize The conflicts usually occur when parents are between 40-60 years old, specially at theirs 50's.} \\
+Issues children & BMI \\
+\multicolumn{2}{|l|}{\ \ \scriptsize When there are issues all the time the BMI range is higher, 24-32; (the average is 23-28),} \\
+\multicolumn{2}{|l|}{\ \ \scriptsize with not children the BMI is below 20-25.} \\
+Issues children & Cholesterol total \\
+\multicolumn{2}{|l|}{\ \ \scriptsize When there are issues all the time the cholesterol level range is higher (5-7mmol/L) } \\
+\multicolumn{2}{|l|}{\ \ \scriptsize compared to the average of (5mmol/L).} \\
+Issues children & Education \\
+\multicolumn{2}{|l|}{\ \ \scriptsize When there are issues all the time the parents' education level is} \\
+\multicolumn{2}{|l|}{\ \ \scriptsize below average compared to other groups.} \\
+Issues children & Income \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Not having children is related to a lower income.} \\
+Issues children & Number of cigarettes \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Heavy smokers have a tendency for issues all the time.} \\
+Issues children & Sleeping time \\
+\multicolumn{2}{|l|}{\ \ \scriptsize With issues all time the sleeping time is lower, 5-7 hours; than the average of 7-8 hours.} \\
+Issues children & Total alcohol consumption \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Issues all the time is related to heavy alcohol consumption.} \\
+Issues children & Weight \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Issues all the time is related to heavier people.} \\
+Issues spouse & Blood pressure diastole \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Higher levels of blood pressure is observed when there are issues all the time.} \\
+Issues spouse & Number of cigarettes \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Consumption of 20 to 30 cigarettes is related to issues all the time with spouse.} \\
+Issues spouse & Total alcohol consumption \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Issues all the time is related to high levels of alcohol consumption.} \\
+Cooking oil & Total cholesterol \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Higher levels of cholesterol are present when using butter/margarine.} \\
+Cooking oil & Education \\
+\multicolumn{2}{|l|}{\ \ \scriptsize More educated people use vegetable oil, less educated people use butter/margarine.} \\
+Kind of milk & Age \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Older people (60-90 years) drink whole milk, people not drinking milk is between 40-60 years.} \\
+Kind of milk & Alcohol, beer \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Whole milk drinkers tend to drink more beers than the average.} \\
+Kind of milk & Blood pressure diastole/systole \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Whole milk drinkers have higher levels of pressure.} \\
+Kind of milk & BMI \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Whole and semi milk drinkers have a lower BMI, 20-27; compared to the average of 23-27.} \\
+Kind of milk & Cholesterol total \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Whole milk drinkers have a higher level of cholesterol.} \\
+Kind of milk & Education \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Whole milk drinkers have a lower level of education.} \\
+Kind of milk & Income \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Whole milk drinkers have a lower income.} \\
+Kind of milk & Cigarettes per day \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Whole milk drinkers smoke more than the average.} \\
+Life satisfaction & Alcohol, beer \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Dissatisfied people drink more beer.} \\
+Life satisfaction & Age \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Dissatisfied people cover all the range of ages, from 20 to 60 years old.} \\
+Life satisfaction & Best time to live \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Dissatisfied people set the best time to live around 20-30 (young ages).} \\
+Life satisfaction & Blood pressure diastole \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Dissatisfied people have a higher pressure level.} \\
+Life satisfaction & Education \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Very pleased people are more educated compared to dissatisfied people.} \\
+Life Satisfaction & Height \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Taller people is slightly more dissatisfied than average-height people.} \\
+Life Satisfaction & Income \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Satisfaction is highly correlated with the income.} \\
+Life Satisfaction & Number of cigarettes \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Dissatisfied people tend to smoke more.} \\
+Life Satisfaction & What age will live \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Dissatisfied people have a lower expectancy, 60-80 years; compared to the average of 80-90 years.} \\
+Mother infarct & Age \\
+\multicolumn{2}{|l|}{\ \ \scriptsize It occurs when people is between 45-65 years.} \\
+Mother infarct & BMI \\
+\multicolumn{2}{|l|}{\ \ \scriptsize With a mother infarct people have a higher BMI.} \\
+Mother infarct & Education \\
+\multicolumn{2}{|l|}{\ \ \scriptsize A mother infarct is related, strangely, to a lower level of education.} \\
+Movies and theater & Age \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Younger people, 20-30 years, go more often, \emph{1+/month}, to these events.} \\
+Movies and theater & Education \\
+\multicolumn{2}{|l|}{\ \ \scriptsize More educated people go more often, \emph{1+/month}, to these events compared to} \\
+\multicolumn{2}{|l|}{\ \ \scriptsize less educated people that goes \emph{almost never}.} \\
+Movies and theater & Income \\
+\multicolumn{2}{|l|}{\ \ \scriptsize With a higher income people assist more often to these events.} \\
+Movies and theater & Cigarettes per day \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Heavy smokers \emph{Almost never} go to movies/theater.} \\
+Reading and music & Alcohol beer \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Heavy beer drinkers \emph{Almost never} read or listen to music.} \\
+Reading and music & Education \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Reading and listening to music is positively correlated to the education level.} \\
+Reading and music & Cigarettes per day \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Heavy smokers almost never read or listen to music.} \\
+Reading and music & Total alcohol consumption \\
+\multicolumn{2}{|l|}{\ \ \scriptsize High alcohol consumption is related to no reading nor listening to music.} \\
+Religious events & Age \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Assistance of \emph{1+/month} shows a higher level between 50-70 years old people,} \\
+\multicolumn{2}{|l|}{\ \ \scriptsize \emph{1+/week} shows a high level between 50-60 years and 25-30 years.} \\
+Religious events & Total alcohol consumption \\
+\multicolumn{2}{|l|}{\ \ \scriptsize There is a decrease in alcohol consumption as the assistance to religious events increases.} \\
+Seat belt & Alcohol, beer and concentrated \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Higher beer/alcohol concentrated consumption is related to no using seat belt.} \\
+Seat belt & Age \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Younger people, 20-40 years, are the ones less likely to use the seat belt.} \\
+Seat belt & Education \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Less educated people tend to use the seat belt less.} \\
+Seat belt & Income \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Lower income is related to not using the seat belt (Is due to public transportation?).} \\
+Seat belt & Total alcohol consumption \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Higher levels of alcohol are related to not using the seat belt.} \\
+Seat belt & What age will live \\
+\multicolumn{2}{|l|}{\ \ \scriptsize People not using the seat belt gave a lower range, 70-90 years; compared to the average of 80-90 years.} \\
+Sex & Alcohol, beer \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Males have a higher maximum of beer consumption with 25 bottles per week compared to} \\
+\multicolumn{2}{|l|}{\ \ \scriptsize 10 bottles per week by females.} \\
+Sex & Age \\
+\multicolumn{2}{|l|}{\ \ \scriptsize The range of ages for both sexes is similar, 25-60 years.} \\
+Sex & Blood pressure diastole/systole \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Higher pressure levels show more in males than females.} \\
+Sex & BMI \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Males have a range between 23-30 while female have a range between 20-27.} \\
+Sex & Education \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Females are more educated, 12-18 years, compared to the 9-18 years of males.} \\
+Sex & Height \\
+\multicolumn{2}{|l|}{\ \ \scriptsize The range for males is between 170-190cm, for female the range is between 155-170cm.} \\
+Sex & Number of cigarettes \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Males smoke more; 25 and 30 cigarettes per day is mainly done by males.} \\
+Sex & Total alcohol consumption \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Males have a higher maximum level of alcohol consumption, 35 doses vs 20 of females.} \\
+Sex & Weight \\
+\multicolumn{2}{|l|}{\ \ \scriptsize The average of males is between 70-100kg, for females the average is between 50-80kg.} \\
+Smoker for a year & Alcohol, beer \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Smokers are related to higher levels of beer consumption.} \\
+Smoker for a year & BMI \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Smokers have a higher BMI.} \\
+Smoker for a year & Education \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Smokers have a lower education level.} \\
+Smoker for a year & Total alcohol consumption \\
+\multicolumn{2}{|l|}{\ \ \scriptsize High consumption of alcohol is related to a \emph{Yes} in smoking for a year.} \\
+Smoker for a year & Weight \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Heavier people tend to have been smokers for a year.} \\
+Smoking now & Alcohol, beer \\
+\multicolumn{2}{|l|}{\ \ \scriptsize A \emph{Yes} answer is related to heavy beer consumption, no smokers are related} \\
+\multicolumn{2}{|l|}{\ \ \scriptsize to lower beer consumption.} \\
+Smoking now & Age \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Random smokers are between 20-30 years old.} \\
+Smoking now & Education \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Smokers tend to have a lower level of education.} \\
+Smoking now & Number of cigarettes \\
+\multicolumn{2}{|l|}{\ \ \scriptsize High presence at 10, 15, 20 (up to 30) cigarettes per day, random smokers are between} \\
+\multicolumn{2}{|l|}{\ \ \scriptsize 1-5 cigarettes per day.} \\
+Smoking now & Total alcohol consumption \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Follow the same tendency as beer consumption.} \\
+Smoking now & What age will live \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Smokers tend to have a lower life expectancy, 70-90 years, compared to the average of 80-90 years.} \\
+Sports activities & Age \\
+\multicolumn{2}{|l|}{\ \ \scriptsize \emph{Hard} sports are being done by people between 15-30 years.} \\
+Sports activities & Blood pressure diastole/systole \\
+\multicolumn{2}{|l|}{\ \ \scriptsize The blood pressure is lower for people doing hard sports.} \\
+Sports activities & BMI \\
+\multicolumn{2}{|l|}{\ \ \scriptsize People not doing sports have a higher BMI, 23-27, compared to the BMI of people doing} \\
+\multicolumn{2}{|l|}{\ \ \scriptsize \emph{hard} sports, 20-25.} \\
+Sports activities & Sleeping time \\
+\multicolumn{2}{|l|}{\ \ \scriptsize People doing hard sports tend to sleep more, 7-10 hours, than the average of 7-8 hours.} \\
+Sports activities & Weight \\
+\multicolumn{2}{|l|}{\ \ \scriptsize People doing nothing is heavier than people doing some kind of sports. There is abundance of } \\
+\multicolumn{2}{|l|}{\ \ \scriptsize people weighting 90+ kilos.} \\
+Stress & Age \\
+\multicolumn{2}{|l|}{\ \ \scriptsize The majority of the people with \emph{no stress at all} are between 55-65 years old (28\%).} \\
+Stress & Blood pressure diastole/systole \\
+\multicolumn{2}{|l|}{\ \ \scriptsize When answer is \emph{Yes it's a hard life} people have a higher pressure level.} \\
+Stress & Income \\
+\multicolumn{2}{|l|}{\ \ \scriptsize The answer \emph{Yes it's a hard life} is related to a lower income.} \\
+Stress & Sleeping time \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Stressed people sleep less, or more, than the average (5-10 hours).} \\ 
+\multicolumn{2}{|l|}{\ \ \scriptsize No stressed people sleeps more, 7-10 hours.} \\
+Stress & What age will live \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Stressed people responded with a lower life expectancy, 60-90 years, than the average of 80-90 years.} \\
+Vegetables & Age \\
+\multicolumn{2}{|l|}{\ \ \scriptsize People eating less than once per week are between 20-30 years,} \\
+\multicolumn{2}{|l|}{\ \ \scriptsize people with daily consumption are between 40-60 years.} \\
+Vegetables & Education \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Less educated people tend to consume less vegetables.} \\ 
+Vegetables & Income \\
+\multicolumn{2}{|l|}{\ \ \scriptsize A higher income is related to daily consumption of vegetables.} \\
+Vegetables & Number of cigarettes per day \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Heavy smokers tend to eat vegetables more sporadically.} \\
+Work/Study load & Age \\
+\multicolumn{2}{|l|}{\ \ \scriptsize \emph{Not paid work} is usually present within people between 60-70 years old.} \\
+Work/Study load & Best time to live \\
+\multicolumn{2}{|l|}{\ \ \scriptsize People with \emph{not paid work} set an older best time to live range 40-60 years,} \\
+\multicolumn{2}{|l|}{\ \ \scriptsize compared to the average of 30-50 years.} \\
+Work/Study load & Blood pressure diastole \\
+\multicolumn{2}{|l|}{\ \ \scriptsize People with an answer of \emph{Always} show a higher pressure level.} \\
+Work/Study load & Education \\
+\multicolumn{2}{|l|}{\ \ \scriptsize Not paid work is related to lower education level.} \\
+Work/Study load & Sleeping time \\
+\multicolumn{2}{|l|}{\ \ \scriptsize High load is related to shorter sleeping time, 5-8 hours, while \emph{not paid work} and} \\
+\multicolumn{2}{|l|}{\ \ \scriptsize \emph{rarely} load have a longer sleeping time 7-10 hours.} \\ 
+
+\end{longtable}
+\end{center}
+
+%%
+%% Appendix E
+%%
+\chapter{Regression tables}
+\label{app:E}
+
+The following tables depict the different regression strategies used for this thesis. Depending on the approach the tables also show the selected variables, their correspondent coefficient the Mean Squared Errors for the training and testing sets. All strategies were compared to the Mean predictor at Table \ref{tab:appE1}, using this last one as baseline. The improvement is also depicted in the tables at the last two columns. Long tables were divided in two; the first section shows the regression parameters and values, the second section shows the errors and improvements.
+
+%% MEAN PREDICTOR
+\begin{table}\small
+ \begin{center}
+  \begin{tabular}{|l|r|r|r|}
+   \hline
+    Variables $Y$ & Mean predictor & MSE & RMSE \\
+   \hline
+   \hline
+age			&	43.2196	&	215.7516	&	14.6885	\\
+height			&	170.6765&	88.1681		&	9.3898	\\
+weight			&	75.2627	&	257.8829	&	16.0587	\\
+education		&	13.9488	&	13.0000		&	3.6055	\\
+income			&	48.6815	&	1197.5406	&	34.6055	\\
+cholesterolTotal	&	4.9799	&	0.8375		&	0.9152	\\
+cholesterolHDL		&	1.7279	&	0.4342		&	0.6590	\\
+bloodPressureSystole	&	128.8930&	156.4849	&	12.5094	\\
+bloodPressureDiastole	&	79.1710	&	70.1752		&	8.3771	\\
+alcoholBeer		&	2.8687	&	23.1699		&	4.8135	\\
+alcoholDrink		&	0.2362	&	0.7912		&	0.8895	\\
+alcoholConcentrated	&	0.7914	&	4.9086		&	2.2155	\\
+alcoholWine		&	1.3528	&	6.8010		&	2.6079	\\
+alcoholLightWine	&	0.0113	&	0.0111		&	0.1055	\\
+numberOfCigarettes	&	5.6978	&	66.2813		&	8.1413	\\
+sleepingTime		&	7.4834	&	0.8906		&	0.9437	\\
+whatAgeWillLive		&	84.8797	&	60.5785		&	7.7832	\\
+bestTimeToLive		&	37.4743	&	186.9253	&	13.6721	\\
+BMI			&	25.5954	&	19.0848		&	4.3686	\\
+totalAlcoholConsumption	&	5.9380	&	58.4402		&	7.6446	\\
+   \hline
+  \end{tabular}
+ \end{center}
+ \caption[Mean predictors for continuous variables]{\label{tab:appE1}Mean predictors for continuous variables.}
+\end{table}
+
+%% SINGLE PREDICTOR
+\begin{sidewaystable}\scriptsize
+ \begin{center}
+  \begin{tabular}{|l|l|r|r|r|r|r|r|}
+   \hline
+    Variables $Y$ & Predictor $X$ & Intercept & Slope & MSE & MSE & Improvement & Improvement \\
+    &  &  & & training & testing & training & testing \\
+   \hline
+   \hline
+age			&	alcoholWine	&	41.6643	&	1.0531	&	208.4756&	208.4796&	0.03	&	0.03	\\
+height			&	sex		&	171.7531&	-6.7647	&	43.5831	&	43.5841	&	0.51	&	0.51	\\
+weight			&	height		&	-88.1171&	0.9576	&	177.2027&	177.2066&	0.31	&	0.31	\\
+education		&	alcoholWine	&	13.6960	&	0.1776	&	12.7673	&	12.7676	&	0.02	&	0.02	\\
+income			&	economicSituation&	41.5295	&	9.1205	&	1108.3357&	1108.3588&	0.07	&	0.07	\\
+alcoholBeer		&	sex		&	3.1394	&	-1.4752	&	21.1359	&	21.1364	&	0.09	&	0.09	\\
+alcoholDrink		&	sleepingTime	&	0.4336	&	-0.0263	&	0.7879	&	0.7879	&	0.00	&	0.00	\\
+alcoholConcentrated	&	alcoholBeer	&	0.5072	&	0.0962	&	4.5860	&	4.5862	&	0.07	&	0.07	\\
+alcoholWine		&	age		&	-0.0736	&	0.0333	&	6.5961	&	6.5963	&	0.03	&	0.03	\\
+alcoholLightWine	&	alcoholWine	&	0.0131	&	-0.0013	&	0.0112	&	0.0112	&	-0.01	&	-0.01	\\
+sleepingTime		&	stress		&	7.7120	&	-0.2215	&	0.8675	&	0.8676	&	0.03	&	0.03	\\
+whatAgeWillLive		&	lifeSatisfaction&	82.2874	&	1.4929	&	58.7030	&	58.7045	&	0.03	&	0.03	\\
+bestTimeToLive		&	age		&	16.1769	&	0.4940	&	134.5867&	134.5901&	0.28	&	0.28	\\
+   \hline
+   \hline
+cholesterolTotal	&	age		&	4.3413	&	0.0129	&	0.8127	&	0.8128	&	0.03	&	0.03	\\
+cholesterolHDL		&	weight		&	2.1231	&	-0.0051	&	0.4275	&	0.4275	&	0.02	&	0.02	\\
+bloodPressureSystole	&	weight		&	110.7684&	0.2372	&	142.0263&	142.0389&	0.09	&	0.09	\\
+bloodPressureDiastole	&	weight		&	66.9990	&	0.1595	&	63.8639	&	63.8696	&	0.09	&	0.09	\\
+numberOfCigarettes	&	smokingNow	&	-0.4573	&	7.1280	&	22.2687	&	22.2710	&	0.66	&	0.66	\\
+   \hline
+  \end{tabular}
+ \end{center}
+ \caption[Regression with a single predictor]{\label{tab:appE2}Regression with a single predictor.}
+\end{sidewaystable}
+
+%% SINGLE POLYNOMIAL PREDICTOR A
+\begin{sidewaystable}\scriptsize
+ \begin{center}
+  \begin{tabular}{|l|l|r|r|r|r|r|r|r|r|}
+   \hline
+    Variables $Y$ & Predictor $X$ & Intercept & Sex & Age & $X^1$ & $X^2$ & $X^3$ & $X^4$ & $X^5$ \\
+   \hline
+   \hline
+height & weight	& 0.06994 & -0.56846 & -0.13737	& 0.28045 & -0.03010 &	0.03187	& -0.02252 & 0.00360	\\
+weight & height	& -0.02820 & -0.07411	&	0.19492	&	0.48191	&	0.04013	&	0.01739	&	-0.00507	&	-0.00138	\\
+education & height & 0.02059	&	0.21028	&	-0.06333	&	0.18610	&	-0.00404	&	0.02665	&	-0.00744	&	-0.00118	\\
+income	& houseSizeAdults & 0.06133 & -0.06043	&	0.13944	&	0.28243	&	-0.07002	&	-0.01128	&	0.00417	&	--	\\
+alcoholBeer & smokingNow & 0.05284	&	-0.28839	&	-0.03349	&	0.29764	&	-0.05284	&	--	&	--	&	--	\\
+alcoholDrink & stress	&	-0.00446	&	-0.03148	&	-0.07110	&	0.01809	&	0.00167	&	0.00638	&	--	&	--	\\
+alcoholConcentrated & alcoholBeer & 0.01822	&	-0.17771	&	0.08990	&	0.38770	&	0.09320	&	-0.21520	&	0.07343	&	-0.00749\\
+alcoholWine & economicSituation	& -0.01754 &	0.02635	&	0.18520	&	0.11005	&	0.02790	&	-0.02641	&	-0.00929	&	--	\\
+alcoholLightWine & sleepingTime	& -0.00428	&	0.03192	&	0.01840	&	0.00598	&	0.00598	&	-0.00531	&	-0.00054	&	0.00061	\\
+sleepingTime & stress	& -0.01682 &	0.06533	&	-0.15721	&	-0.18479	&	0.01682	&	--	&	--	&	--	\\
+whatAgeWillLive	& lifeSatisfaction &	-0.01459	&	0.06966	&	-0.00946	&	0.18267	&	0.01531	&	0.00087	&	--	&	--	\\
+bestTimeToLive	& education &	0.01718	&	0.05188	&	0.52700	&	-0.03711	&	-0.01775	&	0.00795	&	--	&	--	\\
+   \hline
+   \hline
+cholesterolTotal & alcoholBeer	& 0.015992 & 0.028146	& 0.184171 & 0.116005	&	-0.019072	&	-0.001036	&	0.000572	&	--	\\
+cholesterolHDL	& weight & -0.025641	& 0.063274 &	0.036840 &	-0.132331	&	0.031040	&	0.011866	&	-0.003826	&	--	\\
+bloodPressureSystole	& BMI	& 0.034368 & -0.178180	& 0.212861 &	0.261529	&	-0.044149	&	-0.006727	&	0.006189	&	-0.001128\\
+bloodPressureDiastole	& BMI	& 0.028733 & -0.140312	& 0.139877	&	0.295540	&	-0.031146	&	-0.015967	&	0.004042	& --\\
+numberOfCigarettes & smokingNow	& -0.531695 & -0.080528	& 0.035459 &	0.673183	&	0.531724	&	--	&	--	&	--	\\
+   \hline
+  \end{tabular}
+ \end{center}
+ \caption[Polynomial regression with extra variables Sex and Age]{\label{tab:appE3A}Polynomial regression with extra variables Sex and Age.}
+\end{sidewaystable}
+
+%% SINGLE POLYNOMIAL PREDICTOR B
+\begin{sidewaystable}\scriptsize
+ \begin{center}
+  \begin{tabular}{|l|l|r|r|r|r|}
+   \hline
+    Variables $Y$ & Predictor $X$ & MSE & MSE & Improvement & Improvement \\
+    & & training & testing & training & testing \\
+   \hline
+   \hline
+height			&	weight		&	0.3763	&	0.3838	&	0.62	&	0.62	\\
+weight			&	height		&	0.6450	&	0.6488	&	0.36	&	0.35	\\
+education		&	height		&	0.9524	&	0.9577	&	0.05	&	0.04	\\
+income			&	houseSizeAdults	&	0.9057	&	0.8910	&	0.09	&	0.11	\\
+alcoholBeer		&	smokingNow	&	0.8558	&	0.8437	&	0.14	&	0.16	\\
+alcoholDrink		&	stress		&	0.9911	&	1.0101	&	0.01	&	-0.01	\\
+alcoholConcentrated	&	alcoholBeer	&	0.9090	&	0.9241	&	0.09	&	0.08	\\
+alcoholWine		&	economicSituation&	0.9593	&	0.9917	&	0.04	&	0.01	\\
+alcoholLightWine	&	sleepingTime	&	0.9981	&	1.0179	&	0.00	&	-0.02	\\
+sleepingTime		&	stress		&	0.9465	&	0.9453	&	0.05	&	0.05	\\
+whatAgeWillLive		&	lifeSatisfaction&	0.9637	&	0.9846	&	0.04	&	0.02	\\
+bestTimeToLive		&	education	&	0.7166	&	0.7169	&	0.28	&	0.28	\\
+   \hline
+   \hline
+cholesterolTotal	&	alcoholBeer	&	0.9633	&	0.9506	&	0.04	&	0.05	\\
+cholesterolHDL		&	weight		&	0.9783	&	0.9570	&	0.02	&	0.04	\\
+bloodPressureSystole	&	BMI		&	0.8367	&	0.8229	&	0.16	&	0.18	\\
+bloodPressureDiastole	&	BMI		&	0.8743	&	0.8641	&	0.13	&	0.14	\\
+numberOfCigarettes	&	smokingNow	&	0.2898	&	0.2937	&	0.71	&	0.71	\\
+   \hline
+  \end{tabular}
+ \end{center}
+ \caption[Polynomial regression with extra variables Sex and Age (Cont.)]{\label{tab:appE3B}Mean squared errors and improvements for the training and testing data sets used in Polynomial regression with extra variables Sex and Age.}
+\end{sidewaystable}
+
+%% FORWARD STEPWISE SELECTION A
+\begin{sidewaystable}\tiny
+ \begin{center}
+  \begin{tabular}{|l|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|}
+    \hline
+    Variables $Y$ & \rotatebox{90}{sex} & \rotatebox{90}{age} & \rotatebox{90}{height} & \rotatebox{90}{weight} &  \rotatebox{90}{education} &  \rotatebox{90}{economicSituation} &
+    \rotatebox{90}{houseSizeAdults} & \rotatebox{90}{alcoholBeer} & \rotatebox{90}{alcoholWine} & \rotatebox{90}{smokerForAYear} & \rotatebox{90}{smokingNow} & 
+    \rotatebox{90}{sleepingTime} & \rotatebox{90}{stress} & \rotatebox{90}{lifeSatisfaction} & \rotatebox{90}{totalAlcoholConsumption} \\
+   \hline
+   \hline
+age		& --	& --	& -0.1859 & 0.2571 & -0.0776	& --	& --	& -0.0578 & 0.1849	&	0.1589	&	-0.2065	&	-0.1419	&	-0.1223	& -- & -- \\
+height		& -0.5810 & -0.1007 &	-- & 0.3164  &	0.1110	& --	& --	& --	& 0.0182 & --	&	0.0084	&	--	&	--	&	--	& -- \\
+weight		& --	& 0.2032 & 0.5544 & --	& --	& --	& --	& 0.0494 &	--	&	--	&	--	&	--	&	--	& -0.0515  & -- \\
+education 	& -- 	& --	& -- &	-- &	-- &	--&	--	&	--	&	0.1326	&	-0.1001	&	-0.0456	&	--	&	--	& -- & -- \\
+income		& --	& 0.1658 & --	& --	& 0.2022 & 0.2319 & 0.2324 &	0.0337	&	--	&	-0.0074	&	-0.0278	&	--	&	--	& -- & -- \\
+alcoholBeer 	& -0.2832 & -- 	&	-- & --	& -- &	-- &	--	&	--	&	0.0476	&	0.0791	&	0.1878	&	--	&	--	& -- & -- \\
+alcoholDrink 	& --	& --	& --	& 0.0373 & --	& --	& --	& 0.0354 & --	& --	& --	&	--	&	--	&	-- & --	\\
+alcoholConcent. & --	& --	& 0.1399 & --	& -0.0766 & --	& -- &	0.1754	& --	&	--	&	--	&	--	&	--	& -- & -- \\
+alcoholWine 	& --	& 0.1903 & --	& --	& --	& --	& --	& --	&	--	&	--	&	0.0082	&	--	&	--	& -- & -- \\
+alcoholLightWine& -- 	& --	& --	& --	& --	& 0.0031 & --	& --	&	-0.0318	&	--	&	--	&	--	&	--	& -- & -- \\
+sleepingTime	& -- 	& -0.1532	& --	& -0.0650 &	-- &	-- &	-- &	-- &	-0.0107	&	--	&	-0.0627	&	--	&	-0.1664	& -- & -- \\
+whatAgeWillLive	& --	& -0.0230 & --  & -0.0806 &	--  &	-- &	--	& -0.0659 & 0.0083&	--	&	-0.1427	&	--	&	--	& 0.1476 & -- \\
+bestTimeToLive	& --	& 0.5290 & --	& --	& --	& --	& --	& -0.0291 &	--	&	--	&	--	&	--	&	--	& -- & -- \\
+   \hline
+   \hline
+cholesterolTotal & --	& 0.1683 & --	&  --	& --	& --	& --	& 0.0606 & 0.0371 & --	& --	&	--	&	--	&	-0.0688	&	--	\\
+cholesterolHDL	& -- &	-- &   -- & -0.1200 & -- & -- &	-- &	-- &	--	&	--	&	-0.0095	&	--	&	--	&	--	&	--	\\
+bloodPressureSystole	& --	& 0.2461 & --	& 0.2198 & --	& --	& --	& 0.0879  & --	& --	& --	&	--	&	--	&	--	&	--	\\
+bloodPressureDiastole	& --	& 0.1626 & --	& 0.2576 & --	& --	& --	& --	& --	& --	& --	&	--	&	--	&	--	&	0.1072	\\
+numberOfCigarettes	& --	& --	& 0.0004 & 0.0542 & --	& --	& --	& 0.0415 & --	& --	& 0.8024 & --	&	--	&	--	&	--	\\
+   \hline
+  \end{tabular}
+ \end{center}
+ \caption[Regression with the Forward stepwise selection algorithm]{\label{tab:appE4A}Variables and their coefficients selected while using the Forward stepwise selection algorithm for regression. Intercept for all variables is zero due to the normalization of data.}
+\end{sidewaystable}
+
+%% FORWARD STEPWISE SELECTION B
+\begin{sidewaystable}\scriptsize
+ \begin{center}
+  \begin{tabular}{|l|r|r|r|r|}
+   \hline
+    Variables $Y$ & MSE & MSE & Improvement & Improvement \\
+    & training & testing & training & testing \\
+   \hline
+   \hline
+age			&	0.8248	&	0.8294	&	0.18	&	0.17	\\
+height			&	0.3931	&	0.3871	&	0.61	&	0.61	\\
+weight			&	0.6445	&	0.6534	&	0.36	&	0.35	\\
+education		&	0.9665	&	0.9645	&	0.03	&	0.04	\\
+income			&	0.8087	&	0.8211	&	0.19	&	0.18	\\
+alcoholBeer		&	0.8494	&	0.8892	&	0.15	&	0.11	\\
+alcoholDrink		&	0.9967	&	1.0273	&	0.00	&	-0.03	\\
+alcoholConcentrated	&	0.9336	&	0.9196	&	0.07	&	0.08	\\
+alcoholWine		&	0.9640	&	0.9613	&	0.04	&	0.04	\\
+alcoholLightWine	&	0.9989	&	0.9624	&	0.00	&	0.04	\\
+sleepingTime		&	0.9415	&	0.9467	&	0.06	&	0.05	\\
+whatAgeWillLive		&	0.9321	&	0.9321	&	0.07	&	0.07	\\
+bestTimeToLive		&	0.7170	&	0.7187	&	0.28	&	0.28	\\
+   \hline
+   \hline
+cholesterolTotal	&	0.9533	&	0.9555	&	0.05	&	0.04	\\
+cholesterolHDL		&	0.9853	&	0.9657	&	0.01	&	0.03	\\
+bloodPressureSystole	&	0.8456	&	0.8488	&	0.15	&	0.15	\\
+bloodPressureDiastole	&	0.8750	&	0.8775	&	0.13	&	0.12	\\
+numberOfCigarettes	&	0.3292	&	0.3290	&	0.67	&	0.67	\\
+   \hline
+  \end{tabular}
+ \end{center}
+ \caption[Regression with the Forward stepwise selection algorithm (Cont.)]{\label{tab:appE4B}Mean squared errors and improvements for the training and testing data sets while using Forward stepwise selection algorithm. In this case the baseline values to compare the result against is not the Mean predictor but value 1.0, this is due to the normalization of the data.}
+\end{sidewaystable}
+
+%% SISAL SELECTION A
+\begin{sidewaystable}\tiny
+ \begin{center}
+  \begin{tabular}{|l|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|}
+    \hline
+    Variables $Y$ & \rotatebox{90}{sex} & \rotatebox{90}{age} & \rotatebox{90}{height} & \rotatebox{90}{weight} &  \rotatebox{90}{education} &  \rotatebox{90}{economicSituation} &
+    \rotatebox{90}{houseSizeAdults} & \rotatebox{90}{alcoholBeer} & \rotatebox{90}{alcoholWine} & \rotatebox{90}{smokerForAYear} & \rotatebox{90}{smokingNow} & 
+    \rotatebox{90}{sleepingTime} & \rotatebox{90}{stress} & \rotatebox{90}{lifeSatisfaction} & \rotatebox{90}{totalAlcoholConsumption} \\
+   \hline
+   \hline
+age	& --	& --	& -0.1868	& 0.2561 & -0.0774	& --	& --	& -0.0575 & 0.1843 & 0.1611 &	-0.2065	&	-0.1422	&	-0.1218	&	--	&	--	\\
+height	& -0.5816 & -0.1018 &	-- &	0.3165	& 0.1055 & 0.0150 & --	& --	& 0.0177 &	-0.0118	&	0.0166	&	--	&	--	&	0.0155	&	--	\\
+weight	& -0.0568 & 0.1957 &	0.5167	& --	& -0.0108 &	-0.0088	& --	& 0.0302 & -0.0267	& 0.0660 & -0.0186 &	-0.0251	&	0.0388	&	-0.0271	&	--	\\
+education & 0.2028 & -0.0912	& 0.2245 & --	& --	& 0.0963 & -0.0728	& --	& 0.1331 & -0.0838 & -0.0701	&	-0.0228	&	0.0684	&	0.0546	&	--	\\
+income	& -0.0152 & 0.1459 & 0.0664 &	-- & 0.1748 &	0.1921	& 0.2262 & 0.0114 & 0.1214 &	-0.0169	&	-0.0220	&	-0.0250	&	0.0330	&	0.1090	&	--	\\
+alcoholBeer	& -0.2640 & -0.0653 & 0.0095 &	0.0416	& 0.0146 & --	& -0.0217 & --	& 0.0560 & 0.0863 &	0.1664	&	-0.0163	&	0.0303	&	-0.0428	&	--	\\
+alcoholDrink	& --	& -0.0873 & --	& 0.0487 & -0.0398 &	-- & --	& -- &	0.0412	&	--	&	0.0548	&	-0.0239	&	0.0189	&	-0.0211	&	--	\\
+alcoholConcentrated	& -0.1585 & 0.0850 & --	& 0.0771 & --	& --	& --	& 0.1263 & --	& --	&	0.0961	&	--	&	--	&	--	&	--	\\
+alcoholWine		& 0.0528 & 0.2094 & 0.0433 & -0.0381	& 0.1380 & 0.0411 & 0.0178 &	0.0618	& --	& 0.0490 & --	& --	&	0.0194	&	0.0272	&	--	\\
+alcoholLightWine & 0.0182 & 0.0291 & --	& -0.0072 & 0.0075 & 0.0047 &	-0.0050	& -0.0240 & -0.0382 &	-0.0200	& --	&	--	&	0.0067	&	0.0031	&	--	\\
+sleepingTime	& --		& -0.1447 & --			& -0.0686 & --	& --	& --	& --	& --	& --	& --	& --	&	-0.1707	&	--	&	--	\\
+whatAgeWillLive	& --	& --	& --	& -0.0814 &	0.0546	& 0.0224 &	-- & -0.0604 &	-- &	-0.0345	& -0.1122 &	0.0260	&	-0.0628	&	0.1159	&	--	\\
+bestTimeToLive	& 0.0477 & 0.5137 & -0.0331 &	0.0515	& -0.0181 & 0.0223 & 0.0022 &	-0.0164		& -0.0045 & 0.0187 & --	& -- 	&	0.0015	&	0.0396	&	--	\\
+   \hline
+   \hline
+cholesterolTotal & --	& 0.1641 & -0.1582 & 0.2031 & -0.0267	& --	& --	& --	& --	& -0.0118 &	--	&	-0.0261	&	0.0502	&	-0.0422	&	0.0927	\\
+cholesterolHDL	 &	0.1031	& 0.0380 & -0.0322 &	--	& --	& --	& --	& --	& 0.0171 & --	& -0.0191 &	--	&	0.0219	&	--	&	0.0673	\\
+bloodPressureSystole	& -0.1624 & 0.2202 & --	& --	& --	& --	& --	&--	& --	& --	&	--	&	--	&	--	&	-0.0554	&	0.0773	\\
+bloodPressureDiastole	& -0.1017	& 0.1568 & --	& 0.0565 & --	& --	& -0.0136 & --	& 0.0076 & -0.0362 &	0.0136	& -0.0260&	0.0521	&	-0.0407	&	0.0931	\\
+numberOfCigarettes	& -0.0436 &	0.0584	& -0.0448 &	0.0938	& -0.0626 &	-0.0177	& --	& --	& -0.0626 & --	& 0.7879 & -0.0237 & 0.0178 & -0.0114	&	0.0656	\\
+   \hline
+  \end{tabular}
+ \end{center}
+ \caption[Regression with the SISAL algorithm]{\label{tab:appE5A}Variables and their coefficients selected while using the SISAL algorithm for regression. Intercept for all variables is zero due to the normalization of data.}
+\end{sidewaystable}
+
+%% SISAL SELECTION B
+\begin{sidewaystable}\scriptsize
+ \begin{center}
+  \begin{tabular}{|l|r|r|r|r|}
+   \hline
+    Variables $Y$ & MSE & MSE & Improvement & Improvement \\
+    & training & testing & training & testing \\
+   \hline
+   \hline
+age			&	0.8248	&	0.8212	&	0.18	&	0.18	\\
+height			&	0.3914	&	0.3881	&	0.61	&	0.61	\\
+weight			&	0.6369	&	0.6267	&	0.36	&	0.37	\\
+education		&	0.9053	&	0.8908	&	0.09	&	0.11	\\
+income			&	0.7780	&	0.7752	&	0.22	&	0.22	\\
+alcoholBeer		&	0.8360	&	0.8144	&	0.16	&	0.19	\\
+alcoholDrink		&	0.9823	&	0.9477	&	0.02	&	0.05	\\
+alcoholConcentrated	&	0.9032	&	0.8624	&	0.10	&	0.14	\\
+alcoholWine		&	0.9320	&	0.9090	&	0.07	&	0.09	\\
+alcoholLightWine	&	0.9954	&	0.9281	&	0.00	&	0.07	\\
+sleepingTime		&	0.9467	&	0.9240	&	0.05	&	0.08	\\
+whatAgeWillLive		&	0.9244	&	0.8987	&	0.08	&	0.10	\\
+bestTimeToLive		&	0.7120	&	0.7058	&	0.29	&	0.29	\\
+   \hline
+   \hline
+cholesterolTotal	&	0.9447	&	0.9315	&	0.06	&	0.07	\\
+cholesterolHDL		&	0.9722	&	0.9567	&	0.03	&	0.04	\\
+bloodPressureSystole	&	0.8303	&	0.8114	&	0.17	&	0.19	\\
+bloodPressureDiastole	&	0.8606	&	0.8543	&	0.14	&	0.15	\\
+numberOfCigarettes	&	0.3126	&	0.3087	&	0.69	&	0.69	\\
+   \hline
+  \end{tabular}
+ \end{center}
+ \caption[Regression with the SISAL algorithm (Cont.)]{\label{tab:appE5B}Mean squared errors and improvements for the training and testing data sets while using SISAL algorithm. In this case the baseline values to compare the result against is not the Mean predictor but value 1.0, this is due to the normalization of the data.}
+\end{sidewaystable}
+
+%% NN WITH FORWARD SELECTION
+\begin{table}\small
+ \begin{center}
+  \begin{tabular}{|l|c|r|r|r|r|}
+   \hline
+    Variables $Y$ & NN size & MSE & MSE & Improvement & Improvement \\
+    & & training & testing & training & testing \\
+   \hline
+   \hline
+   \multicolumn{6}{|l|}{Forward stepwise selection ALL} \\
+   \hline
+cholesterolTotal	& 4-9-1 & 0.9454 & 0.9462 & 0.0546 & 0.0538 \\
+cholesterolHDL		& 2-4-1 & 0.9823 & 0.9825 & 0.0177 & 0.0175 \\
+bloodPressureSystole	& 3-7-1 & 0.8355 & 0.8357 & 0.1645 & 0.1643 \\
+bloodPressureDiastole	& 3-7-1 & 0.8586 & 0.8589 & 0.1414 & 0.1411 \\
+numberOfCigarettes	& 4-8-1 & 0.2748 & 0.2751 & 0.7252 & 0.7249 \\
+   \hline
+   \hline
+   \multicolumn{6}{|l|}{Forward stepwise selection TOP} \\
+   \hline
+cholesterolTotal	& 3-6-1 & 0.9470 & 0.9475 & 0.0530 & 0.0525 \\
+cholesterolHDL		& 1-3-1 & 0.9829 & 0.9830 & 0.0171 & 0.0170 \\
+bloodPressureSystole	& 2-5-1 & 0.8437 & 0.8438 & 0.1563 & 0.1562 \\
+bloodPressureDiastole	& 2-5-1 & 0.8668 & 0.8670 & 0.1332 & 0.1330 \\
+numberOfCigarettes	& 1-2-1 & 0.2971 & 0.2972 & 0.7029 & 0.7028 \\
+  \hline
+  \end{tabular}
+ \end{center}
+ \caption[Neural network with Forward selection algorithm]{\label{tab:appE6}Neural network models using parameters from the Forward selection algorithm. The first table shows the results when using all the selected parameters. The second table shows the results when using only the most important parameters from the selected ones (higher weight). Enough parameters are selected to have at least 80\% of the total weight represented.}
+\end{table}
+
+%% NN WITH SISAL
+\begin{table}\small
+ \begin{center}
+  \begin{tabular}{|l|c|r|r|r|r|}
+   \hline
+    Variables $Y$ & NN size & MSE & MSE & Improvement & Improvement \\
+    & & training & testing & training & testing \\
+   \hline
+   \hline
+   \multicolumn{6}{|l|}{SISAL ALL} \\
+   \hline
+cholesterolTotal	&	11-19-1	&	0.9212	&	0.9253	&	0.0788	&	0.0747	\\
+cholesterolHDL		&	7-6-1	&	0.9767	&	0.9779	&	0.0233	&	0.0221	\\
+bloodPressureSystole	&	4-8-1	&	0.8614	&	0.8618	&	0.1386	&	0.1382	\\
+bloodPressureDiastole	&	11-15-1	&	0.8475	&	0.8497	&	0.1525	&	0.1503	\\
+numberOfCigarettes	&	12-16-1	&	0.2440	&	0.2461	&	0.7560	&	0.7539	\\
+   \hline
+   \hline
+   \multicolumn{6}{|l|}{SISAL TOP} \\
+   \hline
+cholesterolTotal	&	5-11-1	&	0.9278	&	0.9288	&	0.0722	&	0.0712	\\
+cholesterolHDL		&	4-8-1	&	0.9775	&	0.9785	&	0.0225	&	0.0215	\\
+bloodPressureSystole	&	3-7-1	&	0.8661	&	0.8663	&	0.1339	&	0.1337	\\
+bloodPressureDiastole	&	7-12-1	&	0.8493	&	0.8504	&	0.1507	&	0.1496	\\
+numberOfCigarettes	&	5-11-1	&	0.2600	&	0.2606	&	0.7400	&	0.7394	\\
+  \hline
+  \end{tabular}
+ \end{center}
+ \caption[Neural network with SISAL algorithm]{\label{tab:appE7}Neural network models using parameters from the SISAL algorithm. The first table shows the results when using all the selected parameters. The second table shows the results when using only the most important parameters from the selected ones (higher weight). Enough parameters are selected to have at least 80\% of the total weight represented.}
+\end{table}
+
+%% PCA WITH FORWARD SELECTION
+\begin{table}\small
+ \begin{center}
+  \begin{tabular}{|l|c|r|r|r|r|}
+   \hline
+    Variables $Y$ & Selected & MSE & MSE & Improvement & Improvement \\
+    & components & training & testing & training & testing \\
+   \hline
+   \hline
+   \multicolumn{6}{|l|}{Forward stepwise selection ALL} \\
+   \hline
+cholesterolTotal	&	1,2	&	0.8020	&	0.8023	&	0.0424	&	0.0421	\\
+cholesterolHDL		&	1	&	0.4270	&	0.4271	&	0.0167	&	0.0165	\\
+bloodPressureSystole	&	1,2	&	132.5606&	132.6229&	0.1529	&	0.1525	\\
+bloodPressureDiastole	&	1,2,3	&	61.1725	&	61.2060	&	0.1283	&	0.1278	\\
+numberOfCigarettes	&	1,2,3	&	58.0981	&	58.1301	&	0.1235	&	0.1230	\\
+   \hline
+   \hline
+   \multicolumn{6}{|l|}{Forward stepwise selection TOP} \\
+   \hline
+cholesterolTotal	&	1,2	&	0.8029	&	0.8032	&	0.0414	&	0.0410	\\
+cholesterolHDL		&	1	&	0.4283	&	0.4284	&	0.0136	&	0.0134	\\
+bloodPressureSystole	&	1,2	&	132.9796&	133.0368	&0.1502	&	0.1498	\\
+bloodPressureDiastole	&	1,2	&	62.0634	&	62.0887	&	0.1156	&	0.1152	\\
+numberOfCigarettes	&	1	&	22.3077	&	22.3368	&	0.6634	&	0.6630	\\
+  \hline
+  \end{tabular}
+ \end{center}
+ \caption[PCA regression with Forward selection algorithm]{\label{tab:appE8}Regression on principal components using the parameters selected by the Forward selection algorithm. The first table shows the results when using all the selected parameters. The second table shows the results when using only the most important components. Enough components were selected to have at least a  95\% of the variance represented.}
+\end{table}
+
+%% PCA WITH SISAL
+\begin{table}\small
+ \begin{center}
+  \begin{tabular}{|l|c|r|r|r|r|}
+   \hline
+    Variables $Y$ & Selected & MSE & MSE & Improvement & Improvement \\
+    & components & training & testing & training & testing \\
+   \hline
+   \hline
+   \multicolumn{6}{|l|}{SISAL ALL} \\
+   \hline
+cholesterolTotal	&	1,2,3,4	&	0.7889	&	0.7894	&	0.0581	&	0.0575	\\
+cholesterolHDL		&	1,2,3	&	0.4272	&	0.4274	&	0.0163	&	0.0158	\\
+bloodPressureSystole	&	1,2	&	140.9091&	140.9658&	0.0995	&	0.0992	\\
+bloodPressureDiastole	&	1,2,3	&	61.1734	&	61.2064	&	0.1283	&	0.1278	\\
+numberOfCigarettes	&	1,2,3,4	&	57.3314	&	57.3707	&	0.1350	&	0.1344	\\
+   \hline
+   \hline
+   \multicolumn{6}{|l|}{SISAL TOP} \\
+   \hline
+cholesterolTotal	&	1,2,3,4	&	0.7928	&	0.7932	&	0.0535	&	0.0529	\\
+cholesterolHDL		&	1,2,3	&	0.4271	&	0.4273	&	0.0165	&	0.0160	\\
+bloodPressureSystole	&	1,2	&	141.0715&	141.1307&	0.0985	&	0.0981	\\
+bloodPressureDiastole	&	1,2,3	&	61.0889	&	61.1229	&	0.1295	&	0.1290	\\
+numberOfCigarettes	&	1,2,3	&	55.5672	&	55.5992	&	0.1616	&	0.1612	\\
+  \hline
+  \end{tabular}
+ \end{center}
+ \caption[PCA regression with SISAL algorithm]{\label{tab:appE9}Regression on principal components using parameters from the SISAL selection algorithm. The first table shows the results when using all the selected parameters. The second table shows the results when using only the most important components. Enough components were selected to have at least a  95\% of the variance represented.}
+\end{table}

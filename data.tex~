@@ -1,0 +1,253 @@
+%%
+%% DATA PRE-PROCESSING
+%%
+\chapter{Data pre-processing}
+\label{c:data}
+
+A dataset is the resulting representation of the measurements taken from the environment or a given process \cite{pDataMining}. This collection of measurements can be seen as a $n \times p$ matrix, where $n$ represents the number of objects from where the measurements were taken and where $p$ represents the different measurements recorded. The set of recorded variables describe the underlying process that generated them. In the case of the \emph{Elämä Pelissä} dataset the variables represent the life style of the different people that answered the test. Usually datasets are captured for purpose other than data mining. Data mining is, in many cases, a secondary step; where the dataset is used to extract new and interesting information hiding behind.
+
+\section{The dataset}
+\label{s:theDataSet}
+
+The purpose of the \emph{Elämä Pelissä} test is to invite people to play the life prediction game, get to know their health status, life expectancy and act in consequence. All ``plays'' that have took place have been stored. The data was saved as it was served without any specification. The test transactions have been saved as URLs\footnote{\noun{URL} stands for Uniform Resource Locator. URLs are commonly known as web page addresses.} including the transaction variables\footnote{Symbols \& and = are used to separate and give variables an individual value, e.g. ?var1=3\&var2=5. This approach is used to send and retrieve variables in scripting languages under GET transmission format. Therefore the variables are visible in the URL, contrary to POST format where the variables are send by other methods.}. The test consist on 17 forms (web pages) and as each page is sent to be processed it is saved as a unique URL, carrying with it the previously recorded variables and the ones given in the actual page. Therefore, it is expected that in one play all saved URLs but the last one are incomplete because not all values from all variables have been given until the end. Besides the normal variables in the test extra control variables are used. These control variables indicate if the test is complete and/or if it is a replay.
+
+The knowledge on how the dataset has been structured and how it shall be read is not a strict part of the DM/ML approach. However, it is a part of the complete data analysis process strategy. One section in the process is called ``Collection of data''. The collection of data includes the \emph{How is it going to be collected} and \emph{How is it going to be saved}. Moreover, this section can be extended to cover all the required pre-processing just before starting the strict analysis.
+
+Duodecim provided 16 gzipped files. These files are from 8 servers which saved the test transactions for two months, September and October of 2007. The servers shared the load, therefore all files have similar number of transactions. For September, the initial month when the test was put on-line, each server saved 1,980,000 transactions approximately. For October there were only 70,000 transaction in each server. The uncompressed dataset uses more than 24GB and has more than 16 million transactions.
+
+\section{Parsing the data}
+\label{s:parsingTheData}
+
+One of the features that differentiates data mining from other types of data analysis is the large amounts of data to process \cite{pDataMining}. With 24GB of information it is necessary to organize the data in an efficient way. There are two alternating phases in a data mining approach. In the first phase it is necessary to get the data from the \emph{data source} and in the second phase it is necessary to run analysis algorithms on the extracted data. Because of the continuous switching between these two phases the correct organization of the data will play an important role on the speed with witch the data is analyzed.
+
+As previously stated not all transactions in the provided dataset are \emph{complete} transaction; actually only a small percentage are complete, therefore valid. Hence, a filtering is necessary. The dataset was parsed using a Perl script programmed for this purpose. The parsing program followed 8 steps to handle the data as best possible;
+
+\begin{enumerate}
+ \item A transaction is selected only if it is a full transaction and if it represents the first play of the game, replays are discarded.
+ \item The valid transaction is \emph{broken} into its different variables.
+ \item The date, UNIX epoch, of the transaction is calculated according to the available information.
+ \item A reference to the input file and the row where the transaction is coming from is extracted.
+ \item The recovered variables are cleaned-up, see sub section \ref{ss:cleanUpTheData}.
+ \item Extra informative variables Body Mass Index (BMI) and Total Alcohol Consumption are calculated.
+ \item A log of cleaned-up variables is kept as reference. 
+ \item The variables of the transaction, the date, references and log are saved into a SQLite database, see sub section \ref{ss:SQLite}.
+\end{enumerate}
+
+\subsection{Data clean-up}
+\label{ss:cleanUpTheData}
+
+The on-line test includes some data protection, e.g. limitation of the number of characters per input variable. Nevertheless, the web forms of the test do not handle all the possible inputs that may be introduced. As in any massive survey it is expected that the subjects answering commit mistakes. The most obvious and easy to detect errors are typos, extra information or mixed answers. Errors appear due to poorly structured questions or laziness from the users to read and answer carefully.
+
+For the data analysis it is necessary to keep the data as clean and coherent as possible. Each URL contains 47 variables; there are 40 basic questions (as described in Appendix \ref{app:A}) but some questions divide in sub-questions and each sub-question has to be saved as an independent variable, see Table \ref{tab:multiQ}. That is why the total number of variables is 47 and not  the number of questions. All variables are quantitative, i.e. they represent a number. There are 18 continuous (nominal) variables and 29 discrete (categorical) variables. Discrete variables are represented by integers while continuous are represented by floats.
+
+\begin{table}
+ \begin{center}
+  \begin{tabular}{|rl|rl|}
+   \hline
+        & Question & & Sub questions \\
+   \hline
+   \hline
+     7. & Household size   & 7.1 & Adults (18+ years) \\
+        &                  & 7.2 & Minors ($<$18 years) \\
+     9. & Cholesterol levels & 9.1 & Total cholesterol \\
+        &                    & 9.2 & HDL cholesterol \\
+     10.& Blood pressure   & 10.1 & At systole \\
+        &                  & 10.2 & At diastole \\
+     14.& Alcohol use      & 14.1 & Beer III, IV (bottle 1/3\,L) \\
+        &                  & 14.2 & Long drink (bottle 1/3\,L) \\
+        &                  & 14.3 & Concentrated alcohol (shot 4cl) \\
+        &                  & 14.4 & Wine (glass 12cl) \\
+        &                  & 14.5 & Light wine (glass 12cl) \\
+   \hline
+  \end{tabular}
+ \end{center}
+ \caption[Sub-questions in the \emph{Elämä Pelissä} test]{\label{tab:multiQ}Variable expansion; questions 7, 9, 10 and 14 represent 11 variables.}
+\end{table}
+
+In the test it is possible to leave answers empty. If an answer is empty this usually means that the user did not know the answer or he/she did not want to provide it.
+
+During the data clean-up four issues were handled;
+
+\begin{enumerate}
+\item All URL encoding were converted to normal ASCII characters, e.g. \%30 to 0.
+
+\item Categorical question in the test are limited in the web form by means of radio buttons. Each radio button is related to a unique integer value. However, it was noticed that because the variables were moved from web-form to web-form using the URL to carry them some \emph{hacking} took place; some values were altered and set outside their valid range. Incorrect answers out of the valid range were set to an empty value.
+
+\item For continuous variables non-numerical values are not valid answers. However, the web-forms do not prevent the users from introducing strings. Handling this problem was a big challenge, in many cases the given strings complemented the answer, e.g. 78k in the question ``How much do you weigh?''. Therefore, deleting these answers would have lead to a massive loss of information (on why it is not good to just eliminate problematic records, see \cite{missingD} second chapter). To overpass this problem the script was programmed to look for ordinary strings and remove them. For example, the characters \emph{k}(kilos), \emph{c}(centimeters), \emph{t}(hours), \emph{v}(years)\footnote{The \emph{t} and \emph{v} are for the Finnish words Tuntia (hours) and Vuotta (years).} were removed.
+
+Alcohol related sub questions (question No. 14) had plenty of unacceptable answers. The test asks for the number of bottles or glasses, being drunk per week; however, the questions and how to answer them is confusing. Some answers were given in litters, others in centiliters, others in bottles, etc. These problems were noticed because the strings users attached to their answers, e.g.  25p. The script is programmed to handle the majority of the cases and if not able it will ask \emph{for help}. The script will \emph{learn} the provided help and use it as a reference for similar problems.
+
+\item Another important issue observed in the dataset is the \emph{shifting} of variables. Questions 37 and 38 are not included in the URL if their answers are left empty, contrary to the rest of the questions that are included even if empty. The missing of such space holders shifts the order of the variables. Although not a serious issue it has to be considered and handled correctly in order not to save answers of one question in another question's section.
+\end{enumerate}
+
+Informative variables BMI and Total Alcohol Consumption are calculated while parsing each valid transaction. The variable BMI is calculated as the weight of a person divided by his/her squared height, Equation \ref{eq:BMI}. Total Alcohol Consumption variable is calculated as the sum of all the different alcohol consumption references, Beer, Long drink, Concentrated alcohol, Wine and Light wine. Although different beverages, it is possible to sum them together if they are registered in quantities containing similar amounts of pure alcohol. That is why the questions ask for doses in 1/3 of a liter, 4 centiliters and 12 centiliters. A similar approach was used in \cite{aCarotid}.
+
+\begin{eqnarray}
+ BMI & = & \frac{weight (kg)}{height^2(m^2)}
+\label{eq:BMI}
+\end{eqnarray}
+
+In total there are 49 variables being processed, 47 original from the test and 2 calculated ones. To these 49 variables 3 reference variables are added: time of transaction, file transaction identifier and the row number where the transaction was found. These reference variables though not of use in the DM/ML analysis will serve to backtrack errors to the original sources. The variables are all handled as numbers; this approach will provide an optimized database with a small footprint.
+
+\subsection{SQLite database}
+\label{ss:SQLite}
+
+To perform the different phases of a DM/ML analysis it is necessary to have access to particular sub-sets of the original dataset and, with the retrieved data, compute the required analysis. One way to improve the access to the dataset is by organizing it in a structure that simplifies the burden of finding relevant points in it, i.e. be able to search for points quickly. Using a relational database that can be accessed by means of the Structured Query Language (SQL) is a convenient way. SQL is a super set implementation of what is known as relational algebra. The language is simple and intuitive, simplifying the access to sub-datasets. The strength of databases is that they provide fast execution for most of the queries; this is useful when the queries are not known in advance and are formulated as the DM/ML project progress \cite{pDataMining}.
+
+To save and organize the \emph{Elämä Pelissä} dataset the SQLite database engine is used \cite{sqlite}. This engine is based on extremely efficient R*Tree structures and the total engine size is less than 500 kilobytes; it also has a small memory footprint. Another benefit of using SQLite is the available plug-ins for Perl and R that permit interacting with the database directly from these programs. Three tables were created for the dataset:
+
+\begin{description}
+ \item[vars] It is the main table where all the collected variables are saved. It has 55 numerical fields plus the primary key. Each record has a key pointing to \bold{files}.
+ \item[info] It is an informative table where original data, i.e. before processing, about Alcohol variables and Sleeping time is kept. This table can be considered as a log from the parsing script that processes the data. Each record has a key pointing to \bold{vars}.
+ \item[files] This table contains information regarding the parsed files. Number of transaction processed and number of valid transactions.
+\end{description}
+
+The parsing process for the 16 input files lasted no more than 30 minutes. A total of 16,085,351 transactions were analyzed (15,555,584 for September and 529,767 for October) from those transaction only 457,097 were found as valid ones (445,278 for September and 11,819 for October). Hence, from the provided dataset less than 1 in 32 URLs was useful, only 3.29\% of the recorded transactions. Moreover, a record was eliminated, setting the final number of transactions to 457,096. This record was reported by the logging mechanism as a ``record with incomplete number of variables''. An in depth analysis to row: 1,082,747 of file: \noun{access\_log\_lahna\_syys} showed a damaged record; the URL has \emph{garbage} in many of the variables.
+
+The parsing also generated 4,937 records for the \bold{info} table, i.e. there were around 5,000 transactions (1\% of the total) where the alcohol values or sleeping time information was detected as invalid and needed post processing by the parsing algorithm.
+
+The process finished successfully with a completely populated database, in an easy to access format and with a size of just 65MB, a radical improvement from the original 24GB of data.
+
+\subsection{Outliers}
+\label{ss:Outliers}
+
+Outliers are points that come outside the main body of the data. These points have the property of affecting the generation of data models. After parsing the data and having it loaded into the database the following step is to detect the outliers in it. Outliers have two possible sources; first, people made mistakes when answering the questions, e.g. giving a height of 17 meters instead of 1.7 meters. Second, people intentionally played with the system giving invalid values, e.g. in the dataset some age values are set to 299,830 years.
+
+The categorical variables are limited to only accept a restricted number of answers, incorrect answers are set to empty as it was explained in the previous section. Therefore, no more processing is needed. However, for continuous variables it is necessary to calculate some basic statistics and limit their range accordingly. Initially the variables are limited to what could be called an ``educated guess''; thereafter with a simple statistical analysis the variables are limited to a range of $3\sigma$, i.e. 3 standard deviations from the mean. This approach considers 99.7\%  of the cases. This simple process is done to each continuous variables; including the calculated ones BMI and Total alcohol consumption.
+
+The variables outside the statistical determined ranges are set to a \bold{-2} value in the database\footnote{In the table \bold{vars} two numerical codes are used to know why a value is not present or valid. A \bold{-1} means it is a missing value. A \bold{-2} means the value is an outlier.}, also the counter kept at column \noun{outlierValue} is increased. Otherwise the record as a whole is not altered. This technique was performed manually to each continuous variable in the dataset.
+
+An example with variable Age is observable in Table \ref{tab:AgeOutliers}. Initially the range of values was wide open, up to 300,000 years with an extremely large variance. The first filter, educated guess, was set to be $<500$. This filter limited the age to go from 0 to 495 and normalized the original statistics values. However, the range of age is still not usable, 495 is still to much for a human being; therefore a new filter is established setting the maximum of years to three standard deviations above the mean. With this last filter the last column is obtained. Where the range of Age goes from 1 to 88, a realistic value for human beings. During the filtering process the mean had a small change, it went from 45 to 43 years. However, the variance changed drastically, from more than half a million to 217. The filtering did not affect either the Median (44 years) nor the Mode (50 years). A total of 801 Age variables were set as outliers (64 from the first filter, 737 from the second). A similar process was performed to all the continuous variables. Lets notice that not all variables went through a two-step filtering, a second filter was applied only if required, e.g. the range of values with only one filter was still too large. The complete results for all variables can be observed in Appendix \ref{app:B}.
+
+\begin{table}[h]
+ \begin{center}
+  \begin{tabular}{|lccc|}
+   \hline
+   \multicolumn{4}{|c|}{Age} \\
+   \hline
+   \hline
+    & Initial & & Final \\
+   \hline
+   \bold{Min} & 0 & 0 & \bold{1} \\
+   \bold{Max} & 299830 & 495 & \bold{88} \\
+   \bold{Mean} & 45.35 & 43.25 & 43.15 \\
+   \bold{Variance} & 594993.9 & 226.37 & 217.24 \\
+   \bold{Std Dev} & 771.36 & 15.05 & 14.74 \\
+   \bold{Median} & 44 & 44 & 44 \\
+   \bold{Filter} & $<500$ & $ \mu < 3\sigma$ &  \\
+   \bold{Outliers} & 64 & 737 & \bold{801} \\
+   \hline
+  \end{tabular}
+ \end{center}
+ \caption[Variable Age before and after filtering]{\label{tab:AgeOutliers}Variable Age; before and after applying the different filtering rules.}
+\end{table}
+
+If a record has few variables as outliers, e.g. two or three, it may imply that some typos occurred while the user played the game. However, a record with multiple outliers may imply that somebody introduced the errors on purpose; hence, the full record shall be marked as an outlier, it should be discarded at once and its values not used. With the numbers registered at the column \noun{outlierValue} it is possible to know the number of outlier fields in each record. The table \bold{vars} also includes a column called \noun{outlier}; this field is set to 1 when the record is an outlier and is kept as 0 when the record is valid.
+
+Figure \ref{ima:outlierVariables} depicts the number of outliers against the number of variables. It can be seen that mistakes are common, there are 74,437 records with 1 to 4 outliers, i.e. 16.28\% of the answers in the test have a problem in up to 4 variables. In the figure is observable a \emph{breaking} point at 5 variables. Therefore, five was decided as the number of outliers to separate valid records from invalid ones. Each record having 5 or more outliers will be discarded, i.e. set to 1 in the \noun{outlier} column. With this division 2,668, 0.58\%, records were marked as outliers.
+
+In brief; two kinds of outliers were pinpointed in the data: the variables alone and the complete records. When a variable is set as an outlier it is no longer usable; however, the record it belongs to is. On the other hand, when a record is tagged as an outlier none of its variables are usable, not even the few valid ones it may have.
+
+\begin{figure}
+ \begin{center}
+ \includegraphics[scale=0.5]{figures/outlierVariables}
+ \end{center}
+ \caption[Number of outliers against Number of records]{\label{ima:outlierVariables}Plot showing the number of outliers against the number of records. The breaking point was set at 5. The arrows show the number of records in each set, less than 5 (Left) and 5 or more outliers (Right). The plot excluded the records with only 1 outlier due to their large number (56,351).}
+\end{figure}
+
+The elements with values outside the valid ranges were labeled as outliers, elements with missing values were not changed. Table \ref{tab:proportions} presents the proportions of missing, outlier and valid elements for each column in the database.
+
+From the table it is noticeable that the discrete variables do not have outliers, due to their limited set of answers. The only discrete variables outside this restriction are \emph{House size adults} and \emph{House size minors}. These questions are open questions, i.e. the domain of the answer is the positive integers, however some outliers were found and therefore the range was restricted. For any other case these two variables are treated as discrete during the analysis.
+
+The variables with the most missing values are Cholesterol total, Cholesterol HDL, Blood pressure diastole and Blood pressure systole. The high missingness of these variables is expected because of the difficulty the questions impose; knowing the correct answers beforehand is improbable. Other variables with high missingness are House size minors and Number of cigarettes smoked per day. Although there is people with no children and people that does not smoke it is necessary to confirm this by giving a zero value in the answer. An empty answer is not automatically translated to a zero-value answer. Therefore if the answers are not given the variables are treated as missing ones. On the contrary, for the Alcohol-related variables empty answers will be translated to a zero-value, meaning that if a variable is left blank its value will be set to zero automatically. This modification is done accordingly to the documentation of the test, see \cite{elamaP}.
+
+Regarding the outliers, the highest percentage are observable in the following questions: \emph{Until what age will live?} and \emph{When is the best age to live?}. Although these were simple questions the high number of outliers found was not expected. More difficult questions, e.g. Blood pressure diastole, did not show as many outlier as these two variables.
+
+\begin{center}
+\begin{longtable}{|l|c|ccc|}
+
+\hline
+\endhead
+\hline
+\endfoot
+\endlastfoot
+
+ &  & \multicolumn{3}{c|}{Records} \\ \cline{3-5}
+Column & Type & Valid & Missing & Outlier \\
+\hline
+Sex 			& D & 453412(99.19\%) & 3684(0.81\%) & -- \\ 
+Age 			& C & 452584(99.01\%) & 3711(0.81\%) & 801(0.18\%) \\ 
+Height 			& C & 449834(98.41\%) & 5779(1.26\%) & 1483(0.32\%) \\ 
+Weight 			& C & 448692(98.16\%) & 4037(0.88\%) & 4367(0.96\%) \\ 
+Education 		& C & 448173(98.05\%) & 5648(1.24\%) & 3275(0.72\%) \\ 
+Economic situation 	& D & 452154(98.92\%) & 4942(1.08\%) & -- \\ 
+Income 			& C & 422703(92.48\%) & 27726(6.07\%) & 6667(1.46\%) \\ 
+House size adults 	& D & 451762(98.83\%) & 4102(0.90\%) & 1232(0.27\%) \\ 
+House size minors 	& D & 211093(46.18\%) & 244341(53.46\%) & 1662(0.36\%) \\ 
+Cholesterol total 	& C & 243651(53.30\%) & 210739(46.10\%) & 2706(0.59\%) \\ 
+Cholesterol HDL 	& C & 149737(32.76\%) & 304937(66.71\%) & 2422(0.53\%) \\ 
+Blood pressure systole 	& C & 315379(69.00\%) & 135993(29.75\%) & 5724(1.25\%) \\ 
+Blood pressure diastole & C & 311925(68.24\%) & 136960(29.96\%) & 8211(1.80\%) \\ 
+Diabetes status 	& D & 448081(98.03\%) & 9015(1.97\%) & -- \\ 
+Father infarct 		& D & 449151(98.26\%) & 7945(1.74\%) & -- \\ 
+Mother infarct 		& D & 450130(98.48\%) & 6966(1.52\%) & -- \\ 
+Alcohol beer 		& C & 448281(98.07\%) & 0(0.00\%) & 8815(1.93\%) \\ 
+Alcohol drink 		& C & 453227(99.15\%) & 0(0.00\%) & 3869(0.85\%) \\ 
+Alcohol concentrated 	& C & 450223(98.50\%) & 0(0.00\%) & 6873(1.50\%) \\ 
+Alcohol wine 		& C & 450368(98.53\%) & 0(0.00\%) & 6728(1.47\%) \\ 
+Alcohol light wine 	& C & 449763(98.40\%) & 0(0.00\%) & 7333(1.60\%) \\ 
+Get drunk 		& D & 404024(88.39\%) & 53072(11.61\%) & -- \\ 
+Vegetables 		& D & 451714(98.82\%) & 5382(1.18\%) & -- \\ 
+Fruits and berries 	& D & 451564(98.79\%) & 5532(1.21\%) & -- \\ 
+Kind of butter 		& D & 451699(98.82\%) & 5397(1.18\%) & -- \\ 
+Kind of cooking oil	& D & 450683(98.60\%) & 6413(1.40\%) & -- \\ 
+Kind of milk 		& D & 448674(98.16\%) & 8422(1.84\%) & -- \\ 
+Smoker for a year 	& D & 451063(98.68\%) & 6033(1.32\%) & -- \\ 
+Smoking now 		& D & 448052(98.02\%) & 9044(1.98\%) & -- \\ 
+Number of cigarettes 	& C & 199507(43.65\%) & 253868(55.54\%) & 3721(0.81\%) \\ 
+Seat belt 		& D & 451189(98.71\%) & 5907(1.29\%) & -- \\ 
+Sleeping time 		& C & 447291(97.85\%) & 4433(0.97\%) & 5372(1.18\%) \\ 
+Sports activities	& D & 451907(98.86\%) & 5189(1.14\%) & -- \\ 
+Association activities 	& D & 448925(98.21\%) & 8171(1.79\%) & -- \\ 
+Movies and theater 	& D & 451329(98.74\%) & 5767(1.26\%) & -- \\ 
+Religious events 	& D & 448256(98.07\%) & 8840(1.93\%) & -- \\ 
+Reading and music 	& D & 451765(98.83\%) & 5331(1.17\%) & -- \\ 
+Hobbies 		& D & 451118(98.69\%) & 5978(1.31\%) & -- \\ 
+Issues with spouse 	& D & 447882(97.98\%) & 9214(2.02\%) & -- \\ 
+Issues with children 	& D & 448002(98.01\%) & 9094(1.99\%) & -- \\ 
+Stress 			& D & 451709(98.82\%) & 5387(1.18\%) & -- \\ 
+Life satisfaction 	& D & 451930(98.87\%) & 5166(1.13\%) & -- \\ 
+Work study load 	& D & 448011(98.01\%) & 9085(1.99\%) & -- \\ 
+Dreams impossible 	& D & 450634(98.59\%) & 6462(1.41\%) & -- \\ 
+Do not have good friends & D & 450958(98.66\%) & 6138(1.34\%) & -- \\ 
+What age will live 	& C & 431032(94.30\%) & 15585(3.41\%) & 10479(2.29\%) \\ 
+Best time to live 	& C & 406536(88.94\%) & 35884(7.85\%) & 14676(3.21\%) \\ 
+BMI 			& C & 441894(96.67\%) & 6201(1.36\%) & 9001(1.97\%) \\ 
+Total alcohol consumption & C & 448323(98.08\%) & 0(0.00\%) & 8773(1.92\%) \\ 
+\hline
+
+\caption[Proportion of valid, missing and outlier records in the database]{\label{tab:proportions}Table of variables with the proportion of records that are Valid, Missing or Outlier. The second column indicates if the variable is discrete (D) or continuous (C).} \\
+\end{longtable}
+\end{center}
+
+\subsection{Grouping and Sampling}
+\label{ss:grouppingAndSampling}
+
+The database includes a total of 457,096 records. There are only 18,654 (4.08\%) complete records, i.e. records where all the variables have a valid value. The complete records were grouped into identical ones to see if a \emph{basic profile} could be identified. However, 18,489 independent groups were found, the largest one with 7 records; a really small number to call it a profile.
+
+When using the original database 448,230 groups were found. The largest group has 1,835 records in it; nevertheless, instead of being an informative group, as the expected profile, the group resulted to be the one with the records where all the variables were left empty, i.e. no questions were answered. The next largest groups have only 62 and 61 records hence, they are really small. The difference with the first group is that in these ones the Sex value is given, the rest of the variables are still empty.
+
+A database with complete valid records was generated. It has 18,489 records, its basic statistics were calculated and are observable in Appendix \ref{app:C}. Because its size this database is easy and fast to handle and may be useful to speed up some analysis. However, a complete record may indicate two things; first, that it was answered by a person that knows him/herself really well and is willing to share the information or, second; that it was answered by a person that knows his/her numbers because he/she has some problem and has to be cheeking them constantly. The later will represent a problem for further analysis because the data will be biased.
+
+Another approach is to create samples of the original database based on all the valid records. Nine databases were generated using random sampling selection from the original database. Only valid records, i.e. not outliers, were used; the pool to choose from had 454,428 elements. The databases were filled in sets of three; with 10,000 (2.2\%), 50,000 (11.0\%) and 200,000 (44.0\%) records respectively. The basic statistics of each group were also calculated, see Appendix \ref{app:C}. The observed values are, as expected, close to those of the original data. However as it will be explained in the next chapters the more records used the better results can be obtained.
+
+Figure \ref{ima:statEducationBlood} illustrates a plot where different statistical information is compared between the databases: Original, Complete records and samples 10k, 50k, 200k. Two variables are used for comparison Education and Blood pressure systole. It is observable that all databases present similar basic statistics values. The largest deviation is seen at the complete records dataset, where the variance is smaller. This difference may correspond to some of the issues stated in the previous paragraphs.
+
+\begin{figure}
+ \begin{center}
+ \includegraphics[scale=0.5]{figures/statisticsEducationBlood}
+ \end{center}
+ \caption[Comparison of statistics for different datasets]{\label{ima:statEducationBlood}Plot where the distributions for variables Education and Blood pressure systole for the sampled,  complete and original databases are presented. First column, \noun{all},  shows the values for the original dataset. Column \noun{complete} shows the corresponding values for the dataset with only full records. Remaining columns \noun{10k 50k 200k} show the statistics for the sampled datasets.}
+\end{figure}
+
+The generation of the smaller databases will be of use when analyzing the data and modeling the variables. Their size and completeness makes them easy to use and fast to analyze. The original database, however, has not been discarded. In the following section a data exploratory analysis is performed. The different variables are plotted in different ways and some interesting relations are found.

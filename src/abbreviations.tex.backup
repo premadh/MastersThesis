@@ -1,0 +1,36 @@
+%%
+%% ABBREVIATIONS
+%%
+\chapter*{Abbreviations and Notations}
+
+%[l] flush left the table
+%l flush left first column
+%p{} column of width 0.8 of the line width
+\begin{longtable}[l]{lp{0.8\linewidth}}
+
+WHO	& World Health Organization \\
+ICT	& Information and Communication Technologies  \\
+CGH	& Comparative Genomic Hybridization \\
+aCGH	& Array Comparative Genomic Hybridization \\
+DNA	& Deoxyribonucleic acid  \\
+DM	& Data Mining
+ML	& Machine Learning \\
+Mbp	& mega base pairs \\
+TB	& Terabytes \\
+GB	& Gigabytes \\
+CNV	& Copy Number Variation \\
+ISCN	& International System for human Cytogenetic Nomenclature \\
+EM	& Expectation Maximization \\
+FMM	& Finite Mixture Models \\
+MCMC	& Markov Chain Monte Carlo \\          
+SVD	& Singular Value Decomposition \\
+NCBI    & National Center for Biotechnology Information \\
+ANSI	& American National Standards Institute \\
+BPCR	& Bayesian Piecewise Constant Regression\\
+MAFIA	& MAximal Frequent Itemset Algorithm \\
+$\mathbf{x}$		& Vector of observations of $d$ variables $\mathbf{x}=[x_1,\ldots,x_d]$ \\
+$y$			& An observation of an output variable \\
+$\hat{y}$		& An estimate of the observation $y$ \\
+$\varepsilon$		& Random error
+
+\end{longtable}

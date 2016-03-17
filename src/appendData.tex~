@@ -1,0 +1,59 @@
+\chapter{Datasets}
+\label{ap:appendData}
+
+\begin{fquote}[{\small{F. Mosteller, S. Fienberg, R. Rourke}}] Although we often hear that data speak for themselves, their voices can be soft and sly.  \fqsource{{                              from Beginning Statistics with Data Analysis}} \end{fquote} 
+
+\vspace{1cm}
+
+\begin{synopsis}
+This chapter presents the visualization of the dataset used in this thesis. There were two different chromosomal aberrations dataset in two different resolutions: 400 and 850. Here, the chromosomal aberrations in resolution 400 is depicted for the whole genome while the chromosomal aberrations for dataset in resolution 850 is omitted because of large dimension of dataset. The chapter also tabulates variations in the number of chromosome bands (regions) across different resolutions.
+
+\end{synopsis}
+
+\clearpage
+
+% \section{Genome in Resolution 400}
+% \label{s:wholegenomedata}
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/genome393}
+\caption[Genome in Resolution 400]{Genome in Resolution 400. X-axis are spatial co-ordinates of the chromosome regions. In resolution 400, there are 393 different regions. Y-axis are the cancer patients numbering 4590. Each row represents one sample of the aberrations pattern for a cancer patient and each column represents one of the chromosome bands (regions). $\overline{X}=(X_{ij})$, $X_{ij}\in \{0,1\}$. In figure dark color denotes the presence of aberrations and the white color denotes the absence of chromosomal aberrations. The data is very sparse and skewed. For example, Elementwise AND operation over all the samples in the data results in a zero vector.} \label{Fig:genome303}
+\end{figure}
+
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \multirow{2}{*}{\textbf{Chromosome}} & \multicolumn{4}{|c|}{\textbf{Resolution}} \\ \cline{2-5}   
+			&\textbf{400} &\textbf{550} & \textbf{700} & \textbf{850}\\ \hline   
+    1& 28 & 42 & 61&63\\ \hline
+    2& 30 & 40 &50&62\\ \hline
+    3& 27& 36 & 50&62\\ \hline
+    4& 26 &30& 45&47\\ \hline
+    5& 21& 33& 43&45\\ \hline
+    6& 23& 33 &44&48\\ \hline
+    7& 18& 26& 34&44\\ \hline
+    8& 18&26& 40&40\\ \hline
+    9& 16 &22& 39&43\\ \hline
+    10& 14 &28 &34&42\\ \hline
+    11& 15 &30& 34&36\\ \hline
+    12& 15 & 26 &39&41\\ \hline
+    13& 14& 20 & 24&36\\ \hline
+    14& 14 &18& 24&32\\ \hline
+    15& 16 & 22& 24&32\\ \hline
+    16& 15& 15 &21&25\\ \hline
+    17& 12& 14& 22&24\\ \hline
+    18& 9 &14& 16&20\\ \hline
+    19& 11&11& 19&19\\ \hline
+    20& 10& 10& 18&20\\ \hline 
+    21& 8 & 10& 12&14\\ \hline
+    22& 8 & 12 &16&16\\ \hline
+    X& 19& 28& 38&40\\ \hline
+    Y& 6 &10& 11&11\\ \hline
+   \end{tabular}
+  \caption[Variation of number of chromosome bands]{Variation of number of chromosome bands in each chromosome in four different resolutions. Table captures the differences in the number of chromosome bands across resolutions. Table also shows that some of the chromosomes in two different resolutions have the same number of chromosome bands. For example, chromosome 19 has 11 bands in resolution 400 \& 550 and 19 bands in resolution 700 \& 850.}\label{Tab:chrsub}
+\end{table}
+

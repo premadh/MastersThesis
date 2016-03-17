@@ -1,0 +1,207 @@
+%%
+%% EXPERIMENTS AND RESULTS
+%%
+\chapter{Experiments and Results}
+\label{ch:experiments}
+
+\begin{fquote}[Johann Wolfgang von Goethe]Knowing is not enough; we must apply. \\ Willing is not enough; we must do. \fqsource{{German Writer(1749-1832)}} \end{fquote} 
+
+\begin{synopsis}
+This chapter describes the experiments performed on mixture modelling of Multivariate Bernoulli Distribution on the amplification patterns. The obtained results are analysed and discussed.
+\end{synopsis}
+
+\section{Software:}
+\label{s:software}
+This thesis uses an already defined programme package. Programming the mixture models from scratch and just making them work would consume significant amount of time. Therefore, approach in this thesis was to use a readymade package and analyze the results. This approach provided the time to concernterate the efforts on the machine learning aspects and its application in real world data. Although programming mixture models from scratch would be very educational and precious programming experience, it takes a lot of time and diverges the attention from machine learning which was the primary goal of the thesis.
+
+There are several softwares, both commerical and free, available for finite mixture modelling. Few examples are:
+\begin{itemize}
+ \item MULTIMIX available in http://www.stats.waikato.ac.nz/Staff/maj/multimix/ 
+ \item MIX (Commerical) available in http://icarus.math.mcmaster.ca/peter/mix/mix.html
+ \item AutoClass available in http://ti.arc.nasa.gov/project/autoclass/
+ \item Clustan available in http://www.clustan.com/
+ \item Snob available in http://www.csse.monash.edu.au/\~{}dld/Snob.html
+ \item Mtreemix available in http://mtreemix.bioinf.mpi-sb.mpg.de/
+ \item PyMix available in http://www.pymix.org/pymix/
+ \item em available in http://www.ar.media.kyoto-u.ac.jp/members/david/softwares/em/
+ \item BernoulliMix available in http://www.cis.hut.fi/jhollmen/BernoulliMix/ 
+\end{itemize}
+
+Most of the software packages above were free but had shortcomings of their own. For example, most of them were designed to work with Gaussian distribution. Since our main aim was to model multivariate bernoulli distribution and BernoulliMix provided the all the required features and was freely available. Furthermore, integrating BernoulliMix with other tools such as Matlab \cite{matlab}, Shell Scripting \cite{shellscript}, Perl \cite{perl} and R \cite{rlang} is smooth and unconstrained. 
+
+\subsection{BernoulliMix Program Package}
+\label{ss:bmix}
+BernoulliMix \cite {bmixdoc} programme package is an opensource programme package for finite mixture modelling of Multivariate Bernoulli distributions. It is freely available at \href{http://www.cis.hut.fi/jhollmen/BernoulliMix/}{BernoulliMix Homepage}. BernoulliMix, implemented is ANSI C, can be used to model the 0-1 data probabilistically. BernoulliMix has five programs to work with finite mixture models of multivariate Bernoulli Distribution:
+
+\begin{itemize}
+\item \textbf{bmix\_init}: To initialize the mixture models with randomly selected parameters sampled from the uniform distribution of selected range.
+\item \textbf{bmix\_like}: To calculate the likelihood of the data with the mixture model. Likelihood can be calculated either for whole data or each vector separately.
+\item \textbf{bmix\_train}: To train the mixture model from the data using EM algorithm i.e. learn the parameters of the mixture model.
+\item \textbf{bmix\_sample}: To sample data from Mixture Model as the model is generative.
+\item \textbf{bmix\_cluster}: To cluster the data (associating a component distribution with a cluster) with the mixture model by the maximum posterior rule.
+\end{itemize}
+
+Details about the programme package and its use with examples can be obtained from \cite {bmixdoc}. The BernoulliMix programme package was used in conjuction with Matlab, R, Perl and Shell Scripting to garner the results of the experiments.
+
+\section{Copy number amplification Dataset}
+\label{s:dataset}
+The dataset provided was a binary (0-1) dataset about DNA amplifications specifying amplification of certain band of chromosome. DNA copy number amplifications are mutations in the DNA structure as discussed in chapter \ref{ch:introduction}. The data was collected by bibliomics survey of 838 journal articles during 1992-2002 by hand without using state-of-the-art text mining techniques \cite {Holl20071} \cite{Myllykangas200815}. The dataset contained the information about the amplification patters of 4590 cancer patients. Each row describes one sample of cancer patient while each column identifies one chromosomal band(region). The amplified chromosomal regions were marked with 1 while and the value 0 defines that the chromosome band is not amplified. Furthermore, information regarding the associated tumor was available with each sample of data. Figure \ref{Fig:data} demonstrates the 100 samples of the data in resolution 393.
+
+
+Data figure goes here.
+
+
+
+
+
+
+Patients who whose chromosomal band had not shown amplification for specific chromosome were not included in the experiments. The ISCN (ISCN 2009: An International System for Human Cytogenetic Nomenclature)nomenclature of chromosome discussed in appendix \ref{ap:nomenclature} divides the chromosome into different resolutions shown in table \ref{Tab:resolution}
+
+\begin{table}[h!]
+  \centering
+\begin{tabular}{ |c|c|c|c| }
+\hline
+  \textbf{S.No} &  \textbf{Resolution} &\textbf{$\#$ Regions} &\textbf{$\#$ Regions in Chr 1 } \\ \hline \hline
+  1& 300 & 317 & 23\\ \hline
+  2& 400 & 393 & 28\\ \hline
+  3& 550 & 555 & 42\\ \hline
+  4& 700 & 759 & 61 \\ \hline
+  5& 850 & 862 & 63 \\ \hline
+\end{tabular}
+\caption{\textit{Number of Chromosome bands(regions) for 5 different resolutions of data studied in the thesis. Included as an example number of bands in chromosome 1 }}
+\label{Tab:resolution}
+\end{table}
+
+The original data was in the resolution 400 i.e. there were 393 chromosomal bands(regions) for the entire genome. The original data was up-scaled to resolution 550, 700 and 850 and down-scaled to 300 bands using the ideas discussed in chapter \ref{ch:sampling}. Bands for specific chromosome were extracted and mixture modelling was preformed on each chromosome. For example: chromosome-1 had 63, 61, 42 and 28 chromosomal bands in resolution 850, 700, 550, 400, and 300 respectively. Similarly, a different set of data was available in resolution 850. The data in resolution 850 was different than that in the resolution 400. Similar to the data in the resolution 400, the data in resolution 850 was down-scaled to resolution 300, 400, 550 and 700. Elementwise AND operation over all the samples in the data results in a zero vector which shows that sophisticated methods and techniques are required for classifying and profiling amplification. 
+
+Through study was performed for every chromosome with every resolution using the finite mixture modelling approach.
+
+\section{Scaling Resolutions}
+The downsampling methods were implemented in scripts, one each for each method each chromosome and each resolution. Hence there were 198 scripts in all for all transformations. Matlab \textregistered \cite{matlab} was used for scripting. The individual scripts for downsampling each chromosome takes a file name of the data set in higher resolution as input checks for the abnormality in the data. The data is then transformed bandwise to lower resolution combining the multiple bands in higher resolution according to the three different methods proposed in sub-section \ref{ss:weighted}, \ref{ss:orfunction},  and \ref{ss:majority}.  
+
+\subsection{The property models}
+\label{ss:totamplification}
+Some simple and efficient property models were defined to compare the results of the three different downsampling procedures. 
+\subsubsection{The column and row sums}
+
+The total number of differences in the dataset produced on downsampling from higher resolution to lower resolution was studied. Total number of differences in each chromosome band was computed and compared between three different downsampling methods. The results of the three different downsampling process did not show significant differences with respect to the number of differences in the dataset produced. Figure \ref{Fig:histchr6dm393} shows an example result for chromosome 6 in resolution 393. 
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.6]{figures/histchr6dm393.eps}
+\caption{\textit{Comparison of three different downsampling methods : Example case in chromosome 6 resolution 393. The figure does not show significant difference in the results of the three methods}}\label{Fig:histchr6dm393}
+\end{figure}
+
+From figure \ref{Fig:histchr6dm393}, it can be seen that results produced by three methods are similar. Scrutinizing the results further mean difference between the number of differences produced by the three methods in various chromosome bands was computed. The results for an example case discussed earlier i.e. chromosome 6 resolution 393 have been shown in the figure \ref{Fig:diffchr6dm393} 
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.4]{figures/diffchr6dm393.eps}
+\caption{\textit{Total difference in data produced by three different downsampling methods : Example case in chromosome 6 resolution 393. The figure shows presence of  differences in some chromosome bands }}\label{Fig:diffchr6dm393}
+\end{figure}
+
+
+As the figure \ref{Fig:diffchr6dm393} suggests that there are differences in the results produced by three downsampling methods. Three downsampling methods produced no differences in some chromosomes such as chromosome 1, 5, 8, 19, 20, 21 and 22 in resolution 700. In contrast, the methods produced some negligible differences in other chromosomes. Hence with respect to the total number of differences produced in the lower resolution, the three proposed methods are similar.
+
+\subsubsection{The total number of differences}
+
+Similar to the differences in datasets, the total amplification present in the dataset produced on downsampling from higher resolution to lower resolution was also studied. Total number of amplifications in each chromosome band was computed and compared between three different downsampling methods. The results of the three different downsampling process did not show significant differences with respect to the number of amplifications produced. 
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.6]{figures/totalonediffhist.eps}
+\caption{\textit{Comparison of three different downsampling methods with respect to number of amplifications}}\label{Fig:total1hist}
+\end{figure}
+
+Figure \ref{Fig:total1hist} suggests that the three downsampling methods produces similar results. Furthermore, the mean difference between the number of amplifications produced by the three methods in various chromosomes was computed.
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.4]{figures/total1diff.eps}
+\caption{\textit{Difference in amplifications produced by three different downsampling methods with respect to the number of amplifications produced in the data }} \label{Fig:total1diff}
+\end{figure}
+
+
+Figure \ref{Fig:total1diff} suggests that there are differences in the results produced by three downsampling methods. However, the difference between the methods are not significant when the number of amplifications are considered.
+
+\clearpage
+
+\subsection{Number of unique rows}
+\label{ss:uniquerows}
+
+As discussed in section \ref{s:dataset}, the amplification dataset was a binary dataset consisting of amplification patterns in humans. Since the amplifications are rare and data was high dimensional, the number of unique rows have high significance especially in model based clustering. Hence, number of unique rows in the results of three downsampling methods were compared. Similar to the total number of amplifications, the number of unique rows in the downsampled resolution did not exhibit significant differences in the number of unique rows. Figure \ref{Fig:unqrowhist} depicts the number of unique rows in different chromosomes in various resolutions.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.6]{figures/uniqrowhist.eps}
+\caption{\textit{Number of unique rows produced by three different downsampling methods. The X-axis varies in small intervals with respect to resolution and larger intervals with respect to the chromosome number. As usual chromosome X and Y were excluded from the experiment }}\label{Fig:unqrowhist}
+\end{figure}
+
+Figure \ref{Fig:unqrowhist} indicates that the number of unique rows produced by three different downsampling methods does not vary in different methods. Similar, to the total number of amplifications discussed in section \ref{ss:totamplification}, the results were further scrutinized calculating the mean of differences of number of unique rows produced by each method in each chromosome for each resolution. Figure \ref{Fig:uniqrowdiff} portrays the mean of differences in number of  unique rows produced by each downsampling method.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.4]{figures/uniqrowdiff.eps}
+\caption{\textit{Mean of difference in number of unique rows produced by three different downsampling methods. The X-axis varies in small intervals with respect to resolution and larger intervals with respect to the chromosome number. As usual chromosome X and Y were excluded from the experiment. The figure shows presence of  differences in number of unique rows produced in some chromosomes.}}\label{Fig:uniqrowdiff}
+\end{figure}
+
+Figure \ref{Fig:uniqrowdiff} shows that the number of unique rows varies in some chromosomes. However, these differences are negligible and the overall picture demonstrates no significant differences in the result of three different downsampling procedure with respect to the number of unique rows produced in downsampled data.
+
+
+\subsection{Unamplified changing to amplified}
+\label{ss:0to1}
+
+Property models discussed in section \ref{ss:totamplification}  and \ref{ss:uniquerows} demonstrates no significant difference in the downsampling methods. However, the two methods discussed in section \ref{ss:totamplification}  and \ref{ss:uniquerows} are susceptible to some errors where the number of amplifications are same and also number of amplifications does not change in different methods. For example, the methods discussed section \ref{ss:totamplification}  and \ref{ss:uniquerows} does not show difference between following two datasets. 
+
+\[ \left( \begin{array}{cc}
+1 & 0  \\
+0 & 1  \end{array} \right)\] 
+and 
+\[\left( \begin{array}{ccc}
+0 & 1 \\
+1 & 0 \end{array} \right).\] 
+
+However, the two data above are significantly different. Hence, the number of cases where unamplified band has changed to amplified band in two different methods is calculated. Calculating such differences will also help to measure the closeness of different downsampling methods. The number of cases where unamplified band (represented by 0 in dataset) changes to amplified band (represented by 1 in dataset) is calculated and the results are visualized as shown in the figure \ref{Fig:0to1hist}.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.6]{figures/0to1hist.eps}
+\caption{\textit{Number of unamplified bands changing to amplified bands in different downsampling methods. The X-axis varies in small intervals with respect to resolution and larger intervals with respect to the chromosome number. As usual chromosome X and Y were excluded from the experiment }}\label{Fig:0to1hist}
+\end{figure}
+
+The figure \ref{Fig:0to1hist} exhibits an important observation. The there are no differences in the number of changing amplifications on two methods i.e. the majority and the risk based. On the other hand, there are noticeable differences between risk based and weighted as well as between majority decision and weighted downsampling can be observed. Generally, the risk based and the majority decision downsampling procedure are similar but risk based downsampling is expected to produce more amplifications in the lower resolution than the majority decision. In any case, these highly co-relates with the belief that amplifications typically cover large areas thus producing no difference between risk based and majority decision downsampling methods. On the other hand, weighted downsampling methods is highly effected by length as shown in the example case in the figure \ref{Fig:wamapping} thus differing from majority decision and risk based  downsampling procedure. 
+
+Similar to section \ref{ss:totamplification} and \ref{ss:uniquerows}, the mean of difference between number of unamplified region changing to amplified region was also computed and visualized with the results as shown in the figure \ref{Fig:0to1diff}.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.4]{figures/0to1diff.eps}
+\caption{\textit{Mean of difference in number of unamplified bands changing to amplified bands in different downsampling methods. The X-axis varies in small intervals with respect to resolution and larger intervals with respect to the chromosome number. As usual chromosome X and Y were excluded from the experiment }}\label{Fig:0to1diff}
+\end{figure}
+
+Similar to other metrices for defining the similarity/dissimilarity of the results of methods, figure \ref{Fig:0to1diff} shows negligible difference of the cases where the unamplified band is changed to amplified band in two different downsampling method. After the results from the figure \ref{Fig:0to1hist}, it can be inferred that some negligible differences shown in the property models discussed in section \ref{ss:totamplification} are result of weighted downsampling method.
+\subsection{Upscaling}
+\subsection{Weighted Downsampling}
+\subsection{OR-function Downsampling}
+\subsection{Majority Decision Downsampling}
+\subsection{Comparision of Downsampling Methods}
+
+\section{Mixture Modelling}
+\subsection{Model Selection}
+\label{ss:modelselection}
+Model selection is a process of selecting best model from a set of possible models that optimally fits the data. It is one of the most challanging task in machine learning and there exist no well defined rules to select the best model. Often, model selection depends on the use of some prior information, especially about the data, and `\textit{rule of thumb}' \footnote{Defination from Merriam-Webster Online Dictionary : Rule of thumb - a general principle regarded as roughly correct but not intended to be scientifically accurate}. Simple prototyping of models and their statistical analysis can be used to select the model. However, such process will be highly cumbersome. For example, given a machine learning problem, it is very difficult, if not impossible to select the best method from a myraid of machine learning method such as Support Vector Machines, Multilayer Perceptrons, Extreme Learning Machine, among many others.  In this thesis, the problem was to analyse copy number amplification data relevant to cancer. Cancer is not a single disease but a collection of diseases. Furthermore, cancer is a multifactorial disease. Therefore, mixture modelling was selected to model the amplification data because they provide efficient method to model the heterogeneous population. Furthermore, since the copy number amplification data was a high dimensional binary data, the distribution used in the mixture model is Bernoulli distribution.  
+
+\subsection{Model Structure Selection}
+\label{ss:modelstructureselection}
+After the selection of the model, one difficult problem is accomplished but another one awaits which is the problem of model structure selection. The model structure selection is the application of statistical methods to select the parameters and hyperparameters of the model. For example, given a machine learning problem polynomial curve fitting was choosen as the model because of the availability of some prior knowledge that the model is not linear. Even in polynomial curve fitting: the choice among $ax+b$, $ax^2+bx+c$ and other higher order polynomials is an arduous task. The concept of underfitting, overfitting, bias-variance dilema(trade-off) are the central issues to be considered in model structure selection. These are very important concepts in machine learning but the thesis does not consider the details of these methods. The details of these concepts can be acquired from Sections 6.1, 9.1 of \cite{bishop}; Sections 6.8, 6.9 of \cite{gruney}; and Sections 2.13, 4.13 of \cite{hykin}. In the thesis, the model selected was mixture models. The hyperparameters in mixture models are the number of mixture components \cite{componentdet}. Therefore, the model structure selection problem in this thesís is restricted to the selection of number of mixture components in the mixture model.
+
+To determine optimal number of components in the mixture model, 10-fold cross-validation technique discussed in section \ref{s:crossvalidation}. The 10-fold stratified cross-validation was used with 10-fold random cross-validation to select the number of components in the mixture model. The cross-validation process was repeated 10-times and the number of mixture components were varied between 2 and 20.
+
+\subsubsection{Parameter Estimation}
+\label{ss:parameterestimation}
+ After the selection of model and its hyperparameters are performed, the parameters estimation is relatively an simple task. Parameters estimation is also often referred to as model fitting, model training or model learning in machine learning literature. Consider, for example in above case of polynomial curve fitting, the selected the model is $ax+b$. Now, the value of $a$ and $b$ can be optimized or learned from the data. In the thesis, after the number of components were selected, the model was trained with all the available data to determine the optimal value of the Bernoulli parameter $\theta$.
+
+\subsection{Results}
+
